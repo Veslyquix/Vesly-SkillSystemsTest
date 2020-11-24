@@ -53,4 +53,14 @@ CombatArt_SureShot:
 POIN SkillTester
 WORD SureShotID
 
+ALIGN 4
+CombatArt_Skill1:
+#incbin "Skill1/Skill1.dmp"
+POIN SkillTester
+WORD Skill1ID
 
+ALIGN 4
+CombatArt_Skill2:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill2ID

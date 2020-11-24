@@ -1239,3 +1239,31 @@ applied to the attacker.[X]
 Swarp: Allows unit to swap[N]
 positions with an ally in[N]
 Mag/2 range.[X]
+
+## SD_SK1
+My Skill: Has an effect1.[X]
+
+## SD_SK2
+My Skill: Has an effect2.[X]
+
+## SD_SK3
+My Skill: Has an effect3.[X]
+
+## SD_SK4
+My Skill: Has an effect4.[X]
+
+## SD_SK5
+My Skill: Has an effect5.[X]
+
+## SD_SK6
+My Skill: Has an effect6.[X]
+
+## SD_SK7
+My Skill: Has an effect7.[X]
+
+## SD_SK8
+My Skill: Has an effect8.[X]
+
+## SD_SK9
+My Skill: Has an effect9.[X]
+

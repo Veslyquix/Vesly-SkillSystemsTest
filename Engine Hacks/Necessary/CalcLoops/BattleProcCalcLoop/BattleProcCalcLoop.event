@@ -38,6 +38,13 @@ POIN Proc_Corona Proc_Flare
 	POIN CombatArt_Glacies
 #endif // COMBAT_ARTS
 
+
+
+	POIN CombatArt_Skill1
+
+POIN CombatArt_Skill2
+
+
 POIN Proc_Vengeance //more damage
 
 #ifndef COMBAT_ARTS

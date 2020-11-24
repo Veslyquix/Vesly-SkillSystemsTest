@@ -1,10 +1,13 @@
+@Flare: Halve enemy resistance (Skill% activation)
+@differs from Luna in that it only negates res
+
 .thumb
 .macro blh to, reg=r3
   ldr \reg, =\to
   mov lr, \reg
   .short 0xf800
 .endm
-.equ LunaID, SkillTester+4
+.equ Skill1ID, SkillTester+4
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -22,15 +25,15 @@ tst r0, r1
 bne End
 @if another skill already activated, don't do anything
 
-@check for luna proc
+@check for DragonFang proc
 @ldr r0, SkillTester
 @mov lr, r0
 @mov r0, r4 @attacker data
-@ldr r1, LunaID
+@ldr r1, DragonFangID
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
-cmp r0, #15 @luna art ID
+cmp r0, #15 @dragon fang art ID
 bne End
 @if user has sure shot, check for proc rate
 
@@ -57,20 +60,14 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018  
 
-ldrb  r0, LunaID
+ldrb  r0, Skill1ID
 strb  r0, [r6,#4] 
 
-@and recalculate damage with def=0
-ldrh r0, [r7, #6] @final mt
-ldr r2, [r6]
-mov r1, #1
-tst r1, r2
-beq NoCrit
-@if crit, multiply by 3
-lsl r1, r0, #1
-add r0, r1
-
-NoCrit:
+@1.5x attack
+ldrh r0,[r7,#4]
+mov r2,#9
+mul r0,r2 @x9
+lsr r0,#3 @/8; net 9/8 or 1.125 dmg
 
 cmp r0, #0x7f @damage cap of 127
 ble NotCap
@@ -86,4 +83,5 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD LunaID
+@WORD DragonFangID
+

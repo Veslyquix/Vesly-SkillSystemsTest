@@ -30,7 +30,7 @@ bne End
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
-cmp r0, #15 @luna art ID
+cmp r0, #12 @luna art ID
 bne End
 @if user has sure shot, check for proc rate
 

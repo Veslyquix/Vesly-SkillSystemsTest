@@ -4,7 +4,7 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ LunaID, SkillTester+4
+.equ Skill1ID, SkillTester+4
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -30,7 +30,7 @@ bne End
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
-cmp r0, #15 @luna art ID
+cmp r0, #15 @Skill1 art ID
 bne End
 @if user has sure shot, check for proc rate
 
@@ -57,18 +57,20 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018  
 
-ldrb  r0, LunaID
+ldrb  r0, Skill1ID
 strb  r0, [r6,#4] 
 
-@and recalculate damage with def=0
+@and add 1.5x damage - this means it MUST go after the damage check...
 ldrh r0, [r7, #6] @final mt
-ldr r2, [r6]
-mov r1, #1
-tst r1, r2
-beq NoCrit
-@if crit, multiply by 3
-lsl r1, r0, #1
-add r0, r1
+lsl r0, #0x10
+asr r0, #0x10
+ldrh r1, [r7, #8] @final def
+lsl r1, #0x10
+asr r1, #0x10
+sub r0, r1 @calc damage (damage = 1x)
+lsr r1, r0, #3 @dmg = 0.125
+add r0, r1 @multiply by 1.125x (add 1x + (1/8))
+add r0, #1 @add +1 dmg at end
 
 NoCrit:
 
@@ -86,4 +88,4 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD LunaID
+@WORD Skill1ID

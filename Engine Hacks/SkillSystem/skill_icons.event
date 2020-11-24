@@ -905,5 +905,34 @@ ORG SkillIcon(ArmorboostID)
 ORG SkillIcon(TriangleAttackID)
 #incbin "SkillIcons/TriangleAttack.dmp"
 
+ORG SkillIcon(Skill1ID)
+#incbin "SkillIcons/Skill1.dmp"
+
+ORG SkillIcon(Skill2ID)
+#incbin "SkillIcons/Skill2.dmp"
+
+ORG SkillIcon(Skill3ID)
+#incbin "SkillIcons/Skill3.dmp"
+
+ORG SkillIcon(Skill4ID)
+#incbin "SkillIcons/Skill4.dmp"
+
+ORG SkillIcon(Skill5ID)
+#incbin "SkillIcons/Skill5.dmp"
+
+ORG SkillIcon(Skill6ID)
+#incbin "SkillIcons/Skill6.dmp"
+
+ORG SkillIcon(Skill7ID)
+#incbin "SkillIcons/Skill7.dmp"
+
+ORG SkillIcon(Skill8ID)
+#incbin "SkillIcons/Skill8.dmp"
+
+ORG SkillIcon(Skill9ID)
+#incbin "SkillIcons/Skill9.dmp"
+
+
+
 ORG SkillIcons+0x8000
 

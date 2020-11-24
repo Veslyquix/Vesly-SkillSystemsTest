@@ -24,7 +24,9 @@
 
     //Maps
     #include "Maps/Master Map Installer.event"
-    
+	
+	#include "controlenemy.event"    
+
     MESSAGE Used free space ends at currentOffset
 #else
     ERROR You are not assembling FE8 events!
