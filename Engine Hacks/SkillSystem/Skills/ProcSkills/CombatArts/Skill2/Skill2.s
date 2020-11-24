@@ -41,7 +41,7 @@ bne End
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
-cmp r0, #15 @astra art ID
+cmp r0, #16 @astra art ID
 bne End
 @if user has Astra, check for proc rate
 
@@ -85,7 +85,7 @@ strb    r0,[r6,#4] @save the thing
 mov r1, #0x38
 mov r2, sp
 ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #4
+add r0, #2 @usually adds 4 more rounds of combat 
 str r0, [r2,r1]
 
 @HERE'S THE TRICKY BIT: UPDATE A NEW ROUND OF BATTLE AND SET THE OFFENSIVE SKILL FLAG

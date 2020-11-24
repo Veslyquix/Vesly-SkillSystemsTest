@@ -13,4 +13,4 @@ ORG $01545B
 BYTE  $E0;
 //Assign Skill by Unit  (SkillAssignmentUnitSkillSystemForm) @01 Eirika2020-11-18 4:07:13 PM
 ORG $B37915
-BYTE  $01;
+BYTE  $02;
