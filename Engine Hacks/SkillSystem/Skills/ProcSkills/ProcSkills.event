@@ -52,6 +52,18 @@ POIN SkillTester
 WORD SolID
 WORD LiquidOozeID
 
+Proc_Absorb:
+#incbin "Absorb/proc_Absorb.dmp"
+POIN SkillTester
+WORD AbsorbID
+WORD LiquidOozeID
+
+Proc_Drain:
+#incbin "Drain/proc_Drain.dmp"
+POIN SkillTester
+WORD DrainID
+WORD LiquidOozeID
+
 Proc_Luna:
 #incbin "Luna/proc_luna.dmp"
 POIN SkillTester
@@ -220,17 +232,13 @@ Proc_Vengeance:
 POIN SkillTester
 WORD VengeanceID
 
-ALIGN 4
-Proc_Skill1:
-#incbin "Glacies/proc_glacies.dmp"
-POIN SkillTester
-WORD Skill1ID
+//ALIGN 4
+//Proc_Skill1:
+//#incbin "Glacies/proc_glacies.dmp"
+//POIN SkillTester
+//WORD Skill1ID
 
-ALIGN 4
-Proc_Skill2:
-#incbin "Glacies/proc_glacies.dmp"
-POIN SkillTester
-WORD Skill2ID
+
 
 #include "CombatArts/CombatArtProcSkills.event"
 

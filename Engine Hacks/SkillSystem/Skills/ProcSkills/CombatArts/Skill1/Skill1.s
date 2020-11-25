@@ -96,7 +96,7 @@ mov r0, #0
 str     r0,[r4]                @ 0802B43A 6018 
 ldrb    r0, Skill1ID
 strb    r0,[r4,#4] @save the thing
-mov     r0, #4 @number of extra attacks
+mov     r0, #4 @number of extra attacks?
 strb    r0,[r4,#6]
 b End
 

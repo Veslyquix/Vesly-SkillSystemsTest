@@ -905,6 +905,12 @@ ORG SkillIcon(ArmorboostID)
 ORG SkillIcon(TriangleAttackID)
 #incbin "SkillIcons/TriangleAttack.dmp"
 
+ORG SkillIcon(AbsorbID)
+#incbin "SkillIcons/Skill1.dmp"
+
+ORG SkillIcon(DrainID)
+#incbin "SkillIcons/Skill1.dmp"
+
 ORG SkillIcon(Skill1ID)
 #incbin "SkillIcons/Skill1.dmp"
 

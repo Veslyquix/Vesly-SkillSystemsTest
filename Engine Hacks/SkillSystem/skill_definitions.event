@@ -31,13 +31,21 @@
 //By Vesly
 #define Skill7ID 7
 
-//Name: Description. 
-//By Vesly
-#define Skill8ID 8
+//Absorb: Heal for 12.5% of damage dealt. 
+//Sol's Author Unknown (Initial Commit), edit By Vesly
+#define AbsorbID 8
+
+//Drain: Heal for 25% of damage dealt. 
+//Sol's Author Unknown (Initial Commit), edit By Vesly
+#define DrainID 9
 
 //Name: Description. 
 //By Vesly
-#define Skill9ID 9
+#define Skill8ID 255
+
+//Name: Description. 
+//By Vesly
+#define Skill9ID 255
 
 
 //AI Skills

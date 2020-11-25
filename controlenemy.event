@@ -12,5 +12,8 @@ BYTE  $0A;
 ORG $01545B
 BYTE  $E0;
 //Assign Skill by Unit  (SkillAssignmentUnitSkillSystemForm) @01 Eirika2020-11-18 4:07:13 PM
-ORG $B37915
-BYTE  $02;
+ORG $B37965
+BYTE  $08;
+//Item Editor  (ItemForm) @20 Steel Axe2020-11-25 12:18:34 PM
+ORG $809F90
+BYTE  $7B $03 $2B $04 $00 $00 $20 $02 $01 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $1E $0B $8C $0F $00 $11 $0C $00 $01 $1F $00 $00 $02 $00 $00 $00;
