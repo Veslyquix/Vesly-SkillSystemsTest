@@ -180,6 +180,8 @@ PackGameSaveUnit.set_class:
 	lsr  r2, #16
 	strb r2, [r0, #0x0E]
 
+
+
 	@ WEAPON EXP
 
 	mov r3, #0x0F
@@ -198,6 +200,12 @@ PackGameSaveUnit.lop_wexp:
 	bge PackGameSaveUnit.lop_wexp
 
 	@ SUPPORTS
+
+		@added this
+	ldrb r3, [r1, #0x08] @ r3 = Unit->level
+	mov r4, #0x16
+	strb r3, [r0, r4] @ GameSaveUnit->level = Unit->dark wexp
+		@done adding
 
 	mov r3, #0x17
 	add r3, r0 @ r3 = &GameSaveUnit->supports
@@ -345,12 +353,24 @@ UnpackGameSaveUnit.yes_y:
 	mov  r3, #0x1F
 	and  r3, r2 @ r3 = Unit->exp
 
-	strb r3, [r4, #0x08]
+	strb r3, [r4, #0x08] @commented out
 
 	lsr  r2, #5
 
 	mov  r3, #0x7F
 	and  r3, r2 @ r3 = GameSaveUnit->exp
+
+		@added this
+	mov r1, #0x16
+	ldrb r2, [r5, r1] @ r2 = GameSaveUnit->dark magic wexp
+	strb r2, [r4, #0x08] @ Unit->dark wexp = GameSaveUnit->Level
+	@mov r1, #0x2F
+	mov r2, #0
+	@strb r0, [r4, r1] @ clear dark wexp now that level is sorted
+
+	@strb r2, [r4, #0x2F] @ Unit->dark wexp = 0 now
+	strb r2, [r5, r1] @ r2 = GameSaveUnit->dark magic wexp
+		@done adding
 
 	cmp  r3, #0x7F
 	bne UnpackGameSaveUnit.yes_exp

@@ -26,6 +26,7 @@
     #include "Maps/Master Map Installer.event"
 	
 	#include "controlenemy.event"    
+	#include "few things added.event"
 
     MESSAGE Used free space ends at currentOffset
 #else
