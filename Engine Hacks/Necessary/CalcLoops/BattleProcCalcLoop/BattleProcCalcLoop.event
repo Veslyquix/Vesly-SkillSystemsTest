@@ -59,6 +59,9 @@ POIN Proc_Vengeance //more damage
 	POIN CombatArt_Astra
 #endif // COMBAT_ARTS
 
+	POIN Proc_TripleHit
+	POIN Proc_MultiHit
+
 POIN Proc_Bane DownWithArch Proc_Lethality	//skills that set damage to max
 
 POIN Proc_CapDamage	//check that damage is not over cap

@@ -25,11 +25,19 @@
 
 //Name: Description. 
 //By Vesly
-#define Skill6ID 6
+#define Skill6ID 255
 
 //Name: Description. 
 //By Vesly
-#define Skill7ID 7
+#define Skill7ID 255
+
+//Name: Description. 
+//By Vesly
+#define TripleHitID 6
+
+//Name: Description. 
+//By Vesly
+#define MultiHitID 7
 
 //Absorb: Heal for 12.5% of damage dealt. 
 //Sol's Author Unknown (Initial Commit), edit By Vesly

@@ -316,4 +316,6 @@ SkillDescription(Skill8ID,SD_SK8)
 SkillDescription(Skill9ID,SD_SK9)
 SkillDescription(AbsorbID,SD_Absorb)
 SkillDescription(DrainID,SD_Drain)
+SkillDescription(TripleHitID,SD_TripleHit)
+SkillDescription(MultiHitID,SD_MultiHit)
 

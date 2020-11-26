@@ -232,6 +232,19 @@ Proc_Vengeance:
 POIN SkillTester
 WORD VengeanceID
 
+ALIGN 4
+Proc_TripleHit:
+#incbin "MultiHitMoves/proc_TripleHit.dmp"
+POIN SkillTester
+WORD TripleHitID
+
+ALIGN 4
+Proc_MultiHit:
+#incbin "MultiHitMoves/proc_MultiHit.dmp"
+POIN SkillTester
+WORD MultiHitID
+
+
 //ALIGN 4
 //Proc_Skill1:
 //#incbin "Glacies/proc_glacies.dmp"

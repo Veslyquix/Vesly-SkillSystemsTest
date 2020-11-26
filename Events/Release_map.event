@@ -155,10 +155,10 @@ LOAD1 0x1 EnemyUnits2
 ENUN
 LOAD1 0x0 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
 ENUN
-LOAD1 0x0 Units2
-ENUN
-LOAD1 0x0 MoreUnits
-ENUN
+//LOAD1 0x0 Units2
+//ENUN
+//LOAD1 0x0 MoreUnits
+//ENUN
 // FADI 10
 // MOVE 0 Carlyle [7,10]
 // ENUN
@@ -169,7 +169,9 @@ ENUN
 // FIG1 Carlyle Aias 0
 // STAL 60
 // FADU 10
-GotoPrepScreen
+//GotoPrepScreen
+EVBIT_T 0x7
+ENDA
 
 EndingScene:
 ASMC 0x85C71 0x381F5 0x37CF9 //show records screen

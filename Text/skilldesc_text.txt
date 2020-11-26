@@ -1274,3 +1274,11 @@ of damage dealt.[X]
 ## SD_Drain
 Drain: Heal for 50%[N]
 of damage dealt.[X]
+
+## SD_TripleHit
+Triple Hit: Hits 50%[N]
+damage three times.[X]
+
+## SD_MultiHit
+Multi-Hit: Hits 50%[N]
+damage two to five times.[X]
