@@ -353,3 +353,12 @@ QuickRiposte:
 POIN SkillTester
 WORD QuickRiposteID
 
+
+ALIGN 4
+#include "Skill1/Event.txt"
+
+ALIGN 4
+Skill1:
+#include "Skill1/Skill1.lyn.event"
+POIN SkillTester
+WORD Skill1ID

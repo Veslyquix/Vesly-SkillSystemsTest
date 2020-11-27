@@ -40,15 +40,15 @@ POIN Proc_Corona Proc_Flare
 
 
 
-POIN CombatArt_Skill1
-POIN CombatArt_Skill2
-POIN CombatArt_Skill3
-POIN CombatArt_Skill4
-POIN CombatArt_Skill5
-POIN CombatArt_Skill6
-POIN CombatArt_Skill7
-POIN CombatArt_Skill8
-POIN CombatArt_Skill9
+//POIN CombatArt_Skill1
+//POIN CombatArt_Skill2
+//POIN CombatArt_Skill3
+//POIN CombatArt_Skill4
+//POIN CombatArt_Skill5
+//POIN CombatArt_Skill6
+//POIN CombatArt_Skill7
+//POIN CombatArt_Skill8
+//POIN CombatArt_Skill9
 
 
 POIN Proc_Vengeance //more damage

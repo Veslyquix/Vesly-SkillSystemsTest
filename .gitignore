@@ -22,6 +22,16 @@ $RECYCLE.BIN/
 *.sav
 *.sgm
 *.ups
+*.ss0
+*.ss1
+*.ss2
+*.ss3
+*.ss4
+*.ss5
+*.ss6
+*.ss7
+*.ss8
+*.ss9
 
 # python cache
 __pycache__

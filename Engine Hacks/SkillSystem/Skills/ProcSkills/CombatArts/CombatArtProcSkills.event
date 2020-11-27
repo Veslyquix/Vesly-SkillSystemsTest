@@ -1,5 +1,5 @@
 
-#include "Skill1/Event.txt"
+
 
 ALIGN 4
 CombatArt_Adept:
@@ -55,15 +55,17 @@ CombatArt_SureShot:
 POIN SkillTester
 WORD SureShotID
 
+
+
 ALIGN 4
 CombatArt_Skill1:
-#incbin "Skill1/Skill1.dmp"
+#incbin "Astra/proc_astra.dmp"
 POIN SkillTester
 WORD Skill1ID
 
 ALIGN 4
 CombatArt_Skill2:
-#incbin "Skill2/Skill2.dmp"
+#incbin "Astra/proc_astra.dmp"
 POIN SkillTester
 WORD Skill2ID
 
