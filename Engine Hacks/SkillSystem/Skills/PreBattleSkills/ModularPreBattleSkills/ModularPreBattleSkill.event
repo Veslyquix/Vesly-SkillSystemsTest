@@ -1,0 +1,16 @@
+#include "ModularPreBattleSkill.lyn.event"
+
+ModularPreBattleSkillList: 
+	BYTE Skill1ID
+	BYTE Skill2ID
+	BYTE Skill3ID
+	BYTE Skill4ID
+	BYTE Skill5ID
+	BYTE Skill6ID
+	BYTE Skill7ID
+	BYTE Skill8ID
+	BYTE Skill9ID
+	BYTE 0	
+ALIGN 4
+
+
