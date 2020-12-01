@@ -356,15 +356,3 @@ WORD QuickRiposteID
 
 ALIGN 4
 #include "ModularPreBattleSkills/ModularPreBattleSkill.event"
-
-//ALIGN 4
-//Skill1:
-//#include "ModularPreBattleSkills/Skill.lyn.event"
-//POIN SkillTester
-//WORD Skill1ID
-
-//ALIGN 4
-//Skill2:
-//#include "ModularPreBattleSkills/Skill.lyn.event"
-//POIN SkillTester
-//WORD Skill2ID
