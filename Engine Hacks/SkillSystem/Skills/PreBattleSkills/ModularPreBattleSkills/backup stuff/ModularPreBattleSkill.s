@@ -30,7 +30,7 @@ b Preloop
 @r0, r1, r2 free
 @pre-loop set a counter
 
-Preloop: @r7 has which entry to do in it
+Preloop: @r7 has which row of the table to do in it
 ldr r1, =ModularPreBattleTable
 mov r0, r7	@copy skill id into r0
 mov r2, #64 @ 64 bytes per entry
@@ -47,17 +47,28 @@ mov r6, #3			@r6 as counter
 
 
 
-@Must be combat art?
+@Must be combat art? 0 = any
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
 ldrb r1,[r2,#2]		@r1 now holds cmb art id
 cmp r0, r1 		@exit if not combat art ID
-beq LoopStart
-ldrb r1,[r2,#2]		@r1 now holds cmb art id
+beq AttackerCheck
 cmp r1, #0
 bne SkillChecker
 
+@defender only
+AttackerCheck:
+@attacker only
+@ldr r0,=#0x203A4EC @attacker struct
+@cmp r0,r4
+@bne SkillChecker @if not attacker, don't do
 
+
+@less than full hp
+
+
+
+@units within x squares?
 
 
 LoopStart:
@@ -75,33 +86,72 @@ bgt SkillChecker			@if so, break outta the loop
 @step 2. Load from character/battle struct 
 
 			@r2 still has =SkillXNumbers 
-ldrb r1,[r2,r6]		@r1 is now 3x+1 entry of table 
+ldrb r1,[r2,r6]		@r1 is now 3x entry of table (CBSByte)
 			@eg. 4, 7, A, D, 10, 13, etc. 
-ldrh r0,[r4,r1]		@load r6's value of the battle buffer in r7 into r0
+
+
+
+@step 2.5 loop to figure out byte vs short
+
+mov r3, #0
+CheckIfShortLoop:
+ldr r0, =SignedShortList
+ldrb r0,[r0,r3]		@r0 iterates through a list of values that are Shorts
+add r3, r3, #1
+cmp r0, #0
+beq TryByteLoopInstead
+cmp r0, r1
+beq ItIsAShort
+b CheckIfShortLoop
+
+TryByteLoopInstead:
+mov r3, #0
+
+CheckIfByteLoop:
+ldr r0, =SignedByteList
+ldrb r0,[r0,r3]		@r0 iterates through a list of values that are Bytes
+add r3, r3, #1
+cmp r0, #0
+beq SkillChecker	@invalid parameter given, so try next skill 
+cmp r0, r1
+beq ItIsAByte
+b CheckIfByteLoop
+
+ItIsAShort:
+mov r3, #4
+ldrh r0,[r4,r1]		@
+b OperationToUse
+
+ItIsAByte:
+mov r3, #2
+ldrb r0,[r4,r1]		@
+b OperationToUse
+
+
+
+OperationToUse:
 add r6, r6, #1		@counter +1 (5, 8, B, E, 11, 14, etc.)
 
-
 @step 3. get 3x+2 entry of table and branch 
-ldrb r1,[r2,r6]		@add? subtract? multiply? etc.  
+ldrb r1,[r2,r6]		@add? subtract? or fraction? etc.  
 add r6, r6, #1		@counter +1 (6, 9, C, F, 12, 15, etc.)
 			@3x+3 entry of table 
 
 cmp r1, #1		@branch based on table's entry 
 beq Add			@1 = add, 2 = sub, 3 = lsl, etc. 
 cmp r1, #2
-beq Sub
+beq Sub			@subtracts unit's current value by specified amount
 cmp r1, #3
-beq Lsl
+beq Fraction		@4-bit: 0x32 = multiply by 3, then divide by 2
+cmp r1, #4
+beq LsFraction		@4-bit: 0x32 = shift left by 3 (eg. multiply by 2^3=8), then right by 2 (divide by 4)
 mov r6, #0xFF
-b End			@invalid option, so end 
+b SkillChecker			@invalid option, so end 
 
 
 
 Add:
-			@r2 still has =SkillXNumbers 
-@ldr r2,=Skill1Numbers	@table of what to do
-
-ldrb r1,[r2,r6]		@by this number @3rd entry 8 damage
+ldrb r1,[r2,r6]		@by this number 
 add r0,r1 		@
 b CheckCap
 
@@ -109,23 +159,69 @@ b CheckCap
 @lsr r0,#3 @/8; net x1.125
 
 Sub:
-			@r2 still has =SkillXNumbers 
 ldrb r1,[r2,r6]		@by this number 
 sub r0,r1 		@
 b CheckCap
 
-Lsl:
-			@r2 still has =SkillXNumbers 
-ldrb r1,[r2,r6]		@by this number 
-lsl r0,r1 		@
+LsFraction:
+ldrb r1,[r2,r6]		 
+lsr r1, r1, #4		@0000000X // # of left shifts
+lsl r0,r1 		@shifted left
+
+ldrb r1,[r2,r6]	
+lsl r1, r1, #28		@Y0000000 
+lsr r1, r1, #28		@0000000Y // # of right shifts
+lsr r0,r1 		@shifted right
 b CheckCap
 
 
 
-@Signed / unsigned
-@Byte / short
+
+Fraction:
+ldrb r1,[r2,r6]		@000000XY
+	       @mov r1, #000000XY
+
+@#0x080D18FC uses r0-r3 to divide?
+@i'm using r2 as my table row and r3,r6-r7 as single byte counters
+@rearrange/condense registers
+lsl r7, r7, #8		@0000r700
+add r7, r7, r6		@0000r7r6
+lsl r7, r7, #8		@00r7r600
+add r7, r7, r3		@00r7r6r3
+mov r6, r2
+
+@now take our fraction byte and get the multiplier r3 & divisor r1
+mov r3, r1
+lsr r3, r3, #4		@0000000X // Multiplier
+lsl r1, r1, #28		@Y0000000 
+lsr r1, r1, #28		@0000000Y // Divisor
+
+@r0 / r1 = number
+@mov r0, #45		@eg. dmg
+@mov r1, #5		@divisor
+mul r0, r0, r3		@Multiply first
+blh #0x080D18FC, r2 	@Then divide
+
+
+@fix registers afterwards
+mov r2, r6
+ 			@00r7r6r3
+mov r3, r7
+lsl r3, r3, #24		@r3000000
+lsr r3, r3, #24		@000000r3 // 
+
+mov r6, r7		@00r7r6r3
+lsl r6, r6, #16		@r6r30000 
+lsr r6, r6, #24		@000000r6 // 
+
+lsr r7, r7, #16		@000000r7
+b CheckCap
+
+
 
 CheckCap:
+mov r3, #4		@bytes don't work anyway
+
 cmp r0, #0x7f @damage cap of 127
 ble NotCap
 mov r0, #0x7f
@@ -134,6 +230,19 @@ NotCap:
 sub r6, r6, #2		@counter -2 (4, 7, A, D, 10, 13, etc.)
 			@r2 still has =SkillXNumbers 
 ldrb r1,[r2,r6]		@r1 is now the 3x+1 entry of your table
+
+cmp r3, #2		
+beq StoreByte
+cmp r3, #4
+beq StoreShort
+b LoopStart		@store nothing if not a byte or short somehow
+
+StoreByte:
+strb r0, [r4, r1]
+add r6, r6, #2
+b LoopStart
+
+StoreShort:
 strh r0, [r4, r1] 	@final value stored back in
 add r6, r6, #2		@counter +2 (6, 9, C, F, 12, 15, etc.)
 b LoopStart
@@ -142,14 +251,6 @@ End:
 pop { r4 - r7 }
 pop { r3 }
 bx r3
-
-@End:
-@pop {r4-r7, r15}
-@.align
-@.ltorg
-@SkillTester:
-@Poin SkillTester
-@WORD ElbowRoomID
 
 
 CheckNextSkill:
@@ -170,7 +271,8 @@ bx r3
 
 BreakOut:
 mov r0, r4
-blh SkillTester, r3
-mov r7, #0xFF		@there is a better way to do this *shrugs*
+blh SkillTester, r3	@Skill id was 0 so we terminate by making the counter 0xFF
+mov r7, #0xFF		@I'm sure there is a better way to do this *shrugs*
 pop { r3 }
 bx r3
+
