@@ -1,0 +1,2 @@
+400D000015CA0C08	//[Assembler function:0x80CCA15 NewPromotion]is called[argument:0x0](ASMC)
+2802070020010000	//Event end(also serves as a section to no fade)(EVBIT_T+ENDA)

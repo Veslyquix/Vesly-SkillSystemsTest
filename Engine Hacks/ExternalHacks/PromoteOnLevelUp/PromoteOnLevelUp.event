@@ -1,0 +1,17 @@
+ALIGN 4
+PostBattlePromotion:
+#include "PromoteOnLevelUp.lyn.event"
+//POIN PromotionEvent
+ALIGN 4
+		PromotionEvent:
+		CAM1 0xFFFF
+		CUMO 0xFFFF
+		//STAL 0x24
+		CURE
+		ASMC 0x80CCA15
+		//SMOV 0x3 RedGem
+		//GIVEITEMTO 0xFFFF
+		NoFade
+		ENDA
+//POIN AuraSkillCheck
+//#include "SavageBlow/SavageBlowEvent.event"

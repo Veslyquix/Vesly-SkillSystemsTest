@@ -118,6 +118,9 @@ POP
   //Stairs
   #include "ExternalHacks/Stairs/Stairs.event"
 
+	//Post-action promotion
+	#include "ExternalHacks/PromoteOnLevelUp/PromoteOnLevelUp.event"
+
   //Raid
   #include "ExternalHacks/Raid/Raid.event"
   

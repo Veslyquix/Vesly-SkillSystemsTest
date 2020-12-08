@@ -10,6 +10,10 @@ POIN LungeUpdate
 #ifdef ESCAPE_ARRIVE
 	POIN FinalEscapeThing
 #endif // ESCAPE_ARRIVE
+
+
+POIN PostBattlePromotion
+
 WORD 0
 
 PROTECT $1879A $187B4
