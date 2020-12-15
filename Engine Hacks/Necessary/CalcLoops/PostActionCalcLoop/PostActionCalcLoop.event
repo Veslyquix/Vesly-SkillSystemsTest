@@ -11,8 +11,7 @@ POIN LungeUpdate
 	POIN FinalEscapeThing
 #endif // ESCAPE_ARRIVE
 
-
-POIN PostBattlePromotion
+POIN PromoteOnLevelUp
 
 WORD 0
 

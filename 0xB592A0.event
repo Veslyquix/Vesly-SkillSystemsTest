@@ -1,0 +1,19 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.1.0.0                              //
+// Game: FE8                                      //
+// File: SkillsTest.event_assembler.gba           //
+// Offset: $B592A0                                //
+//                                                //
+////////////////////////////////////////////////////
+
+
+
+ORG $B592A0
+SET_ACTIVE 0xFFFD
+ASMC 0xCCA15
+EVBIT_T 0x7
+ENDA
+
