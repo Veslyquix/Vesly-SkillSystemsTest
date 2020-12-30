@@ -13,6 +13,7 @@ EventPointerTable(0x7, PointerList)
 
 #ifdef DRAGON_VEINS
 VeinEffect(0, FreezeAllEnemies)
+GeneralEffect(0, TestCase)
 #endif // DRAGON_VEINS
 
 PointerList:
@@ -139,6 +140,10 @@ Traps1:
 #ifdef DRAGON_VEINS
 Vein(9,23,0x0,DV1Desc) //freeze enemies
 #endif // DRAGON_VEINS
+
+Pokemblem(10,23,0x0,0xD52)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
+
+
 ENDTRAP
 ALIGN 4
 
@@ -226,6 +231,11 @@ ASMC FreezeAllASMC|1
 NoFade
 ENDA
 #endif // DRAGON_VEINS
+
+TestCase:
+Text(0xc0a)
+NoFade
+ENDA
 
 TalkEvent:
 Text(0xc0a)

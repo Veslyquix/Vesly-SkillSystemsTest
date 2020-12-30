@@ -1,0 +1,78 @@
+
+
+
+	#define CustomTrapID 0x2D //just sequentially after what i'm aware of being used by other hacks already
+
+	#define CustomDefaultMapSpriteID 0x69
+
+	SetTrapEventInit(CustomTrapID,MyTrapInitialization)
+	SetTrapMapSprite(CustomTrapID,CustomDefaultMapSpriteID)
+	SetTrapMapSpritePalette(CustomTrapID,NPCTrapPaletteWord)	
+	SetImpassableTrap(CustomTrapID)
+	SetTrapMapSpriteFunc(CustomTrapID,MyTrapSpriteFunc)
+
+
+//my script for usability / effect
+
+
+
+	//macros for usage
+#define Pokemblem(XX,YY,EffectID) "BYTE CustomTrapID XX YY EffectID 0x0 0x0"
+#define Pokemblem(XX,YY,EffectID, TextID) "BYTE CustomTrapID XX YY EffectID; SHORT TextID"
+
+#define GeneralEffect(id, event) "PUSH; ORG TrapEffectTableOffset + (4 * id); POIN event; POP"
+
+
+
+
+ALIGN 4
+TrapEffectTableOffset:
+ORG currentOffset+(256*4)
+
+
+GeneralEffect:
+#include "asm/CustomTrap.lyn.event"
+POIN TrapEffectTableOffset
+
+
+
+
+  //GeneralEffect:
+    //#incbin "asm/CustomTrap.dmp"
+    //POIN TrapEffectTableOffset
+
+
+
+
+
+
+
+/*
+  GeneralUsability:
+    #incbin "asm/DragonVeinUsabilityNoSkill.dmp"
+    WORD DragonVeinTrapID
+    POIN SkillTester
+    WORD DragonsBloodID
+*/
+
+
+
+
+/*
+The .lyn.event needs this:
+
+4 functions 
+
+ORG CURRENTOFFSET+$1;TelliusTorchInitialization:
+ORG CURRENTOFFSET+$90;TelliusTorchUsability:
+ORG CURRENTOFFSET+$2c;TelliusTorchEffect:
+ORG CURRENTOFFSET+$34;TelliusTorchMapSpriteFunc:
+
+And will probably POIN something like this:
+
+POIN TelliusTorchOffMapSpriteIDLink
+POIN TrapRework_NewUpdateAllLightRunes
+POIN TelliusTorchOnMapSpriteIDLink
+
+
+*/

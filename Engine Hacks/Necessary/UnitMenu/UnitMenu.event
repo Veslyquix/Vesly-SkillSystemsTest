@@ -75,6 +75,14 @@ UnitMenuTable:
   
   #ifdef DRAGON_VEINS
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, VeinUsability, VeinEffect)
+
+
+  MenuCommand(UMText_DV, UMText_DVDesc, GreenText, MyTrapUsability, MyTrapEffect)
+
+
+
+
+
   #endif // DRAGON_VEINS
   
   // UM_Attack

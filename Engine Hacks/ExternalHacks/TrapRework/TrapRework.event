@@ -1,21 +1,7 @@
-
-#ifndef TRAP_REWORK
-
-#ifdef DRAGON_VEINS
-	#define TRAP_REWORK
-#endif // DRAGON_VEINS
-
-#ifdef HEAL_TILES
-	#define TRAP_REWORK
-#endif // HEAL_TILES
-
-#endif // TRAP_REWORK
-
-#ifdef TRAP_REWORK
-
 #ifndef TRAP_REWORK_INSTALLED
 	#define TRAP_REWORK_INSTALLED
 
+	
 	
 	//vanilla trap ID defs
 	#define BallistaTrapID 1
@@ -31,6 +17,48 @@
 	#define MineTrapID 11
 	#define GorgonEggTrapID 12
 	#define LightRuneTrapID 13
+
+		//added 
+
+	
+	#define SomethingID 16
+	#define CutBushID 17		//Destroy
+	#define RockSmashID 18		//Destroy
+	#define StrengthBoulderID 19	//Push
+	#define BreakableFloorID 20	//fall
+	#define HoleID 21 		//fall? boulder?
+	#define BoulderReceptacleID 22	//place boulder into
+
+
+	#define PlayerTalkEventID 23	//call event engine
+	#define NPCTalkEventID 24
+	#define EnemyTalkEventID 25
+
+
+	#define PlayerTalkID 26		//make conversation - unnecessary?
+	#define NPCTalkID 27
+	#define EnemyTalkID 28
+
+	#define DecoyPokemonID 29
+	#define LegendaryPokemonID 30
+
+	#define TeleportPadID 31
+	#define IceTileID 32
+	#define SlideTileID 33
+	#define ArrowTileID 34
+	#define HealTileID 35		//unnecessary?
+
+	#define SpawnGrassID 36
+	#define SpawnBurrowID 37
+	#define SpawnWaterID 38
+	#define SummonAnimID 39
+	#define OpenBallID 40
+	#define SavePointID 41
+
+	#define RedPokeballItemID 42	//respawnable item
+	#define GoldPokeballItemID 43	//non-respawnable item
+	#define HiddenPokeballItemID 44	//invisible item 
+
 	
 	#define LightRuneTrapPaletteWord 0xFFFFB080
 	#define PlayerTrapPaletteWord 0xFFFFC080
@@ -62,7 +90,45 @@
 	SetTrapEventInit(MineTrapID,$378D6)
 	SetTrapEventInit(GorgonEggTrapID,$378EC)
 	SetTrapEventInit(LightRuneTrapID,0)
+
+	SetTrapEventInit(SomethingID,0)
+
+	SetTrapEventInit(CutBushID,0)
+	SetTrapEventInit(RockSmashID,0)
+	SetTrapEventInit(StrengthBoulderID,0)
+	SetTrapEventInit(BreakableFloorID,0)
+	SetTrapEventInit(HoleID,0)
+	SetTrapEventInit(BoulderReceptacleID,0)
+
+	SetTrapEventInit(PlayerTalkEventID,0)
+	SetTrapEventInit(NPCTalkEventID,0)
+	SetTrapEventInit(EnemyTalkEventID,0)
+
+	SetTrapEventInit(PlayerTalkID,0)
+	SetTrapEventInit(NPCTalkID,0)
+	SetTrapEventInit(EnemyTalkID,0)
+
+	SetTrapEventInit(DecoyPokemonID,0)
+	SetTrapEventInit(LegendaryPokemonID,0)
+
+
+	SetTrapEventInit(TeleportPadID,0)
+	SetTrapEventInit(IceTileID,0)
+	SetTrapEventInit(SlideTileID,0)
+	SetTrapEventInit(ArrowTileID,0)
+	SetTrapEventInit(HealTileID,0)
 	
+	SetTrapEventInit(SpawnGrassID,0)
+	SetTrapEventInit(SpawnBurrowID,0)
+	SetTrapEventInit(SpawnWaterID,0)
+	SetTrapEventInit(SummonAnimID,0)
+	SetTrapEventInit(OpenBallID,0)
+	SetTrapEventInit(SavePointID,0)
+	
+	SetTrapEventInit(RedPokeballItemID,0)
+	SetTrapEventInit(GoldPokeballItemID,0)
+	SetTrapEventInit(HiddenPokeballItemID,0)
+
 	
 	#define SetTrapMapSprite(trapID,mapSpriteID) "PUSH; ORG TrapMapSpriteTable+(trapID-1); BYTE mapSpriteID; POP"
 
@@ -80,7 +146,45 @@
 	SetTrapMapSprite(MineTrapID,0)
 	SetTrapMapSprite(GorgonEggTrapID,0)
 	SetTrapMapSprite(LightRuneTrapID,0x66) //light rune map sprite
-	
+
+
+	SetTrapMapSprite(SomethingID,0x6B)
+	SetTrapMapSprite(CutBushID,0x6A)
+	SetTrapMapSprite(RockSmashID,0x6E)
+	SetTrapMapSprite(StrengthBoulderID,0x6F)
+	SetTrapMapSprite(BreakableFloorID,0x70)
+	SetTrapMapSprite(HoleID,0x71)
+	SetTrapMapSprite(BoulderReceptacleID,0x72)
+
+	SetTrapMapSprite(PlayerTalkEventID,0x73)
+	SetTrapMapSprite(NPCTalkEventID,0x73)
+	SetTrapMapSprite(EnemyTalkEventID,0x74)
+
+	SetTrapMapSprite(PlayerTalkID,0x75)
+	SetTrapMapSprite(NPCTalkID,0x76)
+	SetTrapMapSprite(EnemyTalkID,0x77)
+
+	SetTrapMapSprite(DecoyPokemonID,0x78)
+	SetTrapMapSprite(LegendaryPokemonID,0x79)
+
+
+	SetTrapMapSprite(TeleportPadID,0x7A)
+	SetTrapMapSprite(IceTileID,0x7B)
+	SetTrapMapSprite(SlideTileID,0x7C)
+	SetTrapMapSprite(ArrowTileID,0x7D)
+	SetTrapMapSprite(HealTileID,0x7E)
+
+	SetTrapMapSprite(SpawnGrassID,0x6D)
+	SetTrapMapSprite(SpawnBurrowID,0x6C)
+	SetTrapMapSprite(SpawnWaterID,0x7F)
+	SetTrapMapSprite(SummonAnimID,0x63)
+	SetTrapMapSprite(OpenBallID,0x64)
+	SetTrapMapSprite(SavePointID,0x68)
+
+	SetTrapMapSprite(RedPokeballItemID,0x65)
+	SetTrapMapSprite(GoldPokeballItemID,0x66)
+	SetTrapMapSprite(HiddenPokeballItemID,0)
+
 	//Macro for setting unique cases on trap map sprites
 	#define SetTrapMapSpriteFunc(trapID,ptr) "PUSH; ORG (TrapMapSpriteFuncTable+((trapID-1)*4)); POIN ptr; POP"
 	//doesn't need to be one for ballistae, they're handled somewhere else
@@ -90,6 +194,50 @@
 	#define SetTrapMapSpritePalette(trapID,paletteWord) "PUSH; ORG TrapMapSpritePaletteTable+(4*(trapID-1)); WORD paletteWord; POP"
 	
 	SetTrapMapSpritePalette(LightRuneTrapID,LightRuneTrapPaletteWord)
+	
+	
+	
+	
+	SetTrapMapSpritePalette(SomethingID,LightRuneTrapPaletteWord)
+	
+	
+	SetTrapMapSpritePalette(SomethingID,NPCTrapPaletteWord)
+
+	SetTrapMapSpritePalette(CutBushID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(RockSmashID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(StrengthBoulderID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(BreakableFloorID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(HoleID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(BoulderReceptacleID,NPCTrapPaletteWord)
+
+	SetTrapMapSpritePalette(PlayerTalkEventID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(NPCTalkEventID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(EnemyTalkEventID,NPCTrapPaletteWord)
+
+	SetTrapMapSpritePalette(PlayerTalkID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(NPCTalkID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(EnemyTalkID,NPCTrapPaletteWord)
+
+	SetTrapMapSpritePalette(DecoyPokemonID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(LegendaryPokemonID,NPCTrapPaletteWord)
+
+
+	SetTrapMapSpritePalette(TeleportPadID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(IceTileID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(SlideTileID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(ArrowTileID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(HealTileID,NPCTrapPaletteWord)
+	
+	SetTrapMapSpritePalette(SpawnGrassID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(SpawnBurrowID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(SpawnWaterID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(SummonAnimID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(OpenBallID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(SavePointID,NPCTrapPaletteWord)
+	
+	SetTrapMapSpritePalette(RedPokeballItemID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(GoldPokeballItemID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(HiddenPokeballItemID,NPCTrapPaletteWord)
 	
 	
 
@@ -119,7 +267,42 @@
 	
 	SetImpassableTrap(LightRuneTrapID)
 	
-	
+	SetImpassableTrap(SomethingID)
+	SetImpassableTrap(CutBushID)
+	SetImpassableTrap(RockSmashID)
+	SetImpassableTrap(StrengthBoulderID)
+	//SetImpassableTrap(BreakableFloorID)
+	//SetImpassableTrap(HoleID)
+	//SetImpassableTrap(BoulderReceptacleID)
+
+	SetImpassableTrap(PlayerTalkEventID)
+	SetImpassableTrap(NPCTalkEventID)
+	SetImpassableTrap(EnemyTalkEventID)
+
+	SetImpassableTrap(PlayerTalkID)
+	SetImpassableTrap(NPCTalkID)
+	SetImpassableTrap(EnemyTalkID)
+
+	SetImpassableTrap(DecoyPokemonID)
+	SetImpassableTrap(LegendaryPokemonID)
+
+
+	//SetImpassableTrap(TeleportPadID)
+	//SetImpassableTrap(IceTileID)
+	//SetImpassableTrap(SlideTileID)
+	//SetImpassableTrap(ArrowTileID)
+	//SetImpassableTrap(HealTileID)
+
+	SetImpassableTrap(SpawnGrassID)
+	SetImpassableTrap(SpawnBurrowID)
+	SetImpassableTrap(SpawnWaterID)
+	//SetImpassableTrap(SummonAnimID)
+	SetImpassableTrap(OpenBallID)
+	SetImpassableTrap(SavePointID)
+
+	SetImpassableTrap(RedPokeballItemID)
+	SetImpassableTrap(GoldPokeballItemID)
+	//SetImpassableTrap(HiddenPokeballItemID)
  
 	
 
@@ -132,26 +315,16 @@
 	TrapBreakableTerrainList: 
 	TrapBreakableTerrain(0x34,0xFF,20) 		//Snag
 	TrapBreakableTerrain(0x1C,0xFE,0xFF) 	//Wall
+	TrapBreakableTerrain(0x1F,0xFC,40) 		//Door
 	TrapBreakableTerrainListEnd
 	
 
+	//Example usages
 	#include "Modules/DragonVeins/DragonVeins.event"
 	#include "Modules/HealTiles/HealTiles.event"
+	#include "Modules/TelliusTorches/TelliusTorches.event"
+	#include "Modules/Pokemblem/PokemblemTraps.event"
 	
-	//This is here to satiate a hardcoded requirement if heal tiles are not installed.
-	#ifndef HEAL_TILES
-	HealTileTrapIDLink:
-	WORD 0
-	#endif // HEAL_TILES
-	
-	//Tellius Torches are not included in this distribution,
-	//but there are references to it in the code still.
-	//This exists to satiate them, remove it if you add Tellius Torches.
-	TelliusTorchTrapIDLink:
-	TelliusTorchOffMapSpriteIDLink:
-	TelliusTorchOnMapSpriteIDLink:
-	WORD 0
+
 	
 #endif // TRAP_REWORK_INSTALLED
-
-#endif // TRAP_REWORK
