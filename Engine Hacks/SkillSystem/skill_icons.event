@@ -938,6 +938,168 @@ ORG SkillIcon(Skill8ID)
 ORG SkillIcon(Skill9ID)
 #incbin "SkillIcons/Skill9.dmp"
 
+
+ORG SkillIcon(Skill10ID)
+#incbin "SkillIcons/Skill10.dmp"
+
+ORG SkillIcon(Skill11ID)
+#incbin "SkillIcons/Skill11.dmp"
+
+ORG SkillIcon(Skill12ID)
+#incbin "SkillIcons/Skill12.dmp"
+
+ORG SkillIcon(Skill13ID)
+#incbin "SkillIcons/Skill13.dmp"
+
+ORG SkillIcon(Skill14ID)
+#incbin "SkillIcons/Skill14.dmp"
+
+ORG SkillIcon(Skill15ID)
+#incbin "SkillIcons/Skill15.dmp"
+
+ORG SkillIcon(Skill16ID)
+#incbin "SkillIcons/Skill16.dmp"
+
+ORG SkillIcon(Skill17ID)
+#incbin "SkillIcons/Skill17.dmp"
+
+ORG SkillIcon(Skill18ID)
+#incbin "SkillIcons/Skill18.dmp"
+
+ORG SkillIcon(Skill19ID)
+#incbin "SkillIcons/Skill19.dmp"
+
+
+
+ORG SkillIcon(Skill20ID)
+#incbin "SkillIcons/Skill20.dmp"
+
+ORG SkillIcon(Skill21ID)
+#incbin "SkillIcons/Skill21.dmp"
+
+ORG SkillIcon(Skill22ID)
+#incbin "SkillIcons/Skill22.dmp"
+
+ORG SkillIcon(Skill23ID)
+#incbin "SkillIcons/Skill23.dmp"
+
+ORG SkillIcon(Skill24ID)
+#incbin "SkillIcons/Skill24.dmp"
+
+ORG SkillIcon(Skill25ID)
+#incbin "SkillIcons/Skill25.dmp"
+
+ORG SkillIcon(Skill26ID)
+#incbin "SkillIcons/Skill26.dmp"
+
+ORG SkillIcon(Skill27ID)
+#incbin "SkillIcons/Skill27.dmp"
+
+ORG SkillIcon(Skill28ID)
+#incbin "SkillIcons/Skill28.dmp"
+
+ORG SkillIcon(Skill29ID)
+#incbin "SkillIcons/Skill29.dmp"
+
+ORG SkillIcon(Skill30ID)
+#incbin "SkillIcons/Skill30.dmp"
+ORG SkillIcon(Skill31ID)
+#incbin "SkillIcons/Skill31.dmp"
+ORG SkillIcon(Skill32ID)
+#incbin "SkillIcons/Skill32.dmp"
+ORG SkillIcon(Skill33ID)
+#incbin "SkillIcons/Skill33.dmp"
+ORG SkillIcon(Skill34ID)
+#incbin "SkillIcons/Skill34.dmp"
+ORG SkillIcon(Skill35ID)
+#incbin "SkillIcons/Skill35.dmp"
+ORG SkillIcon(Skill36ID)
+#incbin "SkillIcons/Skill36.dmp"
+ORG SkillIcon(Skill37ID)
+#incbin "SkillIcons/Skill37.dmp"
+ORG SkillIcon(Skill38ID)
+#incbin "SkillIcons/Skill38.dmp"
+ORG SkillIcon(Skill39ID)
+#incbin "SkillIcons/Skill39.dmp"
+
+ORG SkillIcon(Skill40ID)
+#incbin "SkillIcons/Skill40.dmp"
+
+ORG SkillIcon(Skill41ID)
+#incbin "SkillIcons/Skill41.dmp"
+
+ORG SkillIcon(Skill42ID)
+#incbin "SkillIcons/Skill42.dmp"
+
+ORG SkillIcon(Skill43ID)
+#incbin "SkillIcons/Skill43.dmp"
+
+ORG SkillIcon(Skill44ID)
+#incbin "SkillIcons/Skill44.dmp"
+
+ORG SkillIcon(Skill45ID)
+#incbin "SkillIcons/Skill45.dmp"
+
+ORG SkillIcon(Skill46ID)
+#incbin "SkillIcons/Skill46.dmp"
+
+ORG SkillIcon(Skill47ID)
+#incbin "SkillIcons/Skill47.dmp"
+
+ORG SkillIcon(Skill48ID)
+#incbin "SkillIcons/Skill48.dmp"
+
+ORG SkillIcon(Skill49ID)
+#incbin "SkillIcons/Skill49.dmp"
+
+
+ORG SkillIcon(Skill50ID)
+#incbin "SkillIcons/Skill50.dmp"
+ORG SkillIcon(Skill51ID)
+#incbin "SkillIcons/Skill51.dmp"
+ORG SkillIcon(Skill52ID)
+#incbin "SkillIcons/Skill52.dmp"
+ORG SkillIcon(Skill53ID)
+#incbin "SkillIcons/Skill53.dmp"
+ORG SkillIcon(Skill54ID)
+#incbin "SkillIcons/Skill54.dmp"
+ORG SkillIcon(Skill55ID)
+#incbin "SkillIcons/Skill55.dmp"
+ORG SkillIcon(Skill56ID)
+#incbin "SkillIcons/Skill56.dmp"
+ORG SkillIcon(Skill57ID)
+#incbin "SkillIcons/Skill57.dmp"
+ORG SkillIcon(Skill58ID)
+#incbin "SkillIcons/Skill58.dmp"
+ORG SkillIcon(Skill59ID)
+#incbin "SkillIcons/Skill59.dmp"
+
+ORG SkillIcon(Skill60ID)
+#incbin "SkillIcons/Skill60.dmp"
+
+ORG SkillIcon(Skill61ID)
+#incbin "SkillIcons/Skill61.dmp"
+ORG SkillIcon(Skill62ID)
+#incbin "SkillIcons/Skill62.dmp"
+ORG SkillIcon(Skill63ID)
+#incbin "SkillIcons/Skill63.dmp"
+ORG SkillIcon(Skill64ID)
+#incbin "SkillIcons/Skill64.dmp"
+ORG SkillIcon(Skill65ID)
+#incbin "SkillIcons/Skill65.dmp"
+ORG SkillIcon(Skill66ID)
+#incbin "SkillIcons/Skill66.dmp"
+ORG SkillIcon(Skill67ID)
+#incbin "SkillIcons/Skill67.dmp"
+ORG SkillIcon(Skill68ID)
+#incbin "SkillIcons/Skill68.dmp"
+ORG SkillIcon(Skill69ID)
+#incbin "SkillIcons/Skill69.dmp"
+
+ORG SkillIcon(Skill70ID)
+#incbin "SkillIcons/Skill70.dmp"
+
+
 ORG SkillIcon(TripleHitID)
 #incbin "SkillIcons/TripleHit.dmp"
 

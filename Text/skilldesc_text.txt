@@ -1231,54 +1231,89 @@ Vengeance: Add half of damage[N]
 taken to damage dealt.[N]
 (Skill % activation)[X]
 
-## SD_Synchronize
-Synchronize: Statuses are also[N]
-applied to the attacker.[X]
 
-## SD_Swarp
-Swarp: Allows unit to swap[N]
-positions with an ally in[N]
-Mag/2 range.[X]
+## UM_Rally
+ Rally[X]
 
-## SD_SK1
-My Skill: Has an effect1.[X]
+## UM_RallyDesc
+Buff nearby allies.[X]
 
-## SD_SK2
-My Skill: Has an effect2.[X]
+## UM_Lunge
+ Lunge[X]
 
-## SD_SK3
-My Skill: Has an effect3.[X]
+## UM_LungeDesc
+Switch places with opponent[N]
+after combat.[N]
+(3 Durability Per Hit)[X]
 
-## SD_SK4
-My Skill: Has an effect4.[X]
+## UM_Mercy
+ Mercy[X]
 
-## SD_SK5
-My Skill: Has an effect5.[X]
+## UM_MercyDesc
+Leave opponent with[N]
+at least 1 HP.[N]
+(3 Durability Per Hit)[X]
 
-## SD_SK6
-My Skill: Has an effect6.[X]
+## UM_Gamble
+ Gamble[X]
 
-## SD_SK7
-My Skill: Has an effect7.[X]
+## UM_GambleDesc
+2x crit rate, 0.5x hit rate.[N]
+(3 Durability Per Hit)[X]
 
-## SD_SK8
-My Skill: Has an effect8.[X]
 
-## SD_SK9
-My Skill: Has an effect9.[X]
+## UMText_DV
+ Dragon Vein[X]
 
-## SD_Absorb
-Absorb: Heal for 25%[N]
-of damage dealt.[X]
+## UMText_DVDesc
+Use the power of dragons.[X]
 
-## SD_Drain
-Drain: Heal for 50%[N]
-of damage dealt.[X]
+## UM_Shove
+ Shove[X]
 
-## SD_TripleHit
-Triple Hit: Hits 50%[N]
-damage three times.[X]
+## UM_ShoveDesc
+Push an adjacent unit one[N]
+tile away.[X]
 
-## SD_MultiHit
-Multi-Hit: Hits 50%[N]
-damage two to five times.[X]
+## UM_Smite
+ Smite[X]
+
+## UM_SmiteDesc
+Push an adjacent unit two[N]
+tiles away.[X]
+
+## UM_Pivot
+ Pivot[X]
+
+## UM_PivotDesc
+Move to opposite side of[N]
+an adjacent ally.[X]
+
+## UM_Reposition
+ Reposition[X]
+
+## UM_RepositionDesc
+Move adjacent ally to this[N]
+unit's opposite side.[X]
+
+## UM_Swap
+ Swap[X]
+
+## UM_SwapDesc
+Swap positions with adjacent[N]
+ally.[X]
+
+## UM_Capture
+ Capture[X]
+
+## UM_CaptureDesc
+Strike a fatal blow with reduced[N]
+stats to capture an enemy.[X]
+
+
+## UM_Swarp
+ Swarp[X]
+
+## UM_SwarpDesc
+Swap positions with a distant[N]
+ally.[X]

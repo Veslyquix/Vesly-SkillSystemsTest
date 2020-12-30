@@ -1,0 +1,222 @@
+## SD_SK1
+Wild: 130% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 3.[X]
+
+## SD_SK2
+Feral: 150% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 5.[X]
+
+## SD_SK3
+Ferocious: 170% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 7.[X]
+
+## SD_SK4
+Savage: 190% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 9.[X]
+
+
+## SD_SK5
+Strong: +6 Atk.[N]
+Halved Avoid. Hp Cost: 3.[X]
+
+## SD_SK6
+Fierce: +9 Atk.[N]
+Halved Avoid. Hp Cost: 5.[X]
+
+## SD_SK7
+Power: +12 Atk.[N]
+Halved Avoid. Hp Cost: 7.[X]
+
+## SD_SK8
+Vicious: +15 Atk.[N]
+Halved Avoid. Hp Cost: 9.[X]
+
+
+## SD_SK9
+Hasty: +5 AS, 110% Atk.[N]
+-10% Def/Res. Hp Cost: 3.[X]
+
+## SD_SK10
+Quick: +8 AS, 115% Atk.[N]
+-15% Def/Res. Hp Cost: 5.[X]
+
+## SD_SK11
+Rapid: +12 AS, 120% Atk.[N]
+-20% Def/Res. Hp Cost: 7.[X]
+
+## SD_SK12
+Bullet: 150% AS, 130% Atk.[N]
+-25% Def/Res. Hp Cost: 10.[X]
+
+
+## SD_SK13
+Graceful: +15 Avoid, 110% Def/Res.[N]
+Hp Cost: 2.[X]
+
+## SD_SK14
+Nimble: +20 Avoid, 115% Def/Res.[N]
+Hp Cost: 4.[X]
+
+## SD_SK15
+Agile: +25 Avoid, 120% Def/Res.[N]
+Hp Cost: 6.[X]
+
+## SD_SK16
+Acrobatic: 150% Avoid, 130% Def/Res.[N]
+Hp Cost: 8.[X]
+
+
+## SD_SK17
+Keen: +25 Hit, 80% Atk.[N]
+Hp Cost: 2.[X]
+
+## SD_SK18
+Marked: +35 Hit, 85% Atk.[N]
+Hp Cost: 3.[X]
+
+## SD_SK19
+Exact: +45 Hit, 90% Atk.[N]
+Hp Cost: 4.[X]
+
+## SD_SK20
+Precise: +55 Hit, 95% Atk.[N]
+Hp Cost: 5.[X]
+
+## SD_SK21
+Swift: Perfect accuracy.[N]
+Hp Cost: 6.[X]
+
+
+## SD_SK22
+Sturdy: +5 Def/Res, +5 Avoid.[N]
+Hp Cost: 3.[X]
+
+## SD_SK23
+Solid: +7 Def/Res, +10 Avoid.[N]
+Hp Cost: 5.[X]
+
+## SD_SK24
+Burly: +9 Def/Res, +15 Avoid.[N]
+Hp Cost: 7.[X]
+
+## SD_SK25
+Tanky: 150% Def/Res, +20 Avoid.[N]
+Hp Cost: 9.[X]
+
+
+## SD_SK26
+Careful: +25 critical evade.[N]
+Hp Cost: 4.[X]
+
+## SD_SK27
+Cautious: Cannot be crit.[N]
+Hp Cost: 7.[X]
+
+## SD_SK28
+Focused: Double Crit Rate.[N]
+75% Def/Res. Hp Cost: 5.[X]
+
+
+
+## SD_SK29
+My Skill 29: Has an effect.[X]
+## SD_SK30
+My Skill 30: Has an effect.[X]
+## SD_SK31
+My Skill 31: Has an effect.[X]
+## SD_SK32
+My Skill 32: Has an effect.[X]
+## SD_SK33
+My Skill 33: Has an effect.[X]
+## SD_SK34
+My Skill 34: Has an effect.[X]
+## SD_SK35
+My Skill 35: Has an effect.[X]
+## SD_SK36
+My Skill 36: Has an effect.[X]
+## SD_SK37
+My Skill 37: Has an effect.[X]
+## SD_SK38
+My Skill 38: Has an effect.[X]
+## SD_SK39
+My Skill 39: Has an effect.[X]
+## SD_SK40
+My Skill 40: Has an effect.[X]
+## SD_SK41
+My Skill 41: Has an effect.[X]
+## SD_SK42
+My Skill 42: Has an effect.[X]
+## SD_SK43
+My Skill 43: Has an effect.[X]
+## SD_SK44
+My Skill 44: Has an effect.[X]
+## SD_SK45
+My Skill 45: Has an effect.[X]
+## SD_SK46
+My Skill 46: Has an effect.[X]
+## SD_SK47
+My Skill 47: Has an effect.[X]
+## SD_SK48
+My Skill 48: Has an effect.[X]
+## SD_SK49
+My Skill 49: Has an effect.[X]
+## SD_SK50
+My Skill 50: Has an effect.[X]
+## SD_SK51
+My Skill 51: Has an effect.[X]
+## SD_SK52
+My Skill 52: Has an effect.[X]
+## SD_SK53
+My Skill 53: Has an effect.[X]
+## SD_SK54
+My Skill 54: Has an effect.[X]
+## SD_SK55
+My Skill 55: Has an effect.[X]
+## SD_SK56
+My Skill 56: Has an effect.[X]
+## SD_SK57
+My Skill 57: Has an effect.[X]
+## SD_SK58
+My Skill 58: Has an effect.[X]
+## SD_SK59
+My Skill 59: Has an effect.[X]
+## SD_SK60
+My Skill 60: Has an effect.[X]
+## SD_SK61
+My Skill 61: Has an effect.[X]
+## SD_SK62
+My Skill 62: Has an effect.[X]
+## SD_SK63
+My Skill 63: Has an effect.[X]
+## SD_SK64
+My Skill 64: Has an effect.[X]
+## SD_SK65
+My Skill 65: Has an effect.[X]
+## SD_SK66
+My Skill 66: Has an effect.[X]
+## SD_SK67
+My Skill 67: Has an effect.[X]
+## SD_SK68
+My Skill 68: Has an effect.[X]
+## SD_SK69
+My Skill 69: Has an effect.[X]
+## SD_SK70
+My Skill 70: Has an effect.[X]
+
+
+## SD_Absorb
+Absorb: Heal for 25%[N]
+of damage dealt.[X]
+
+## SD_Drain
+Drain: Heal for 50%[N]
+of damage dealt.[X]
+
+## SD_TripleHit
+Triple Hit: Hits 50%[N]
+damage three times.[X]
+
+## SD_MultiHit
+Multi-Hit: Hits 50%[N]
+damage two to five times.[X]
+

@@ -77,6 +77,7 @@ no_personal:
 no_class:
 	@ learned skills, up to 4
 	cmp r6, #0x46
+	@cmp r6, #0x0	@all units to be generic
 	bhi generic_unit
 
 	ldr r0, =BWLTable

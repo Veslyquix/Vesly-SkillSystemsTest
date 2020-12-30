@@ -1,0 +1,150 @@
+## UM_Skill43
+ Skill43[X]
+## UM_Skill43_Desc
+Has a variable effect.[X]
+
+## UM_Skill44
+ Skill44[X]
+## UM_Skill44_Desc
+Has a variable effect.[X]
+
+## UM_Skill45
+ Skill45[X]
+## UM_Skill45_Desc
+Has a variable effect.[X]
+
+## UM_Skill46
+ Skill46[X]
+## UM_Skill46_Desc
+Has a variable effect.[X]
+
+## UM_Skill47
+ Skill47[X]
+## UM_Skill47_Desc
+Has a variable effect.[X]
+
+## UM_Skill48
+ Skill48[X]
+## UM_Skill48_Desc
+Has a variable effect.[X]
+
+## UM_Skill49
+ Skill49[X]
+## UM_Skill49_Desc
+Has a variable effect.[X]
+
+## UM_Skill50
+ Skill50[X]
+## UM_Skill50_Desc
+Has a variable effect.[X]
+
+## UM_Skill51
+ Skill51[X]
+## UM_Skill51_Desc
+Has a variable effect.[X]
+
+## UM_Skill52
+ Skill52[X]
+## UM_Skill52_Desc
+Has a variable effect.[X]
+
+## UM_Skill53
+ Skill53[X]
+## UM_Skill53_Desc
+Has a variable effect.[X]
+
+## UM_Skill54
+ Skill54[X]
+## UM_Skill54_Desc
+Has a variable effect.[X]
+
+## UM_Skill55
+ Skill55[X]
+## UM_Skill55_Desc
+Has a variable effect.[X]
+
+## UM_Skill56
+ Skill56[X]
+## UM_Skill56_Desc
+Has a variable effect.[X]
+
+## UM_Skill57
+ Skill57[X]
+## UM_Skill57_Desc
+Has a variable effect.[X]
+
+## UM_Skill58
+ Skill58[X]
+## UM_Skill58_Desc
+Has a variable effect.[X]
+
+## UM_Skill59
+ Skill59[X]
+## UM_Skill59_Desc
+Has a variable effect.[X]
+
+## UM_Skill60
+ Skill60[X]
+## UM_Skill60_Desc
+Has a variable effect.[X]
+
+## UM_Skill61
+ Skill61[X]
+## UM_Skill61_Desc
+Has a variable effect.[X]
+
+## UM_Skill62
+ Skill62[X]
+## UM_Skill62_Desc
+Has a variable effect.[X]
+
+## UM_Skill63
+ Skill63[X]
+## UM_Skill63_Desc
+Has a variable effect.[X]
+
+## UM_Skill64
+ Skill64[X]
+## UM_Skill64_Desc
+Has a variable effect.[X]
+
+## UM_Skill65
+ Skill65[X]
+## UM_Skill65_Desc
+Has a variable effect.[X]
+
+## UM_Skill66
+ Skill66[X]
+## UM_Skill66_Desc
+Has a variable effect.[X]
+
+## UM_Skill67
+ Skill67[X]
+## UM_Skill67_Desc
+Has a variable effect.[X]
+
+## UM_Skill68
+ Skill68[X]
+## UM_Skill68_Desc
+Has a variable effect.[X]
+
+## UM_Skill69
+ Skill69[X]
+## UM_Skill69_Desc
+Has a variable effect.[X]
+
+## UM_Skill70
+ Skill70[X]
+## UM_Skill70_Desc
+Has a variable effect.[X]
+
+## SD_Synchronize
+Synchronize: Statuses are also[N]
+applied to the attacker.[X]
+
+## SD_Swarp
+Swarp: Allows unit to swap[N]
+positions with an ally in[N]
+Mag/2 range.[X]
+
+

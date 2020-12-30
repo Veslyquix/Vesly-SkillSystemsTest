@@ -17,7 +17,7 @@ Learned  [X]
 
 #include "statscreen_text.txt"
 
-#include "unitmenu_text.txt"
+
 
 #0xd4c LikesText
 #first text ID in the free block
@@ -98,6 +98,20 @@ Mov[X]
 A scroll that teaches[N]
 a skill when used.[X]
 
-#include "skilldesc_text.txt"
 
+#include "skilldesc_text.txt"
 #include "unitinfo_text.txt"
+
+# 0x11FF DUMMYTEST1 
+asdfQWRER[X]
+
+#include "unitmenu_text.txt"
+
+# 0x126F DUMMYTEST3 
+asdfQWRER[X]
+#include "unitmenu_text part 2.txt"
+
+# 0x13A9 DUMMYTEST2 
+asdfQWRER[X]
+
+#include "skilldesc_text part 2.txt"

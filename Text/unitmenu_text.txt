@@ -1,81 +1,3 @@
-## UM_Rally
- Rally[X]
-
-## UM_RallyDesc
-Buff nearby allies.[X]
-
-## UM_Lunge
- Lunge[X]
-
-## UM_LungeDesc
-Switch places with opponent[N]
-after combat.[N]
-(3 Durability Per Hit)[X]
-
-## UM_Mercy
- Mercy[X]
-
-## UM_MercyDesc
-Leave opponent with[N]
-at least 1 HP.[N]
-(3 Durability Per Hit)[X]
-
-## UM_Gamble
- Gamble[X]
-
-## UM_GambleDesc
-2x crit rate, 0.5x hit rate.[N]
-(3 Durability Per Hit)[X]
-
-
-## UMText_DV
- Dragon Vein[X]
-
-## UMText_DVDesc
-Use the power of dragons.[X]
-
-## UM_Shove
- Shove[X]
-
-## UM_ShoveDesc
-Push an adjacent unit one[N]
-tile away.[X]
-
-## UM_Smite
- Smite[X]
-
-## UM_SmiteDesc
-Push an adjacent unit two[N]
-tiles away.[X]
-
-## UM_Pivot
- Pivot[X]
-
-## UM_PivotDesc
-Move to opposite side of[N]
-an adjacent ally.[X]
-
-## UM_Reposition
- Reposition[X]
-
-## UM_RepositionDesc
-Move adjacent ally to this[N]
-unit's opposite side.[X]
-
-## UM_Swap
- Swap[X]
-
-## UM_SwapDesc
-Swap positions with adjacent[N]
-ally.[X]
-
-## UM_Capture
- Capture[X]
-
-## UM_CaptureDesc
-Strike a fatal blow with reduced[N]
-stats to capture an enemy.[X]
-
 ## UM_EditSkill
  Edit Skills[X]
 
@@ -154,9 +76,249 @@ A precision attack that always[N]
 hits and does 1.5x damage.[N]
 (4 Durability Per Hit)[X]
 
-## UM_Swarp
- Swarp[X]
 
-## UM_SwarpDesc
-Swap positions with a distant[N]
-ally.[X]
+
+
+
+
+## UM_Skill1
+ Wild[X]
+## UM_Skill1_Desc
+130% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 3.[X]
+
+## UM_Skill2
+ Feral[X]
+## UM_Skill2_Desc
+150% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 5.[X]
+
+
+## UM_Skill3
+ Ferocious[X]
+## UM_Skill3_Desc
+170% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 7.[X]
+
+
+## UM_Skill4
+ Savage[X]
+## UM_Skill4_Desc
+190% Atk, -20 Hit.[N]
+50% Def/Res. Hp Cost: 9.[X]
+
+## UM_Skill5
+ Strong[X]
+## UM_Skill5_Desc
++6 Atk.[N]
+Halved Avoid. Hp Cost: 3.[X]
+
+## UM_Skill6
+ Fierce[X]
+## UM_Skill6_Desc
++9 Atk.[N]
+Halved Avoid. Hp Cost: 5.[X]
+
+## UM_Skill7
+ Power[X]
+## UM_Skill7_Desc
++12 Atk.[N]
+Halved Avoid. Hp Cost: 7.[X]
+
+## UM_Skill8
+ Vicious[X]
+## UM_Skill8_Desc
++15 Atk.[N]
+Halved Avoid. Hp Cost: 9.[X]
+
+## UM_Skill9
+ Hasty[X]
+## UM_Skill9_Desc
++5 AS, 110% Atk.[N]
+-10% Def/Res. Hp Cost: 3.[X]
+
+## UM_Skill10
+ Quick[X]
+## UM_Skill10_Desc
++8 AS, 115% Atk.[N]
+-15% Def/Res. Hp Cost: 5.[X]
+
+
+## UM_Skill11
+ Rapid[X]
+## UM_Skill11_Desc
++12 AS, 120% Atk.[N]
+-20% Def/Res. Hp Cost: 7.[X]
+
+## UM_Skill12
+ Bullet[X]
+## UM_Skill12_Desc
+150% AS, 130% Atk.[N]
+-25% Def/Res. Hp Cost: 10.[X]
+
+## UM_Skill13
+ Graceful[X]
+## UM_Skill13_Desc
++15 Avoid, 110% Def/Res.[N]
+Hp Cost: 2.[X]
+
+## UM_Skill14
+ Nimble[X]
+## UM_Skill14_Desc
++20 Avoid, 115% Def/Res.[N]
+Hp Cost: 4.[X]
+
+## UM_Skill15
+ Agile[X]
+## UM_Skill15_Desc
+Agile: +25 Avoid, 120% Def/Res.[N]
+Hp Cost: 6.[X]
+
+## UM_Skill16
+ Acrobatic[X]
+## UM_Skill16_Desc
+150% Avoid, 130% Def/Res.[N]
+Hp Cost: 8.[X]
+
+## UM_Skill17
+ Keen[X]
+## UM_Skill17_Desc
++25 Hit, 80% Atk.[N]
+Hp Cost: 2.[X]
+
+## UM_Skill18
+ Marked[X]
+## UM_Skill18_Desc
++35 Hit, 85% Atk.[N]
+Hp Cost: 3.[X]
+
+## UM_Skill19
+ Exact[X]
+## UM_Skill19_Desc
++45 Hit, 90% Atk.[N]
+Hp Cost: 4.[X]
+
+## UM_Skill20
+ Precise[X]
+## UM_Skill20_Desc
++55 Hit, 95% Atk.[N]
+Hp Cost: 5.[X]
+
+## UM_Skill21
+ Swift[X]
+## UM_Skill21_Desc
+Perfect accuracy.[N]
+Hp Cost: 6.[X]
+
+## UM_Skill22
+ Sturdy[X]
+## UM_Skill22_Desc
++5 Def/Res, +5 Avoid.[N]
+Hp Cost: 3.[X]
+
+## UM_Skill23
+ Solid[X]
+## UM_Skill23_Desc
++7 Def/Res, +10 Avoid.[N]
+Hp Cost: 5.[X]
+
+## UM_Skill24
+ Burly[X]
+## UM_Skill24_Desc
++9 Def/Res, +15 Avoid.[N]
+Hp Cost: 7.[X]
+
+## UM_Skill25
+ Tanky[X]
+## UM_Skill25_Desc
+Tanky: 150% Def/Res, +20 Avoid.[N]
+Hp Cost: 9.[X]
+
+## UM_Skill26
+ Careful[X]
+## UM_Skill26_Desc
+Careful: +25 critical evade.[N]
+Hp Cost: 4.[X]
+
+## UM_Skill27
+ Cautious[X]
+## UM_Skill27_Desc
+Cautious: Cannot be crit.[N]
+Hp Cost: 7.[X]
+
+## UM_Skill28
+ Focused[X]
+## UM_Skill28_Desc
+Double Crit Rate.[N]
+75% Def/Res. Hp Cost: 5.[X]
+
+## UM_Skill29
+ Skill29[X]
+## UM_Skill29_Desc
+Has a variable effect.[X]
+
+## UM_Skill30
+ Skill30[X]
+## UM_Skill30_Desc
+Has a variable effect.[X]
+
+## UM_Skill31
+ Skill31[X]
+## UM_Skill31_Desc
+Has a variable effect.[X]
+
+## UM_Skill32
+ Skill32[X]
+## UM_Skill32_Desc
+Has a variable effect.[X]
+
+## UM_Skill33
+ Skill33[X]
+## UM_Skill33_Desc
+Has a variable effect.[X]
+
+## UM_Skill34
+ Skill34[X]
+## UM_Skill34_Desc
+Has a variable effect.[X]
+
+## UM_Skill35
+ Skill35[X]
+## UM_Skill35_Desc
+Has a variable effect.[X]
+
+## UM_Skill36
+ Skill36[X]
+## UM_Skill36_Desc
+Has a variable effect.[X]
+
+## UM_Skill37
+ Skill37[X]
+## UM_Skill37_Desc
+Has a variable effect.[X]
+
+## UM_Skill38
+ Skill38[X]
+## UM_Skill38_Desc
+Has a variable effect.[X]
+
+## UM_Skill39
+ Skill39[X]
+## UM_Skill39_Desc
+Has a variable effect.[X]
+
+## UM_Skill40
+ Skill40[X]
+## UM_Skill40_Desc
+Has a variable effect.[X]
+
+## UM_Skill41
+ Skill41[X]
+## UM_Skill41_Desc
+Has a variable effect.[X]
+
+## UM_Skill42
+ Skill42[X]
+## UM_Skill42_Desc
+Has a variable effect.[X]
+

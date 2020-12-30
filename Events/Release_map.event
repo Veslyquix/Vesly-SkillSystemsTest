@@ -113,9 +113,9 @@ UNIT
 
 EnemyUnits:
 UNIT Morva_Ch20 0x3B 0x40 0xA5    [15,2] 0b 0x0 0x0 0x0 [WretchedAir,0x0,0x0,0x0] AttackInRangeAI
-UNIT ONeill Fighter 0x40 0xA5     [8,19] 0b 0x0 0x0 0x0 [SteelAxe, HandAxe] AttackInRangeAI
-UNIT Breguet Knight 0x40 0xA5     [5,18] 0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
-UNIT Bone Brigand 0x40 0xA5       [11,17] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT ONeill Fighter 0x40 0xA5     [8,19] 0b 0x0 0x0 0x0 [0x0,0x0] AttackInRangeAI
+UNIT Breguet Knight 0x40 0xA5     [8,21] 0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
+UNIT Bone Brigand 0x40 0xA5       [10,20] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Bazba Brigand 0x40 0xA5      [16,18] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Saar Knight 0x40 0xA5        [8,15] 0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
 UNIT Novala Shaman 0x40 0xA5      [12,13] 0 0 0 0 [Nosferatu] AttackInRangeAI
@@ -186,21 +186,33 @@ VillageEvent:
 
 HouseEvent:
 	// Set parameters
-	SVAL r1 NiceThighsID
-	SVAL r2 (-1) // (-1) is active unit
+//BYTE  $40 $05 $02 $00 $7C $43 $80 $08 //sval s2 to 0880437C
+SVAL 0x2 0x880437C
+BYTE $40 $0D $68 $00 $01 $00 $00 $09 //call ASMC Set unit status rom unit struct on Knoll
+
+BYTE $29 $26 $1F $00 //cam1 to Knoll
+
+BYTE $20 $38 $00 $00 //set unit 0 as active
+
+//BYTE $28 $02 $07 $00 $20 $01 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00;
+
+WORD 0x13083C21 //cursor to 8x, 19y
+
+
+	//SVAL r1 NiceThighsID
+	//SVAL r2 (-1) // (-1) is active unit
 	
 	// Check if unit has skill
 	// If they have, goto label #0 (end)
-	ASMC (ASMC_HasSkill+1)
-	BNE 0 rC r0
+	//ASMC (ASMC_HasSkill+1)
+	//BNE 0 rC r0
 	
 	// Learn skill to unit
-	ASMC (ASMC_LearnNewSkill+1)
+	//ASMC (ASMC_LearnNewSkill+1)
 	
 LABEL 0
 	// end
 	
-	Text(HouseText)
 	
 	NoFade
 	ENDA

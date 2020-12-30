@@ -111,6 +111,7 @@ cmp r1, r0
 bge NoCap
   @if hp will cap, set r0 to damage taken
   mov r0, r1
+
 NoCap:
 strb r0, [r6, #5] @write hp change
 mov r2, #0x13
