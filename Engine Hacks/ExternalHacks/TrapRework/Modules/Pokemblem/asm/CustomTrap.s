@@ -151,6 +151,7 @@ bx r1
 
 
 MyTrapEffect:
+push {r4, lr}
 @Basically the execute event routine.
 
 @But first, we need to find the event associated with this location.
@@ -163,8 +164,15 @@ bl GetAdjacentTrap
 mov r4, r0  @&The DV
 ldrb r1, [r4, #0x3]     @effect id
 lsl r1, #0x2
-ldr r0, EventAddressTable
+ldr r0, TrapEffectTableOffset
 ldr r0, [r0, r1]
+
+@ldr r0, =#0x8BD6B70	
+
+cmp r0, #0
+beq DeleteTrap
+
+
 mov r1, #0x0            @Fade at the end?
 @At this point, r0 should be the pointer to the event to execute.
 
@@ -176,6 +184,7 @@ bl goto_r3
     @cmp r0, #1
     @bgt ReduceUses
 
+DeleteTrap:
 @Remove the DV trap from the map.
 mov r0, r4
 
@@ -193,6 +202,9 @@ ldr r1, CurrentUnitFateData	@these four lines copied from wait routine
 mov r0, #0x1
 strb r0, [r1,#0x11]
 mov r0, #0x17	@makes the unit wait?? makes the menu disappear after command is selected??
+
+
+@mov r0,#0x94		@play beep sound & end menu on next frame & clear menu graphics
 
 pop {r4}
 pop {r3}
@@ -234,5 +246,6 @@ GetTrap:
     .long 0x802E1F1
 RemoveTrap:
     .long 0x802EA91
-EventAddressTable:
+TrapEffectTableOffset:
+@EventAddressTable:
     @.long 0xDEADBEEF @Should be defined in the install file
