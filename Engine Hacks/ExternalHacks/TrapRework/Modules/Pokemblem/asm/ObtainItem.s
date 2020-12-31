@@ -21,8 +21,11 @@
 .endm
 
 
+.ltorg
+.align
 
 
+.equ GetTrapAt,0x802e1f0
 .equ CheckEventId,0x8083da8
 .equ SpawnTrap,0x802E2B8 @r0 = x coord, r1 = y coord, r2 = trap ID
 .equ Init_ReturnPoint,0x8037901
@@ -56,11 +59,7 @@ ReturnPoint:
 ldr r3,=Init_ReturnPoint
 bx r3
 
-.ltorg
-.align
 
-
-.equ GetTrapAt,0x802e1f0
 
 GetAdjacentTrap: @r0 = unit we're checking for adjacency to
 push {r4-r6,r14}
