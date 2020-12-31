@@ -79,9 +79,9 @@ UnitMenuTable:
 
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, MyTrapUsability, MyTrapEffect)
 
+  MenuCommand(UMText_DV, UMText_DVDesc, GreenText, ObtainItemUsability, ObtainItemEffect)
 
-
-
+  MenuCommand(UMText_DV, UMText_DVDesc, GreenText, TelliusTorchUsability, TelliusTorchEffect)
 
   #endif // DRAGON_VEINS
   

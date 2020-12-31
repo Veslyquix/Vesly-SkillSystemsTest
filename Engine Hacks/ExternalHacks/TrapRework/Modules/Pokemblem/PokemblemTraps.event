@@ -19,11 +19,18 @@
 	//macros for usage
 #define Pokemblem(XX,YY,EffectID) "BYTE CustomTrapID XX YY EffectID 0x0 0x0"
 #define Pokemblem(XX,YY,EffectID, TextID) "BYTE CustomTrapID XX YY EffectID; SHORT TextID"
-
 #define GeneralEffect(id, event) "PUSH; ORG TrapEffectTableOffset + (4 * id); POIN event; POP"
 
+#define ObtainItemEffect(id, event) "PUSH; ORG TrapEffectTableOffset + (4 * id); POIN event; POP"
+#define ObtainItem(XX,YY,CompletionFlag, ItemID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID 0x0"
+#define ObtainItem(XX,YY,CompletionFlag, ItemID, EffectID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID EffectID"
 
-
+/*
+#define ObtainRareItem(XX,YY,CompletionFlag, ItemID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID 0x0"
+#define ObtainRareItem(XX,YY,CompletionFlag, ItemID, EffectID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID EffectID"
+#define ObtainItem(XX,YY,CompletionFlag, ItemID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID 0x0"
+#define ObtainItem(XX,YY,CompletionFlag, ItemID, EffectID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID EffectID"
+*/
 
 ALIGN 4
 TrapEffectTableOffset:
@@ -37,42 +44,48 @@ POIN TrapEffectTableOffset
 
 
 
-  //GeneralEffect:
-    //#incbin "asm/CustomTrap.dmp"
-    //POIN TrapEffectTableOffset
+// 		Pokeball items 
+
+	#define RedPokeballItemID 0x2A	//respawnable item 0x2A or #42
+	#define GoldPokeballItemID 0x2B	//non-respawnable item
+	#define HiddenPokeballItemID 0x2C	//invisible item 0x2C or #44
+
+#define RedPokeball(XX,YY,EffectID) "BYTE CustomTrapID XX YY EffectID 0x0 0x0"
+#define RedPokeball(XX,YY,EffectID, TextID) "BYTE CustomTrapID XX YY EffectID; SHORT TextID"
+#define GoldPokeball(XX,YY,EffectID) "BYTE CustomTrapID XX YY EffectID 0x0 0x0"
+#define GoldPokeball(XX,YY,EffectID, TextID) "BYTE CustomTrapID XX YY EffectID; SHORT TextID"
+#define HiddenPokeball(XX,YY,EffectID) "BYTE CustomTrapID XX YY EffectID 0x0 0x0"
+#define HiddenPokeball(XX,YY,EffectID, TextID) "BYTE CustomTrapID XX YY EffectID; SHORT TextID"
+
+#define HiddenMapSpriteID 0x69
+
+
+	SetTrapEventInit(RedPokeballItemID,ObtainItemInitialization)
+	SetTrapEventInit(GoldPokeballItemID,ObtainItemInitialization)
+	SetTrapEventInit(HiddenPokeballItemID,ObtainItemInitialization)
+
+	SetTrapMapSprite(RedPokeballItemID,0x65)
+	SetTrapMapSprite(GoldPokeballItemID,0x66)
+	SetTrapMapSprite(HiddenPokeballItemID,0)
+
+	SetTrapMapSpritePalette(RedPokeballItemID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(GoldPokeballItemID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(HiddenPokeballItemID,NPCTrapPaletteWord)
+
+	SetImpassableTrap(RedPokeballItemID)
+	SetImpassableTrap(GoldPokeballItemID)
+	//SetImpassableTrap(HiddenPokeballItemID)
+
+
+
+	SetTrapMapSpriteFunc(RedPokeballItemID,ObtainItemSpriteFunc)
+
+//add to unit menu to make usable 
+#include "asm/ObtainItem.lyn.event"
+POIN TrapEffectTableOffset
 
 
 
 
 
 
-
-/*
-  GeneralUsability:
-    #incbin "asm/DragonVeinUsabilityNoSkill.dmp"
-    WORD DragonVeinTrapID
-    POIN SkillTester
-    WORD DragonsBloodID
-*/
-
-
-
-
-/*
-The .lyn.event needs this:
-
-4 functions 
-
-ORG CURRENTOFFSET+$1;TelliusTorchInitialization:
-ORG CURRENTOFFSET+$90;TelliusTorchUsability:
-ORG CURRENTOFFSET+$2c;TelliusTorchEffect:
-ORG CURRENTOFFSET+$34;TelliusTorchMapSpriteFunc:
-
-And will probably POIN something like this:
-
-POIN TelliusTorchOffMapSpriteIDLink
-POIN TrapRework_NewUpdateAllLightRunes
-POIN TelliusTorchOnMapSpriteIDLink
-
-
-*/

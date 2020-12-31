@@ -55,9 +55,6 @@
 	#define OpenBallID 40
 	#define SavePointID 41
 
-	#define RedPokeballItemID 42	//respawnable item
-	#define GoldPokeballItemID 43	//non-respawnable item
-	#define HiddenPokeballItemID 44	//invisible item 
 
 	
 	#define LightRuneTrapPaletteWord 0xFFFFB080
@@ -125,9 +122,7 @@
 	SetTrapEventInit(OpenBallID,0)
 	SetTrapEventInit(SavePointID,0)
 	
-	SetTrapEventInit(RedPokeballItemID,0)
-	SetTrapEventInit(GoldPokeballItemID,0)
-	SetTrapEventInit(HiddenPokeballItemID,0)
+
 
 	
 	#define SetTrapMapSprite(trapID,mapSpriteID) "PUSH; ORG TrapMapSpriteTable+(trapID-1); BYTE mapSpriteID; POP"
@@ -181,9 +176,7 @@
 	SetTrapMapSprite(OpenBallID,0x64)
 	SetTrapMapSprite(SavePointID,0x68)
 
-	SetTrapMapSprite(RedPokeballItemID,0x65)
-	SetTrapMapSprite(GoldPokeballItemID,0x66)
-	SetTrapMapSprite(HiddenPokeballItemID,0)
+
 
 	//Macro for setting unique cases on trap map sprites
 	#define SetTrapMapSpriteFunc(trapID,ptr) "PUSH; ORG (TrapMapSpriteFuncTable+((trapID-1)*4)); POIN ptr; POP"
@@ -235,9 +228,7 @@
 	SetTrapMapSpritePalette(OpenBallID,NPCTrapPaletteWord)
 	SetTrapMapSpritePalette(SavePointID,NPCTrapPaletteWord)
 	
-	SetTrapMapSpritePalette(RedPokeballItemID,NPCTrapPaletteWord)
-	SetTrapMapSpritePalette(GoldPokeballItemID,NPCTrapPaletteWord)
-	SetTrapMapSpritePalette(HiddenPokeballItemID,NPCTrapPaletteWord)
+
 	
 	
 
@@ -300,9 +291,7 @@
 	SetImpassableTrap(OpenBallID)
 	SetImpassableTrap(SavePointID)
 
-	SetImpassableTrap(RedPokeballItemID)
-	SetImpassableTrap(GoldPokeballItemID)
-	//SetImpassableTrap(HiddenPokeballItemID)
+
  
 	
 
