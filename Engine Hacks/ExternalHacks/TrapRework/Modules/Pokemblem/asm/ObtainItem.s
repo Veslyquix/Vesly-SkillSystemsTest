@@ -38,7 +38,7 @@ ldrb r1,[r5,#2] @y coord
 
 @add CompletionFlag check here to prevent it from spawning would be nice
 @mov r0, #0xB0
-@blh CheckEventId, 
+@blh CheckEventId
 @cmp r0, #0
 @bne ReturnPoint
 @does not seem to work tho not sure why
