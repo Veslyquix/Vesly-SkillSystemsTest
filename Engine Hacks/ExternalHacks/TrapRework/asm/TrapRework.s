@@ -54,12 +54,23 @@ mov r2,r0 @r2 = trap ID
 
 
 @add special cases here for your traps, if needed
+HiddenSprite:
+mov r1, #0x10		@custom traps to use 0x3 as completion flag / hidden sprite 
+cmp r2, r1
+blt HealTiles
+ldrb r0,[r4,#0x3]	@XX 0x01 YY 0x02 completion flag 0x03 to not display, etc. 
+push {r2}
+blh CheckEventId,r1
+pop {r2}
+cmp r0,#0
+bne End
+
+HealTiles:
 @ex. heal tiles
 ldr r1,=HealTileTrapIDLink
 ldrb r1,[r1]
 cmp r2,r1
 bne TorchOnOffCheck
-
 ldrb r0,[r4,#0x7]
 push {r2}
 blh CheckEventId,r1

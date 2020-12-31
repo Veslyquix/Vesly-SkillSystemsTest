@@ -37,6 +37,12 @@ TrapEffectTableOffset:
 ORG currentOffset+(256*4)
 
 
+
+ALIGN 4
+ObtainItemEventTableOffset:
+ORG currentOffset+(256*4)
+
+
 GeneralEffect:
 #include "asm/CustomTrap.lyn.event"
 POIN TrapEffectTableOffset
@@ -82,10 +88,11 @@ POIN TrapEffectTableOffset
 
 //add to unit menu to make usable 
 #include "asm/ObtainItem.lyn.event"
-POIN TrapEffectTableOffset
+POIN ObtainItemEventTableOffset
+WORD RedPokeballItemID
+POIN GiveItemEvent
 
 
 
-
-
+#include "GiveItemEvent.event"
 
