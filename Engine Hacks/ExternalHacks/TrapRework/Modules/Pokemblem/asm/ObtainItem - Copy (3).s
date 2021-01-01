@@ -23,8 +23,8 @@
 
 .ltorg
 .align
-.equ MemorySlot0,0x30004B8
-.equ MemorySlot3,0x30004C4	@item ID to give @[0x30004C4]!
+
+.equ MemorySlot3,0x30004C4	@item ID to give 
 .equ GetTrapAt,0x802e1f0
 .equ CheckEventId,0x8083da8
 .equ SetFlag, 0x8083D80
@@ -37,6 +37,17 @@ ObtainItemInitialization:
 @r5 = pointer to trap data in events
 ldrb r0,[r5,#1] @x coord
 ldrb r1,[r5,#2] @y coord
+
+@add CompletionFlag check here to prevent it from spawning would be nice
+mov r0, #0xB0
+blh CheckEventId
+cmp r0, #0
+bne ReturnPoint
+@does not seem to work tho not sure why
+
+
+ldrb r0,[r5,#1] @x coord
+ldrb r1,[r5,#2] @y coord
 ldrb r2,[r5] @trap ID
 blh SpawnTrap @returns pointer to trap data in RAM
 
@@ -45,8 +56,8 @@ ldrb r1,[r5,#3] @initial vision range
 strb r1,[r0,#3] 
 ldrb r1,[r5,#4] @set vision range
 strb r1,[r0,#4]
-@ldrb r1,[r5,#5] @set vision range
-@strb r1,[r0,#5]
+ldrb r1,[r5,#5] @set vision range
+strb r1,[r0,#5]
 
 ReturnPoint:
 ldr r3,=Init_ReturnPoint
@@ -58,91 +69,110 @@ GetAdjacentTrap: @r0 = unit we're checking for adjacency to
 push {r4-r6,r14}
 mov r4,r0
 
-ldr r4,=#0x3004E50
-ldr r0,[r4]
-
-mov r4, r0
-
 ldrb r5,[r4,#0x10] @x coord
 ldrb r6,[r4,#0x11] @y coord
-
 
 mov r0,r5
 sub r0,#1
 mov r1,r6
 blh GetTrapAt
 
-mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
-cmp r1, r2
-bge CheckA 
-b ReturnA
-CheckA:
-mov r2, #0x20
-cmp r1, r2
-blt RetTrap
+mov r2, #0x2A
+@ldr r2,=RedPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
-ReturnA:
+mov r2, #0x2B
+@ldr r2,=GoldPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
+
+mov r2, #0x2C
+@ldr r2,=HiddenPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
 mov r0,r5
 mov r1,r6
 sub r1,#1
 blh GetTrapAt
 
-mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
-cmp r1, r2
-bge CheckB 
-b ReturnB
-CheckB:
-mov r2, #0x20
-cmp r1, r2
-blt RetTrap
+mov r2, #0x2A
+@ldr r2,=RedPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
-ReturnB:
+mov r2, #0x2B
+@ldr r2,=GoldPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
+
+mov r2, #0x2C
+@ldr r2,=HiddenPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
 mov r0,r5
 add r0,#1
 mov r1,r6
 blh GetTrapAt
 
-mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
-cmp r1, r2
-bge CheckC 
-b ReturnC
-CheckC:
-mov r2, #0x20
-cmp r1, r2
-blt RetTrap
-ReturnC:
+mov r2, #0x2A
+@ldr r2,=RedPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
+
+mov r2, #0x2B
+@ldr r2,=GoldPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
+
+mov r2, #0x2C
+@ldr r2,=HiddenPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
 mov r0,r5
 mov r1,r6
 add r1,#1
 blh GetTrapAt
 
-mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
-cmp r1, r2
-bge CheckD 
-b ReturnD
-CheckD:
-mov r2, #0x20
-cmp r1, r2
-blt RetTrap
+mov r2, #0x2A
+@ldr r2,=RedPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
-ReturnD:
-mov r0,#0	@no trap so return 0
+mov r2, #0x2B
+@ldr r2,=GoldPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
 
+mov r2, #0x2C
+@ldr r2,=HiddenPokeballItemID
+@ldrb r2,[r2]
+cmp r1,r2
+beq RetTrap
+
+mov r0,#0
 
 RetTrap:
 pop {r4-r6}
@@ -158,16 +188,17 @@ push {r4,r14}
 ldr r4,=#0x3004E50
 ldr r0,[r4]
 bl GetAdjacentTrap
-mov r4, r0  @&The DV
-
 cmp r0,#0
 beq Usability_RetFalse
 
 
 ldrb r0, [r4, #0x3]     @Completion flag
 blh CheckEventId
-cmp r0, #0
+cmp r0, #1
 bne Usability_RetFalse
+
+
+
 
 
 ldr r4,=#0x3004E50
@@ -206,20 +237,8 @@ ldr r0, CurrentUnitPointer
 ldr r0, [r0]
 
 bl GetAdjacentTrap
-
 mov r4, r0  @&The DV
 
-@turn on completion flag 
-mov r0, #0			@empty it first 
-ldrb r0, [r4, #0x3]     @Completion flag
-cmp r0, #0
-beq ItemToGive
-blh SetFlag
-
-ItemToGive:
-mov r2, #0			@empty it first 
-ldr r1,=MemorySlot3
-str r2,[r1]		@overwrite s3 with 0
 
 ldrb r2, [r4, #0x4]     @item id
 cmp r2, #0
@@ -227,29 +246,30 @@ beq EventTime
 
 
 ldr r1,=MemorySlot3
-strb r2,[r1]		@overwrite s3 
+ldr r0,[r1]
+ldr r0,[r0]
 
-ldr	r0, =GiveItemEvent	@this event gives item found in byte 0x4 of the trap
+str r2,[r1]		@overwrite s3 
+
+
+ldr	r0, =GiveItemEvent	@this event is just "give gem"
 mov	r1, #0x01		@0x01 = wait for events
 ldr r3, ExecuteEvent
 bl goto_r3
 
-@b DeleteTrap
-
 EventTime:
-mov r1, #0
 ldrb r1, [r4, #0x5]     @effect id
-@lsl r1, #0x2	@I think Sme was reserving a couple of bits before 
+lsl r1, #0x2
 ldr r0, TrapEffectTableOffset
 ldr r0, [r0, r1]
 
-cmp r1, #0	@no table entry 
+@ldr r0, =#0x8BD6B70	
+cmp r1, #0
+beq DeleteTrap
+cmp r1, #1
 beq DeleteTrap
 
-@ldr r0, =#0x8BD6B70	
-cmp r0, #0	@no event
-beq DeleteTrap
-cmp r0, #1	@dummy event
+cmp r0, #0
 beq DeleteTrap
 
 @At this point, r0 should be the pointer to the event to execute.
@@ -257,9 +277,22 @@ beq DeleteTrap
 ldr r3, ExecuteEvent
 bl goto_r3
 
+    @check if DV should be removed.
+    @ldrb r0, [r4, #6] @nope, can only have 6 bytes per trap data
+    @cmp r0, #1
+    @bgt ReduceUses
 
 DeleteTrap:
 @Remove the DV trap from the map.
+
+
+@turn on completion flag 
+ldrb r0, [r4, #0x3]     @Completion flag
+blh SetFlag
+
+
+
+
 @ldr r3, RemoveTrap
 @bl goto_r3
 
@@ -270,6 +303,8 @@ ldr r1, CurrentUnitFateData	@these four lines copied from wait routine
 mov r0, #0x1
 strb r0, [r1,#0x11]
 @mov r0, #0x17	@makes the unit wait?? makes the menu disappear after command is selected??
+
+
 mov r0,#0x94		@play beep sound & end menu on next frame & clear menu graphics
 
 pop {r4}

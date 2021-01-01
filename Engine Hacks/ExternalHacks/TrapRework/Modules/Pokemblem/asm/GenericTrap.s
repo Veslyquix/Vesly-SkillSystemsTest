@@ -1,17 +1,17 @@
 .thumb
 .align
 
-.global ObtainItemInitialization
-.type ObtainItemInitialization, %function
+.global GenericTrapInitialization
+.type GenericTrapInitialization, %function
 
-.global ObtainItemUsability
-.type ObtainItemUsability, %function
+.global GenericTrapUsability
+.type GenericTrapUsability, %function
 
-.global ObtainItemEffect
-.type ObtainItemEffect, %function
+.global GenericTrapEffect
+.type GenericTrapEffect, %function
 
-.global ObtainItemSpriteFunc
-.type ObtainItemSpriteFunc, %function
+.global GenericTrapSpriteFunc
+.type GenericTrapSpriteFunc, %function
 
 
 .macro blh to, reg=r3
@@ -32,7 +32,7 @@
 .equ Init_ReturnPoint,0x8037901
 @.equ GiveItemEvent, ObtainItemID+4
 
-ObtainItemInitialization:
+GenericTrapInitialization:
 
 @r5 = pointer to trap data in events
 ldrb r0,[r5,#1] @x coord
@@ -75,12 +75,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
+mov r2, #0x20
 cmp r1, r2
 bge CheckA 
 b ReturnA
 CheckA:
-mov r2, #0x20
+mov r2, #0x50
 cmp r1, r2
 blt RetTrap
 
@@ -94,12 +94,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
+mov r2, #0x20
 cmp r1, r2
 bge CheckB 
 b ReturnB
 CheckB:
-mov r2, #0x20
+mov r2, #0x50
 cmp r1, r2
 blt RetTrap
 
@@ -113,12 +113,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
+mov r2, #0x20
 cmp r1, r2
 bge CheckC 
 b ReturnC
 CheckC:
-mov r2, #0x20
+mov r2, #0x50
 cmp r1, r2
 blt RetTrap
 ReturnC:
@@ -131,12 +131,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x10
+mov r2, #0x20
 cmp r1, r2
 bge CheckD 
 b ReturnD
 CheckD:
-mov r2, #0x20
+mov r2, #0x50
 cmp r1, r2
 blt RetTrap
 
@@ -153,23 +153,26 @@ bx r1
 .align
 
 
-ObtainItemUsability:
+GenericTrapUsability:
 push {r4,r14}
 ldr r4,=#0x3004E50
 ldr r0,[r4]
 bl GetAdjacentTrap
 mov r4, r0  @&The DV
-
 cmp r0,#0
 beq Usability_RetFalse
 
 
-ldrb r0, [r4, #0x3]     @Completion flag
-blh CheckEventId
+ldrb r0, [r4, #0x3]     @Required Flag
+
 cmp r0, #0
+beq CantoCheck
+
+blh CheckEventId
+cmp r0, #1
 bne Usability_RetFalse
 
-
+CantoCheck:
 ldr r4,=#0x3004E50
 @can't use if cantoing
 ldr r0,[r4]
@@ -196,8 +199,7 @@ bx r1
 .align
 
 
-
-ObtainItemEffect:
+GenericTrapEffect:
 push {r4, lr}
 @Basically the execute event routine.
 
@@ -209,33 +211,6 @@ bl GetAdjacentTrap
 
 mov r4, r0  @&The DV
 
-@turn on completion flag 
-mov r0, #0			@empty it first 
-ldrb r0, [r4, #0x3]     @Completion flag
-cmp r0, #0
-beq ItemToGive
-blh SetFlag
-
-ItemToGive:
-mov r2, #0			@empty it first 
-ldr r1,=MemorySlot3
-str r2,[r1]		@overwrite s3 with 0
-
-ldrb r2, [r4, #0x4]     @item id
-cmp r2, #0
-beq EventTime
-
-
-ldr r1,=MemorySlot3
-strb r2,[r1]		@overwrite s3 
-
-ldr	r0, =GiveItemEvent	@this event gives item found in byte 0x4 of the trap
-mov	r1, #0x01		@0x01 = wait for events
-ldr r3, ExecuteEvent
-bl goto_r3
-
-@b DeleteTrap
-
 EventTime:
 mov r1, #0
 ldrb r1, [r4, #0x5]     @effect id
@@ -243,17 +218,23 @@ ldrb r1, [r4, #0x5]     @effect id
 ldr r0, TrapEffectTableOffset
 ldr r0, [r0, r1]
 
-cmp r1, #0	@no table entry 
+
+cmp r0, #0	@no table entry 
 beq DeleteTrap
 
+b AlwaysEvent
+
+@cmp r1, #0	@no event
+@beq DeleteTrap
+
+@b AlwaysEvent
 @ldr r0, =#0x8BD6B70	
-cmp r0, #0	@no event
-beq DeleteTrap
-cmp r0, #1	@dummy event
-beq DeleteTrap
+@cmp r1, #1	@dummy event
+@beq DeleteTrap
+
 
 @At this point, r0 should be the pointer to the event to execute.
-
+AlwaysEvent:
 ldr r3, ExecuteEvent
 bl goto_r3
 
@@ -280,7 +261,7 @@ bx r3
 
 
 
-ObtainItemSpriteFunc:
+GenericTrapSpriteFunc:
 push {r4,r14}
 mov r4,r0 @r4 = trap data ptr
 

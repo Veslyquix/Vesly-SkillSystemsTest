@@ -13,7 +13,11 @@ EventPointerTable(0x7, PointerList)
 
 #ifdef DRAGON_VEINS
 VeinEffect(0, FreezeAllEnemies)
-GeneralEffect(0, TestCase)
+//GenericEffect(0, TestCase)
+
+//VeinEffect(1, FreezeAllEnemies)
+//GenericEffect(1, TestCase)
+
 ObtainItemEffect(0, TestCase)
 //TelliusTorchEffect
 
@@ -144,8 +148,8 @@ Traps1:
 Vein(9,23,0x0,DV1Desc) //freeze enemies
 #endif // DRAGON_VEINS
 
-Pokemblem(10,23,0x0,0xD52)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
-ObtainItem(11,23,0xA0,0x01, 0x0)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
+Generic(10,23,0xA0, 0x8, 0x1)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
+ObtainItem(11,23,0xA0,0x09, 0x1)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
 TelliusTorchOn(12,23,0x01) //"BYTE TelliusTorchTrapID x y visionRange visionRange 0"
 
 

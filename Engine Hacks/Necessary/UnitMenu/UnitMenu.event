@@ -77,7 +77,7 @@ UnitMenuTable:
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, VeinUsability, VeinEffect)
 
 
-  MenuCommand(UMText_DV, UMText_DVDesc, GreenText, MyTrapUsability, MyTrapEffect)
+  MenuCommand(UM_Mercy, UM_MercyDesc, GreenText, GenericTrapUsability, GenericTrapEffect)
 
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, ObtainItemUsability, ObtainItemEffect)
 
