@@ -20,11 +20,11 @@
 	//macros for usage
 #define Generic(XX,YY,EffectID) "BYTE CustomTrapID XX YY 0x0 0x0 EffectID"
 #define Generic(XX,YY,ReqFlag, Sprite, EffectID) "BYTE CustomTrapID XX YY ReqFlag Sprite EffectID"
-#define GenericEffect(id, event) "PUSH; ORG TrapEffectTableOffset + (4 * id); POIN event; POP"
+#define GenericEffect(id, event) "PUSH; ORG GenericTrapTableOffset + (4 * id); POIN event; POP"
 
 
 
-#define ObtainItemEffect(id, event) "PUSH; ORG TrapEffectTableOffset + (4 * id); POIN event; POP"
+#define ObtainEffect(id, event) "PUSH; ORG ObtainItemEventTableOffset + (4 * id); POIN event; POP"
 #define ObtainItem(XX,YY,CompletionFlag, ItemID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID 0x0"
 #define ObtainItem(XX,YY,CompletionFlag, ItemID, EffectID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID EffectID"
 
@@ -35,20 +35,31 @@
 #define ObtainItem(XX,YY,CompletionFlag, ItemID, EffectID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID EffectID"
 */
 
+/*
+
 ALIGN 4
 TrapEffectTableOffset:
 ORG currentOffset+(256*4)
+*/
 
-
-
+    MESSAGE ObtainItemEventTableOffset space at currentOffset
 ALIGN 4
 ObtainItemEventTableOffset:
 ORG currentOffset+(256*4)
 
 
-GenericEffect:
+    MESSAGE GenericTrapTableOffset space at currentOffset
+ALIGN 4
+GenericTrapTableOffset:
+ORG currentOffset+(256*4)
+
+
+
+
 #include "asm/GenericTrap.lyn.event"
-POIN TrapEffectTableOffset
+//POIN TrapEffectTableOffset
+//POIN ObtainItemEventTableOffset
+POIN GenericTrapTableOffset
 
 
 
@@ -88,6 +99,7 @@ POIN TrapEffectTableOffset
 	SetTrapMapSpriteFunc(RedPokeballItemID,ObtainItemSpriteFunc)
 
 //add to unit menu to make usable 
+//ObtainItemEffect:
 #include "asm/ObtainItem.lyn.event"
 POIN ObtainItemEventTableOffset
 WORD RedPokeballItemID

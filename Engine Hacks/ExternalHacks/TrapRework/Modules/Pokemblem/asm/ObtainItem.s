@@ -240,7 +240,7 @@ EventTime:
 mov r1, #0
 ldrb r1, [r4, #0x5]     @effect id
 @lsl r1, #0x2	@I think Sme was reserving a couple of bits before 
-ldr r0, TrapEffectTableOffset
+ldr r0, ObtainEffectTableOffset
 ldr r0, [r0, r1]
 
 cmp r1, #0	@no table entry 
@@ -314,6 +314,6 @@ GetTrap:
     .long 0x802E1F1
 RemoveTrap:
     .long 0x802EA91
-TrapEffectTableOffset:
+ObtainEffectTableOffset:
     @.long 0xDEADBEEF @Should be defined in the install file
 

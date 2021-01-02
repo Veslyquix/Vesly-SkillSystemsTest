@@ -13,13 +13,9 @@ EventPointerTable(0x7, PointerList)
 
 #ifdef DRAGON_VEINS
 VeinEffect(0, FreezeAllEnemies)
-//GenericEffect(0, TestCase)
-
-//VeinEffect(1, FreezeAllEnemies)
-//GenericEffect(1, TestCase)
-
-ObtainItemEffect(0, TestCase)
-//TelliusTorchEffect
+ObtainEffect(0, FreezeAllEnemies)
+GenericEffect(0, TalkEvent)
+GenericEffect(1, TestCase)
 
 #endif // DRAGON_VEINS
 
@@ -150,7 +146,7 @@ Vein(9,23,0x0,DV1Desc) //freeze enemies
 
 Generic(10,23,0xA0, 0x8, 0x1)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
 ObtainItem(11,23,0xA0,0x09, 0x1)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
-TelliusTorchOn(12,23,0x01) //"BYTE TelliusTorchTrapID x y visionRange visionRange 0"
+Generic(12,23,0x00, 0xA, 0x0) //"BYTE TelliusTorchTrapID x y visionRange visionRange 0"
 
 
 ENDTRAP
@@ -241,11 +237,13 @@ NoFade
 ENDA
 #endif // DRAGON_VEINS
 
+    MESSAGE TestCase at currentOffset
 TestCase:
-Text(0xc0a)
+HouseEvent(HouseText, HouseBG)
 NoFade
 ENDA
 
+    MESSAGE TalkEvent at currentOffset
 TalkEvent:
 Text(0xc0a)
 NoFade
