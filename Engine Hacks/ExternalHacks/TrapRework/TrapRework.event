@@ -99,38 +99,7 @@
 	SetTrapEventInit(LightRuneTrapID,0)
 
 
-	SetTrapEventInit(CutBushID,0)
-	SetTrapEventInit(RockSmashID,0)
-	SetTrapEventInit(StrengthBoulderID,0)
-	SetTrapEventInit(BreakableFloorID,0)
-	SetTrapEventInit(HoleID,0)
-	SetTrapEventInit(BoulderReceptacleID,0)
 
-	SetTrapEventInit(FoodID,0)
-	SetTrapEventInit(BlueWaitID,0)
-	SetTrapEventInit(GenericID,0)
-	SetTrapEventInit(NPCTalkID,0)
-
-	SetTrapEventInit(Placeholder19ID,0)
-	SetTrapEventInit(Placeholder20ID,0)
-	SetTrapEventInit(Placeholder21ID,0)
-	SetTrapEventInit(Placeholder22ID,0)
-	SetTrapEventInit(Placeholder23ID,0)
-	SetTrapEventInit(Placeholder24ID,0)
-	SetTrapEventInit(Placeholder25ID,0)
-	SetTrapEventInit(Placeholder26ID,0)
-	SetTrapEventInit(Placeholder27ID,0)
-	SetTrapEventInit(Placeholder28ID,0)
-	SetTrapEventInit(Placeholder29ID,0)
-	SetTrapEventInit(Placeholder30ID,0)
-	SetTrapEventInit(Placeholder31ID,0)
-	SetTrapEventInit(Placeholder41ID,0)
-	SetTrapEventInit(Placeholder42ID,0)
-	SetTrapEventInit(Placeholder43ID,0)
-	SetTrapEventInit(Placeholder44ID,0)
-	SetTrapEventInit(Placeholder45ID,0)
-	SetTrapEventInit(Placeholder46ID,0)
-	SetTrapEventInit(Placeholder47ID,0)
 
 
 	
@@ -154,7 +123,7 @@
 
 
 	SetTrapMapSprite(CutBushID,0x6A)
-	SetTrapMapSprite(RockSmashID,0x6A)
+	SetTrapMapSprite(RockSmashID,0x65)
 	SetTrapMapSprite(StrengthBoulderID,0x6A)
 	SetTrapMapSprite(BreakableFloorID,0x6A)
 	SetTrapMapSprite(HoleID,0x6A)

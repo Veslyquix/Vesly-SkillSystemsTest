@@ -1,17 +1,17 @@
 .thumb
 .align
 
-.global GenericTrapInitialization
-.type GenericTrapInitialization, %function
+.global GenericTrapDisappearInitialization
+.type GenericTrapDisappearInitialization, %function
 
-.global GenericTrapUsability
-.type GenericTrapUsability, %function
+.global GenericTrapDisappearUsability
+.type GenericTrapDisappearUsability, %function
 
-.global GenericTrapEffect
-.type GenericTrapEffect, %function
+.global GenericTrapDisappearEffect
+.type GenericTrapDisappearEffect, %function
 
-.global GenericTrapSpriteFunc
-.type GenericTrapSpriteFunc, %function
+.global GenericTrapDisappearSpriteFunc
+.type GenericTrapDisappearSpriteFunc, %function
 
 
 .macro blh to, reg=r3
@@ -32,7 +32,7 @@
 .equ Init_ReturnPoint,0x8037901
 @.equ GiveItemEvent, ObtainItemID+4
 
-GenericTrapInitialization:
+GenericTrapDisappearInitialization:
 
 @r5 = pointer to trap data in events
 ldrb r0,[r5,#1] @x coord
@@ -75,12 +75,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x30
+mov r2, #0x20
 cmp r1, r2
 bge CheckA 
 b ReturnA
 CheckA:
-mov r2, #0x50
+mov r2, #0x30
 cmp r1, r2
 blt RetTrap
 
@@ -94,12 +94,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x30
+mov r2, #0x20
 cmp r1, r2
 bge CheckB 
 b ReturnB
 CheckB:
-mov r2, #0x50
+mov r2, #0x30
 cmp r1, r2
 blt RetTrap
 
@@ -113,12 +113,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x30
+mov r2, #0x20
 cmp r1, r2
 bge CheckC 
 b ReturnC
 CheckC:
-mov r2, #0x50
+mov r2, #0x30
 cmp r1, r2
 blt RetTrap
 ReturnC:
@@ -131,12 +131,12 @@ blh GetTrapAt
 mov r1, #0
 ldrb r1,[r0,#2]
 
-mov r2, #0x30
+mov r2, #0x20
 cmp r1, r2
 bge CheckD 
 b ReturnD
 CheckD:
-mov r2, #0x50
+mov r2, #0x30
 cmp r1, r2
 blt RetTrap
 
@@ -153,7 +153,7 @@ bx r1
 .align
 
 
-GenericTrapUsability:
+GenericTrapDisappearUsability:
 push {r4,r14}
 ldr r4,=#0x3004E50
 ldr r0,[r4]
@@ -199,7 +199,7 @@ bx r1
 .align
 
 
-GenericTrapEffect:
+GenericTrapDisappearEffect:
 push {r4, lr}
 @Basically the execute event routine.
 
@@ -221,7 +221,7 @@ EventTime:
 mov r1, #0
 ldrb r1, [r4, #0x5]     @effect id
 lsl r1, #0x2	@4 bytes per table extry, so effectID * 4 = entry 
-ldr r0, GTTable
+ldr r0, GTDTable
 ldr r0, [r0, r1]
 
 
@@ -247,8 +247,9 @@ bl goto_r3
 
 DeleteTrap:
 @Remove the DV trap from the map.
-@ldr r3, RemoveTrap
-@bl goto_r3
+mov r0, r4
+ldr r3, RemoveTrap
+bl goto_r3
 
 
 
@@ -267,7 +268,7 @@ bx r3
 
 
 
-GenericTrapSpriteFunc:
+GenericTrapDisappearSpriteFunc:
 push {r4,r14}
 mov r4,r0 @r4 = trap data ptr
 
@@ -301,6 +302,6 @@ GetTrap:
     .long 0x802E1F1
 RemoveTrap:
     .long 0x802EA91
-GTTable:
+GTDTable:
     @.long 0xDEADBEEF @Should be defined in the install file
 

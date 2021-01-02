@@ -41,12 +41,12 @@ ldrb r2,[r5] @trap ID
 blh SpawnTrap @returns pointer to trap data in RAM
 
 @give it our vision range data 
-ldrb r1,[r5,#3] @initial vision range
+ldrb r1,[r5,#3] @save byte 0x3
 strb r1,[r0,#3] 
-ldrb r1,[r5,#4] @set vision range
+ldrb r1,[r5,#4] @save byte 0x4
 strb r1,[r0,#4]
-@ldrb r1,[r5,#5] @set vision range
-@strb r1,[r0,#5]
+ldrb r1,[r5,#5] @save byte 0x5
+strb r1,[r0,#5]
 
 ReturnPoint:
 ldr r3,=Init_ReturnPoint
@@ -239,7 +239,7 @@ bl goto_r3
 EventTime:
 mov r1, #0
 ldrb r1, [r4, #0x5]     @effect id
-@lsl r1, #0x2	@I think Sme was reserving a couple of bits before 
+lsl r1, #0x2	@4 bytes per table extry, so effectID * 4 = entry 
 ldr r0, ObtainEffectTableOffset
 ldr r0, [r0, r1]
 
@@ -260,8 +260,9 @@ bl goto_r3
 
 DeleteTrap:
 @Remove the DV trap from the map.
-@ldr r3, RemoveTrap
-@bl goto_r3
+mov r0, r4
+ldr r3, RemoveTrap
+bl goto_r3
 
 
 

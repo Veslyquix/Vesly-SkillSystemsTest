@@ -79,6 +79,8 @@ UnitMenuTable:
 
   MenuCommand(UM_Mercy, UM_MercyDesc, GreenText, GenericTrapUsability, GenericTrapEffect)
 
+  MenuCommand(UM_Rally, UM_RallyDesc, GreenText, GenericTrapDisappearUsability, GenericTrapDisappearEffect)
+
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, ObtainItemUsability, ObtainItemEffect)
 
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, TelliusTorchUsability, TelliusTorchEffect)

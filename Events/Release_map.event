@@ -13,9 +13,13 @@ EventPointerTable(0x7, PointerList)
 
 #ifdef DRAGON_VEINS
 VeinEffect(0, FreezeAllEnemies)
-ObtainEffect(0, FreezeAllEnemies)
+VeinEffect(1, TalkEvent)
+ObtainEffect(0, TalkEvent)
+ObtainEffect(1, FreezeAllEnemies)
 GenericEffect(0, TalkEvent)
 GenericEffect(1, TestCase)
+GenericDisappearEffect(0, TalkEvent)
+GenericDisappearEffect(1, TestCase)
 
 #endif // DRAGON_VEINS
 
@@ -141,13 +145,16 @@ UNIT
 
 Traps1:
 #ifdef DRAGON_VEINS
-Vein(9,23,0x0,DV1Desc) //freeze enemies
+//Vein(9,23,0x0,DV1Desc) //freeze enemies
+//Vein(9,22,0x1,DV1Desc) //freeze enemies
 #endif // DRAGON_VEINS
 
-Generic(12,23,0x00, 0xA, 0x0) //x, y, req'd flag, sprite, EventTableID
-Generic(10,23,0xA0, 0x8, 0x1)	//coordinates 10x 23y, req'd flag, sprite, EventTableID
-ObtainItem(11,23,0xA0,0x09, 0x1)	//coordinates 10x 23y, completion flag, item given, EventTableID
-
+Generic(9,23,0xA0, 0xA, 0x0) //x, y, req'd flag, sprite, EventTableID
+Generic(10,23,0x00, 0x8, 0x1)	//coordinates 10x 23y, req'd flag, sprite, EventTableID
+ObtainItem(11,23,0xA0,0x09, 0x0)	//coordinates 10x 23y, completion flag, item given, EventTableID
+ObtainItem(12,23,0x00,0x0B, 0x1)	//coordinates 10x 23y, completion flag, item given, EventTableID
+GenericDisappear(7,23,0xA0, 0x6, 0x0) //x, y, req'd flag, sprite, EventTableID
+GenericDisappear(8,23,0x00, 0x1, 0x1)	//coordinates 10x 23y, req'd flag, sprite, EventTableID
 
 
 ENDTRAP

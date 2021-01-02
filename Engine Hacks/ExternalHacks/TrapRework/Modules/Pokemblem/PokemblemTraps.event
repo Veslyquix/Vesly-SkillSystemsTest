@@ -6,11 +6,69 @@
 	#define CustomDefaultMapSpriteID 0x69
 	#define HiddenMapSpriteID 0x69
 
-	SetTrapEventInit(CustomTrapID,GenericTrapInitialization)
+
 	SetTrapMapSprite(CustomTrapID,CustomDefaultMapSpriteID)
 	SetTrapMapSpritePalette(CustomTrapID,NPCTrapPaletteWord)	
 	SetImpassableTrap(CustomTrapID)
 	SetTrapMapSpriteFunc(CustomTrapID,GenericTrapSpriteFunc)
+
+
+
+	SetTrapEventInit(RedPokeballItemID,ObtainItemInitialization)
+	SetTrapEventInit(GoldPokeballItemID,ObtainItemInitialization)
+	SetTrapEventInit(HiddenPokeballItemID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder19ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder20ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder21ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder22ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder23ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder24ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder25ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder26ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder27ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder28ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder29ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder30ID,ObtainItemInitialization)
+	SetTrapEventInit(Placeholder31ID,ObtainItemInitialization)
+
+
+	SetTrapEventInit(CutBushID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(RockSmashID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(StrengthBoulderID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(BreakableFloorID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(HoleID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(BoulderReceptacleID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(SpawnGenericID,GenericTrapDisappearInitialization)
+
+	SetTrapEventInit(FoodID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(BlueWaitID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder41ID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder42ID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder43ID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder44ID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder45ID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder46ID,GenericTrapDisappearInitialization)
+	SetTrapEventInit(Placeholder47ID,GenericTrapDisappearInitialization)
+
+
+	SetTrapEventInit(GenericID,GenericTrapInitialization)
+	SetTrapEventInit(NPCTalkID,GenericTrapInitialization)
+	SetTrapEventInit(CustomTrapID,GenericTrapInitialization)
+	
+	SetTrapEventInit(51,GenericTrapInitialization)
+	SetTrapEventInit(52,GenericTrapInitialization)
+	SetTrapEventInit(53,GenericTrapInitialization)
+	SetTrapEventInit(54,GenericTrapInitialization)
+	SetTrapEventInit(55,GenericTrapInitialization)
+	SetTrapEventInit(56,GenericTrapInitialization)
+	SetTrapEventInit(57,GenericTrapInitialization)
+	SetTrapEventInit(58,GenericTrapInitialization)
+	SetTrapEventInit(59,GenericTrapInitialization)
+	SetTrapEventInit(60,GenericTrapInitialization)
+	SetTrapEventInit(61,GenericTrapInitialization)
+	SetTrapEventInit(62,GenericTrapInitialization)
+	SetTrapEventInit(63,GenericTrapInitialization)
+
 
 
 //my script for usability / effect
@@ -20,8 +78,12 @@
 	//macros for usage
 #define Generic(XX,YY,EffectID) "BYTE CustomTrapID XX YY 0x0 0x0 EffectID"
 #define Generic(XX,YY,ReqFlag, Sprite, EffectID) "BYTE CustomTrapID XX YY ReqFlag Sprite EffectID"
-#define GenericEffect(id, event) "PUSH; ORG GenericTrapTableOffset + (4 * id); POIN event; POP"
+#define GenericEffect(id, event) "PUSH; ORG GenericTrapDisappearTableOffset + (4 * id); POIN event; POP"
 
+
+#define GenericDisappear(XX,YY,EffectID) "BYTE CutBushID XX YY 0x0 0x0 EffectID"
+#define GenericDisappear(XX,YY,ReqFlag, Sprite, EffectID) "BYTE CutBushID XX YY ReqFlag Sprite EffectID"
+#define GenericDisappearEffect(id, event) "PUSH; ORG GenericTrapTableOffset + (4 * id); POIN event; POP"
 
 
 #define ObtainEffect(id, event) "PUSH; ORG ObtainItemEventTableOffset + (4 * id); POIN event; POP"
@@ -35,12 +97,6 @@
 #define ObtainItem(XX,YY,CompletionFlag, ItemID, EffectID) "BYTE RedPokeballItemID XX YY CompletionFlag ItemID EffectID"
 */
 
-/*
-
-ALIGN 4
-TrapEffectTableOffset:
-ORG currentOffset+(256*4)
-*/
 
     MESSAGE ObtainItemEventTableOffset space at currentOffset
 ALIGN 4
@@ -53,20 +109,23 @@ ALIGN 4
 GenericTrapTableOffset:
 ORG currentOffset+(256*4)
 
+    MESSAGE GenericTrapDisappearTableOffset space at currentOffset
+ALIGN 4
+GenericTrapDisappearTableOffset:
+ORG currentOffset+(256*4)
 
 
 
 #include "asm/GenericTrap.lyn.event"
-//POIN TrapEffectTableOffset
-//POIN ObtainItemEventTableOffset
 POIN GenericTrapTableOffset
 
+
+#include "asm/GenericTrapDisappear.lyn.event"
+POIN GenericTrapDisappearTableOffset
 
 
 
 // 		Pokeball items 
-
-
 
 #define RedPokeball(XX,YY,EffectID) "BYTE CustomTrapID XX YY EffectID 0x0 0x0"
 #define RedPokeball(XX,YY,EffectID, TextID) "BYTE CustomTrapID XX YY EffectID; SHORT TextID"
@@ -78,9 +137,7 @@ POIN GenericTrapTableOffset
 
 
 
-	SetTrapEventInit(RedPokeballItemID,ObtainItemInitialization)
-	SetTrapEventInit(GoldPokeballItemID,ObtainItemInitialization)
-	SetTrapEventInit(HiddenPokeballItemID,ObtainItemInitialization)
+
 
 	SetTrapMapSprite(RedPokeballItemID,0x65)
 	SetTrapMapSprite(GoldPokeballItemID,0x66)
