@@ -144,9 +144,10 @@ Traps1:
 Vein(9,23,0x0,DV1Desc) //freeze enemies
 #endif // DRAGON_VEINS
 
-Generic(10,23,0xA0, 0x8, 0x1)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
-ObtainItem(11,23,0xA0,0x09, 0x1)	//coordinates 10x 23y, effect id 0x1, descriptive text 0x0D52
-Generic(12,23,0x00, 0xA, 0x0) //"BYTE TelliusTorchTrapID x y visionRange visionRange 0"
+Generic(12,23,0x00, 0xA, 0x0) //x, y, req'd flag, sprite, EventTableID
+Generic(10,23,0xA0, 0x8, 0x1)	//coordinates 10x 23y, req'd flag, sprite, EventTableID
+ObtainItem(11,23,0xA0,0x09, 0x1)	//coordinates 10x 23y, completion flag, item given, EventTableID
+
 
 
 ENDTRAP
