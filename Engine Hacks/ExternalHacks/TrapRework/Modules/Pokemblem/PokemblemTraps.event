@@ -147,7 +147,7 @@ POIN GenericTrapDisappearTableOffset
 	SetTrapMapSpritePalette(GoldPokeballItemID,NPCTrapPaletteWord)
 	SetTrapMapSpritePalette(HiddenPokeballItemID,NPCTrapPaletteWord)
 
-	//SetImpassableTrap(RedPokeballItemID)
+	SetImpassableTrap(RedPokeballItemID)
 	SetImpassableTrap(GoldPokeballItemID)
 	//SetImpassableTrap(HiddenPokeballItemID)
 

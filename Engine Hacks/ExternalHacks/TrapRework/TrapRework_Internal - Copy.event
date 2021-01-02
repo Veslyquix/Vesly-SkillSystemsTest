@@ -1,5 +1,4 @@
 
-#include "bin/ProcDefinitions.txt"
 
 	#include "asm/TrapRework.lyn.event"	
 	
@@ -25,82 +24,10 @@
 		ORG $1A174
 		jumpToHack(TrapRework_NewRefreshTrapFogVision)
 	
-		//ORG $02e470 //Sme's address 
-
-		//ORG $35E20 //1st asm call of Procs Terrain Heal Loop
-//callHack_r3(TrapRework_NewUpdateAllLightRunes)	
-//SHORT 0xE027
-//jumpToHack(TerrainHealLoopAddedAsmCall)
-
-
-		//ORG $59E348
-		//jumpToHack(TrapRework_NewUpdateAllLightRunes)
-		//jumpToHack(TerrainHealLoopAddedAsmCall)	
-
-		//POIN TerrainHealLoopProcAdded
-		//jumpToHack(TrapRework_NewUpdateAllLightRunes)	//this ones makes terrain work 
-
-
-
-		//ORG $59A2B4 //1st asm call of Procs Terrain Heal Loop
-		//jumpToHack(TrapRework_NewUpdateAllLightRunes)
-
-
-
-		//ORG $59A2B4	//ProcsMapMain - jump to ProcsTerrainHealLoop
-		//POIN TerrainHealLoopMyVersion
-
-
-
-		//ORG $59E308 	//(ProcsTerrainHealLoop) 96 bytes
-		//POIN TerrainHealLoopProcAdded
-
-		
+		ORG $02e470
+		jumpToHack(TrapRework_NewUpdateAllLightRunes)	
 	POP
 	
-//	callHack_r3(Add_Weapon_Might) //0xC bytes
-//	SHORT 0xE027
-
-//ALIGN 4
-//TerrainHealLoopAddedAsmCall:
-//PROC_CALL_ROUTINE(TrapRework_NewUpdateAllLightRunes) 
-//jumpToHack(TrapRework_NewUpdateAllLightRunes)	
-//callHack_r3(TrapRework_NewUpdateAllLightRunes)	
-//SHORT 0xE027
-//#incbin "bin/ProcsTerrainHealLoopFirstAsmCall.dmp"
-
-
-//PROC_CALL_ROUTINE(TrapRework_NewUpdateAllLightRunes)	
-
-
-TerrainHealLoopMyVersion:
-
-PROC_CALL_ROUTINE(TrapRework_NewUpdateAllLightRunes)	
-PROC_CALL_ROUTINE($8035E21) 
-PROC_LABEL(0)
-PROC_CALL_ROUTINE($8035E51)
-PROC_CALL_ROUTINE($8035ED9)
-PROC_YIELD
-
-PROC_CALL_ROUTINE($8035EFD)
-PROC_YIELD
-
-PROC_CALL_ROUTINE($8035F41)
-
-PROC_LABEL(1)
-PROC_CALL_ROUTINE($8035F6D)
-PROC_GOTO(0)
-PROC_END
-
-
-//#incbin "bin/ProcsTerrainHealLoop.dmp"  //the regular Terrain Heal Loop
-
-
-
-
-
-
-
 	/*
 	//install example map sprite
 	PUSH

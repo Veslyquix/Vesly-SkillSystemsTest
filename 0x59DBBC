@@ -1,0 +1,176 @@
+01000000807F0D08	//Set Name Pointer [NAME:0x80D7F80 SALLYCURSOR]
+0E00100000000000	//Sleep for given duration [WAIT FRAME:16 frame sec(0.2667 sec)] (Sets callback to Sleep Callback)
+02000000D1410308	//Call Routine [ASM:0x80341D1 PrepScreenProc_LockGame] (Argument: r0=Struct Ptr)
+14000000697D0308	//Call Routine [ASM:0x8037D69 PrepScreenProc_AddPostgameUnits]. If Routine returns 1, yield without forwarding, continue otherwise
+0E00010000000000	//Sleep for given duration [WAIT FRAME:1 frame sec(0.0167 sec)] (Sets callback to Sleep Callback)
+0200000001420308	//Call Routine [ASM:0x8034201 PrepScreenProc_HideEverythingAndUnlockGame] (Argument: r0=Struct Ptr)
+0200000071380308	//Call Routine [ASM:0x8033871 InitPrepScreenUnitsAndCamera] (Argument: r0=Struct Ptr)
+0E00010000000000	//Sleep for given duration [WAIT FRAME:1 frame sec(0.0167 sec)] (Sets callback to Sleep Callback)
+0200000095410308	//Call Routine [ASM:0x8034195 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0E00080000000000	//Sleep for given duration [WAIT FRAME:8 frame sec(0.1333 sec)] (Sets callback to Sleep Callback)
+0200000085660908	//Call Routine [ASM:0x8096685 NewPrepScreenTraineePromotionManager] (Argument: r0=Struct Ptr)
+1400000099660908	//Call Routine [ASM:0x8096699 PrepScreenTraineePromotionManagerExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0200000085660908	//Call Routine [ASM:0x8096685 NewPrepScreenTraineePromotionManager] (Argument: r0=Struct Ptr)
+1400000099660908	//Call Routine [ASM:0x8096699 PrepScreenTraineePromotionManagerExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0200000085660908	//Call Routine [ASM:0x8096685 NewPrepScreenTraineePromotionManager] (Argument: r0=Struct Ptr)
+1400000099660908	//Call Routine [ASM:0x8096699 PrepScreenTraineePromotionManagerExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0B00020000000000	//Defines Label [LABEL:0x2] (doesn't do anything by itself)
+0200000055640908	//Call Routine [ASM:0x8096455 StartAtMenu] (Argument: r0=Struct Ptr)
+14000000B1660908	//Call Routine [ASM:0x80966B1 AtMenuExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000C1380308	//Call Routine [ASM:0x80338C1 InitPrepScreenCursorPosition] (Argument: r0=Struct Ptr)
+0C00320000000000	//Goto Label [LABEL:0x32]
+0B00330000000000	//Defines Label [LABEL:0x33] (doesn't do anything by itself)
+02000000693D0108	//Call Routine [ASM:0x8013D69 StartFadeInBlackMedium] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0200000055640908	//Call Routine [ASM:0x8096455 StartAtMenu] (Argument: r0=Struct Ptr)
+14000000B1660908	//Call Routine [ASM:0x80966B1 AtMenuExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+0B00320000000000	//Defines Label [LABEL:0x32] (doesn't do anything by itself)
+02000000A9110308	//Call Routine [ASM:0x80311A9 ReloadGameCoreGraphics] (Argument: r0=Struct Ptr)
+02000000F5A10108	//Call Routine [ASM:0x801A1F5 RefreshFogAndUnitMaps] (Argument: r0=Struct Ptr)
+020000003D9C0108	//Call Routine [ASM:0x8019C3D UpdateGameTilesGraphics] (Argument: r0=Struct Ptr)
+02000000A1710208	//Call Routine [ASM:0x80271A1 SMS_UpdateFromGameData] (Argument: r0=Struct Ptr)
+02000000BD340308	//Call Routine [ASM:0x80334BD PrepScreenProc_InitMapMenu] (Argument: r0=Struct Ptr)
+02000000CD340308	//Call Routine [ASM:0x80334CD PrepScreenProc_DimMapImmediate] (Argument: r0=Struct Ptr)
+020000008D3D0108	//Call Routine [ASM:0x8013D8D StartFadeOutBlackMedium] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0C003D0000000000	//Goto Label [LABEL:0x3D]
+0B00000000000000	//Defines Label [LABEL:0x0] (doesn't do anything by itself)
+0200000015350308	//Call Routine [ASM:0x8033515 PrepScreenProc_StartDimMap] (Argument: r0=Struct Ptr)
+1400000045380108	//Call Routine [ASM:0x8013845 MapBrightnessFadeExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0200000049360308	//Call Routine [ASM:0x8033649 PrepScreenProc_StartMapMenu] (Argument: r0=Struct Ptr)
+0B003D0000000000	//Defines Label [LABEL:0x3D] (doesn't do anything by itself)
+0200000095730908	//Call Routine [ASM:0x8097395 EnablePrepScreenMenu] (Argument: r0=Struct Ptr)
+1400000041730908	//Call Routine [ASM:0x8097341 PrepScreenMenuExists]. If Routine returns 1, yield without forwarding, continue otherwise
+02000000E9340308	//Call Routine [ASM:0x80334E9 PrepScreenProc_StartBrightenMap] (Argument: r0=Struct Ptr)
+1400000045380108	//Call Routine [ASM:0x8013845 MapBrightnessFadeExists]. If Routine returns 1, yield without forwarding, continue otherwise
+0B00090000000000	//Defines Label [LABEL:0x9] (doesn't do anything by itself)
+1400000059570308	//Call Routine [ASM:0x8035759 IsBottomHelpTextActive]. If Routine returns 1, yield without forwarding, continue otherwise
+02000000F5A10108	//Call Routine [ASM:0x801A1F5 RefreshFogAndUnitMaps] (Argument: r0=Struct Ptr)
+020000003D9C0108	//Call Routine [ASM:0x8019C3D UpdateGameTilesGraphics] (Argument: r0=Struct Ptr)
+02000000A1710208	//Call Routine [ASM:0x80271A1 SMS_UpdateFromGameData] (Argument: r0=Struct Ptr)
+020000003DD10808	//Call Routine [ASM:0x808D13D New6CPPInterfaceConstructor] (Argument: r0=Struct Ptr)
+0300000041390308	//Set Loop routine [ASM:0x8033941 Procs PrepScreen CallASM] And Yield
+0300000079390308	//Set Loop routine [ASM:0x8033979 PrepScreenProc_MapIdle] And Yield
+0B00010000000000	//Defines Label [LABEL:0x1] (doesn't do anything by itself)
+02000000CDDA0108	//Call Routine [ASM:0x801DACD HideMoveRangeGraphics] (Argument: r0=Struct Ptr)
+0200000051D10808	//Call Routine [ASM:0x808D151 DeletePlayerPhaseInterface6Cs] (Argument: r0=Struct Ptr)
+020000007DCC0108	//Call Routine [ASM:0x801CC7D DisplayActiveUnitEffectRange] (Argument: r0=Struct Ptr)
+03000000353F0308	//Set Loop routine [ASM:0x8033F35 Procs PrepScreen CallASM] And Yield
+0C00090000000000	//Goto Label [LABEL:0x9]
+0B00350000000000	//Defines Label [LABEL:0x35] (doesn't do anything by itself)
+020000008D340308	//Call Routine [ASM:0x803348D Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0800000048A55908	//Continue only if struct of type [Procs:0x859A548 Procs CameraMovement] exists, Yields without forwarding otherwise
+02000000D5330308	//Call Routine [ASM:0x80333D5 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0C00340000000000	//Goto Label [LABEL:0x34]
+0B00360000000000	//Defines Label [LABEL:0x36] (doesn't do anything by itself)
+020000008D340308	//Call Routine [ASM:0x803348D Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0800000048A55908	//Continue only if struct of type [Procs:0x859A548 Procs CameraMovement] exists, Yields without forwarding otherwise
+020000002D340308	//Call Routine [ASM:0x803342D Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0C00340000000000	//Goto Label [LABEL:0x34]
+0B00340000000000	//Defines Label [LABEL:0x34] (doesn't do anything by itself)
+020000008D3E0308	//Call Routine [ASM:0x8033E8D InitMapChangeGraphicsIfFog] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000A53E0308	//Call Routine [ASM:0x8033EA5 DisplayMapChangeIfFog] (Argument: r0=Struct Ptr)
+0E003C0000000000	//Sleep for given duration [WAIT FRAME:60 frame sec(1 sec)] (Sets callback to Sleep Callback)
+0C00000000000000	//Goto Label [LABEL:0x0]
+0B00050000000000	//Defines Label [LABEL:0x5] (doesn't do anything by itself)
+02000000A9110308	//Call Routine [ASM:0x80311A9 ReloadGameCoreGraphics] (Argument: r0=Struct Ptr)
+0600010018AE5908	//Call new Child Procs [Child Procs:0x859AE18 Procs ADJUSTFROMXI] And Yield
+0C00090000000000	//Goto Label [LABEL:0x9]
+0B00060000000000	//Defines Label [LABEL:0x6] (doesn't do anything by itself)
+0200000091400308	//Call Routine [ASM:0x8034091 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0C00010000000000	//Goto Label [LABEL:0x1]
+0B00030000000000	//Defines Label [LABEL:0x3] (doesn't do anything by itself)
+0200000051D10808	//Call Routine [ASM:0x808D151 DeletePlayerPhaseInterface6Cs] (Argument: r0=Struct Ptr)
+02000000113C0308	//Call Routine [ASM:0x8033C11 SALLYCURSOR6C_StartUnitSwap] (Argument: r0=Struct Ptr)
+0800000048A55908	//Continue only if struct of type [Procs:0x859A548 Procs CameraMovement] exists, Yields without forwarding otherwise
+03000000913C0308	//Set Loop routine [ASM:0x8033C91 PrepScreen_UnitSwapIdle] And Yield
+02000000CDDA0108	//Call Routine [ASM:0x801DACD HideMoveRangeGraphics] (Argument: r0=Struct Ptr)
+02000000093E0308	//Call Routine [ASM:0x8033E09 PrepScreen_StartUnitSwapAnim] (Argument: r0=Struct Ptr)
+0800000048A55908	//Continue only if struct of type [Procs:0x859A548 Procs CameraMovement] exists, Yields without forwarding otherwise
+1400000049EC0108	//Call Routine [ASM:0x801EC49 UnitSwapAnimationExists]. If Routine returns 1, yield without forwarding, continue otherwise
+020000008D3E0308	//Call Routine [ASM:0x8033E8D InitMapChangeGraphicsIfFog] (Argument: r0=Struct Ptr)
+02000000F5A10108	//Call Routine [ASM:0x801A1F5 RefreshFogAndUnitMaps] (Argument: r0=Struct Ptr)
+02000000A1710208	//Call Routine [ASM:0x80271A1 SMS_UpdateFromGameData] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000A53E0308	//Call Routine [ASM:0x8033EA5 DisplayMapChangeIfFog] (Argument: r0=Struct Ptr)
+0C00090000000000	//Goto Label [LABEL:0x9]
+0B00040000000000	//Defines Label [LABEL:0x4] (doesn't do anything by itself)
+02000000CDDA0108	//Call Routine [ASM:0x801DACD HideMoveRangeGraphics] (Argument: r0=Struct Ptr)
+0800000048A55908	//Continue only if struct of type [Procs:0x859A548 Procs CameraMovement] exists, Yields without forwarding otherwise
+02000000D93D0308	//Call Routine [ASM:0x8033DD9 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+0C00090000000000	//Goto Label [LABEL:0x9]
+0B000B0000000000	//Defines Label [LABEL:0xB] (doesn't do anything by itself)
+0C00010000000000	//Goto Label [LABEL:0x1]
+0B00390000000000	//Defines Label [LABEL:0x39] (doesn't do anything by itself)
+02000000813D0108	//Call Routine [ASM:0x8013D81 StartFadeInBlackFast] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0200000085010308	//Call Routine [ASM:0x8030185 BlockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+020000004D330308	//Call Routine [ASM:0x803334D ClosePrepScreenMapMenu] (Argument: r0=Struct Ptr)
+02000000C13E0308	//Call Routine [ASM:0x8033EC1 PrepScreenProc_StartConfigMenu] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000B9010308	//Call Routine [ASM:0x80301B9 UnblockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+0C003E0000000000	//Goto Label [LABEL:0x3E]
+0B00380000000000	//Defines Label [LABEL:0x38] (doesn't do anything by itself)
+02000000813D0108	//Call Routine [ASM:0x8013D81 StartFadeInBlackFast] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0200000085010308	//Call Routine [ASM:0x8030185 BlockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+020000004D330308	//Call Routine [ASM:0x803334D ClosePrepScreenMapMenu] (Argument: r0=Struct Ptr)
+020000009DE70808	//Call Routine [ASM:0x808E79D Show status screen subroutine] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000B9010308	//Call Routine [ASM:0x80301B9 UnblockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+0C003E0000000000	//Goto Label [LABEL:0x3E]
+0B003B0000000000	//Defines Label [LABEL:0x3B] (doesn't do anything by itself)
+02000000813D0108	//Call Routine [ASM:0x8013D81 StartFadeInBlackFast] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0200000085010308	//Call Routine [ASM:0x8030185 BlockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+020000004D330308	//Call Routine [ASM:0x803334D ClosePrepScreenMapMenu] (Argument: r0=Struct Ptr)
+020000000D410308	//Call Routine [ASM:0x803410D When accessing save screen on advancement advance screen] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000B9010308	//Call Routine [ASM:0x80301B9 UnblockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+0200000069410308	//Call Routine [ASM:0x8034169 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0C003E0000000000	//Goto Label [LABEL:0x3E]
+0B00370000000000	//Defines Label [LABEL:0x37] (doesn't do anything by itself)
+02000000693D0108	//Call Routine [ASM:0x8013D69 StartFadeInBlackMedium] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0200000079400308	//Call Routine [ASM:0x8034079 PrepScreenProc_Cleanup] (Argument: r0=Struct Ptr)
+02000000E9590808	//Call Routine [ASM:0x80859E9 nullsub_20] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+020000000D240108	//Call Routine [ASM:0x801240D PositionUnitsAccordingToDeployment] (Argument: r0=Struct Ptr)
+0200000079420308	//Call Routine [ASM:0x8034279 EndPrepScreen] (Argument: r0=Struct Ptr)
+1000000000000000	//Yeild (Stops exectution until next call to interpreter)
+0B003E0000000000	//Defines Label [LABEL:0x3E] (doesn't do anything by itself)
+02000000A9110308	//Call Routine [ASM:0x80311A9 ReloadGameCoreGraphics] (Argument: r0=Struct Ptr)
+02000000F5A10108	//Call Routine [ASM:0x801A1F5 RefreshFogAndUnitMaps] (Argument: r0=Struct Ptr)
+020000003D9C0108	//Call Routine [ASM:0x8019C3D UpdateGameTilesGraphics] (Argument: r0=Struct Ptr)
+02000000A1710208	//Call Routine [ASM:0x80271A1 SMS_UpdateFromGameData] (Argument: r0=Struct Ptr)
+0200000049360308	//Call Routine [ASM:0x8033649 PrepScreenProc_StartMapMenu] (Argument: r0=Struct Ptr)
+02000000CD340308	//Call Routine [ASM:0x80334CD PrepScreenProc_DimMapImmediate] (Argument: r0=Struct Ptr)
+02000000A53D0108	//Call Routine [ASM:0x8013DA5 StartFadeOutBlackFast] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0C003D0000000000	//Goto Label [LABEL:0x3D]
+0B003C0000000000	//Defines Label [LABEL:0x3C] (doesn't do anything by itself)
+02000000693D0108	//Call Routine [ASM:0x8013D69 StartFadeInBlackMedium] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+02000000CDDA0108	//Call Routine [ASM:0x801DACD HideMoveRangeGraphics] (Argument: r0=Struct Ptr)
+0200000085010308	//Call Routine [ASM:0x8030185 BlockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+02000000D53E0308	//Call Routine [ASM:0x8033ED5 CallCursorShop] (Argument: r0=Struct Ptr)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+02000000B9010308	//Call Routine [ASM:0x80301B9 UnblockGameGraphicsLogic] (Argument: r0=Struct Ptr)
+02000000A9110308	//Call Routine [ASM:0x80311A9 ReloadGameCoreGraphics] (Argument: r0=Struct Ptr)
+02000000F5A10108	//Call Routine [ASM:0x801A1F5 RefreshFogAndUnitMaps] (Argument: r0=Struct Ptr)
+020000003D9C0108	//Call Routine [ASM:0x8019C3D UpdateGameTilesGraphics] (Argument: r0=Struct Ptr)
+02000000A1710208	//Call Routine [ASM:0x80271A1 SMS_UpdateFromGameData] (Argument: r0=Struct Ptr)
+0200000095410308	//Call Routine [ASM:0x8034195 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+0200000009360308	//Call Routine [ASM:0x8033609 Procs PrepScreen CallASM] (Argument: r0=Struct Ptr)
+020000008D3D0108	//Call Routine [ASM:0x8013D8D StartFadeOutBlackMedium] (Argument: r0=Struct Ptr)
+0300000069400108	//Set Loop routine [ASM:0x8014069 ContinueUntilSomeTransistion6CExists] And Yield
+0C00090000000000	//Goto Label [LABEL:0x9]
+0B003A0000000000	//Defines Label [LABEL:0x3A] (doesn't do anything by itself)
+0E00000000000000	//Sleep for given duration [WAIT FRAME:0 frame sec(0 sec)] (Sets callback to Sleep Callback)
+0200000049360308	//Call Routine [ASM:0x8033649 PrepScreenProc_StartMapMenu] (Argument: r0=Struct Ptr)
+0C003D0000000000	//Goto Label [LABEL:0x3D]
+0000000000000000	//End (Deletes Self)

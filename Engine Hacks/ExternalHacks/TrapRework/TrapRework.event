@@ -155,6 +155,21 @@
 	SetTrapMapSprite(Placeholder46ID,0x6A)
 	SetTrapMapSprite(Placeholder47ID,0x6A)
 
+	SetTrapMapSprite(51,0x6A)
+	SetTrapMapSprite(52,0x6A)
+	SetTrapMapSprite(53,0x6A)
+	SetTrapMapSprite(54,0x6A)
+	SetTrapMapSprite(55,0x6A)
+	SetTrapMapSprite(56,0x6A)
+	SetTrapMapSprite(57,0x6A)
+	SetTrapMapSprite(58,0x6A)
+	SetTrapMapSprite(59,0x6A)
+	SetTrapMapSprite(60,0x6A)
+	SetTrapMapSprite(61,0x6A)
+	SetTrapMapSprite(62,0x6A)
+	SetTrapMapSprite(63,0x6A)
+
+
 
 
 	//Macro for setting unique cases on trap map sprites
@@ -204,6 +219,19 @@
 	SetTrapMapSpritePalette(Placeholder46ID,NPCTrapPaletteWord)
 	SetTrapMapSpritePalette(Placeholder47ID,NPCTrapPaletteWord)
 	
+	SetTrapMapSpritePalette(51,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(52,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(53,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(54,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(55,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(56,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(57,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(58,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(59,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(60,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(61,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(62,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(63,NPCTrapPaletteWord)
 
 	
 	
@@ -232,6 +260,7 @@
 	//Macro for setting traps as impassable, like light runes
 	#define SetImpassableTrap(trapID) "PUSH; ORG (TrapLightRuneImpassableTable+trapID); BYTE 1; POP"
 	
+
 	SetImpassableTrap(LightRuneTrapID)
 	
 	SetImpassableTrap(CutBushID)
@@ -255,10 +284,10 @@
 	SetImpassableTrap(Placeholder25ID)
 	SetImpassableTrap(Placeholder26ID)
 	SetImpassableTrap(Placeholder27ID)
-	SetImpassableTrap(Placeholder28ID)
-	SetImpassableTrap(Placeholder29ID)
-	SetImpassableTrap(Placeholder30ID)
-	SetImpassableTrap(Placeholder31ID)
+	//SetImpassableTrap(Placeholder28ID)
+	//SetImpassableTrap(Placeholder29ID)
+	//SetImpassableTrap(Placeholder30ID)
+	//SetImpassableTrap(Placeholder31ID)
 	SetImpassableTrap(Placeholder41ID)
 	SetImpassableTrap(Placeholder42ID)
 	SetImpassableTrap(Placeholder43ID)
@@ -267,8 +296,17 @@
 	SetImpassableTrap(Placeholder46ID)
 	SetImpassableTrap(Placeholder47ID)
 
+	SetImpassableTrap(51)
+	SetImpassableTrap(52)
+	SetImpassableTrap(53)
+	SetImpassableTrap(54)
+	SetImpassableTrap(55)
+	SetImpassableTrap(56)
+	SetImpassableTrap(57)
+	SetImpassableTrap(58)
+	SetImpassableTrap(59)
 
-	
+
 
 	//Macro for settings pairs of terrain IDs & char IDs for breakable terrain
 	#define TrapBreakableTerrain(terrainID,charID,maxHP) "BYTE (terrainID-1) charID maxHP 0"

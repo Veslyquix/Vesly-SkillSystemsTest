@@ -30,6 +30,9 @@
 .equ SetFlag, 0x8083D80
 .equ SpawnTrap,0x802E2B8 @r0 = x coord, r1 = y coord, r2 = trap ID
 .equ Init_ReturnPoint,0x8037901
+.equ UpdateImpassibleTrapTerrain, 0x802eb50 @   [0x802eb50]?
+.equ UpdateAllLightRunes, 0x802E470 @  [0x802E470]?   
+
 @.equ GiveItemEvent, ObtainItemID+4
 
 GenericTrapInitialization:
@@ -40,6 +43,8 @@ ldrb r1,[r5,#2] @y coord
 ldrb r2,[r5] @trap ID
 blh SpawnTrap @returns pointer to trap data in RAM
 
+
+
 @give it our vision range data 
 ldrb r1,[r5,#3] @initial vision range
 strb r1,[r0,#3] 
@@ -47,6 +52,12 @@ ldrb r1,[r5,#4] @set vision range
 strb r1,[r0,#4]
 ldrb r1,[r5,#5] @set vision range
 strb r1,[r0,#5]
+
+ldr r1, =MemorySlot3
+mov r2, #0
+str r2, [r1]
+
+@blh UpdateImpassibleTrapTerrain
 
 ReturnPoint:
 ldr r3,=Init_ReturnPoint
