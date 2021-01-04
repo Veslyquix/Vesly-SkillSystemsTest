@@ -290,7 +290,7 @@ bx r0
 @based on NullAllLightRunesTerrain at address 2EB50
 
 TrapRework_NewUpdateAllLightRunes:
-push {r4-r5,r14}
+push {r4,r14}
 
 ldr r2,=gTrapArray
 ldrb r0,[r2,#2]
@@ -325,7 +325,7 @@ cmp r0,#0
 bne LightRunes_LoopStart
 
 LightRunes_GoBack:
-pop {r4-r5}
+pop {r4}
 pop {r0}
 bx r0
 
