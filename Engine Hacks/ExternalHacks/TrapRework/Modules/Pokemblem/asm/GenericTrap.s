@@ -4,8 +4,34 @@
 .global GenericTrapInitialization
 .type GenericTrapInitialization, %function
 
-.global GenericTrapUsability
-.type GenericTrapUsability, %function
+
+
+.global GenericTrapUsability0x30
+.type GenericTrapUsability0x30, %function
+.global GenericTrapUsability0x31
+.type GenericTrapUsability0x31, %function
+.global GenericTrapUsability0x32
+.type GenericTrapUsability0x32, %function
+.global GenericTrapUsability0x33
+.type GenericTrapUsability0x33, %function
+.global GenericTrapUsability0x34
+.type GenericTrapUsability0x34, %function
+.global GenericTrapUsability0x35
+.type GenericTrapUsability0x35, %function
+.global GenericTrapUsability0x36
+.type GenericTrapUsability0x36, %function
+.global GenericTrapUsability0x37
+.type GenericTrapUsability0x37, %function
+.global GenericTrapUsability0x38
+.type GenericTrapUsability0x38, %function
+.global GenericTrapUsability0x39
+.type GenericTrapUsability0x39, %function
+
+
+
+
+
+
 
 .global GenericTrapEffect
 .type GenericTrapEffect, %function
@@ -64,7 +90,6 @@ ldr r3,=Init_ReturnPoint
 bx r3
 
 
-
 GetAdjacentTrap: @r0 = unit we're checking for adjacency to
 push {r4-r6,r14}
 mov r4,r0
@@ -91,7 +116,7 @@ cmp r1, r2
 bge CheckA 
 b ReturnA
 CheckA:
-mov r2, #0x50
+mov r2, #0x39
 cmp r1, r2
 blt RetTrap
 
@@ -110,7 +135,7 @@ cmp r1, r2
 bge CheckB 
 b ReturnB
 CheckB:
-mov r2, #0x50
+mov r2, #0x39
 cmp r1, r2
 blt RetTrap
 
@@ -129,7 +154,7 @@ cmp r1, r2
 bge CheckC 
 b ReturnC
 CheckC:
-mov r2, #0x50
+mov r2, #0x39
 cmp r1, r2
 blt RetTrap
 ReturnC:
@@ -147,7 +172,7 @@ cmp r1, r2
 bge CheckD 
 b ReturnD
 CheckD:
-mov r2, #0x50
+mov r2, #0x39
 cmp r1, r2
 blt RetTrap
 
@@ -164,11 +189,137 @@ bx r1
 .align
 
 
-GenericTrapUsability:
-push {r4,r14}
+GetAdjacentTrapIndividual: @r0 = unit we're checking for adjacency to
+push {r4-r7,r14}
+@r7 trap type to check against 
+mov r4,r0
+
 ldr r4,=#0x3004E50
 ldr r0,[r4]
-bl GetAdjacentTrap
+
+mov r4, r0
+
+ldrb r5,[r4,#0x10] @x coord
+ldrb r6,[r4,#0x11] @y coord
+
+
+mov r0,r5
+sub r0,#1
+mov r1,r6
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+
+mov r0,r5
+mov r1,r6
+sub r1,#1
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+
+mov r0,r5
+add r0,#1
+mov r1,r6
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+
+mov r0,r5
+mov r1,r6
+add r1,#1
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+mov r0,#0	@no trap so return 0
+
+
+RetTrapIndividual:
+pop {r4-r7}
+pop {r1}
+bx r1
+
+
+GenericTrapUsability0x30:
+push {r4,r7,r14}
+mov r7, #0x30
+b GenericTrapUsability
+
+GenericTrapUsability0x31:
+push {r4,r7,r14}
+mov r7, #0x31
+b GenericTrapUsability
+
+GenericTrapUsability0x32:
+push {r4,r7,r14}
+mov r7, #0x32
+b GenericTrapUsability
+
+GenericTrapUsability0x33:
+push {r4,r7,r14}
+mov r7, #0x33
+b GenericTrapUsability
+
+GenericTrapUsability0x34:
+push {r4,r7,r14}
+mov r7, #0x34
+b GenericTrapUsability
+
+GenericTrapUsability0x35:
+push {r4,r7,r14}
+mov r7, #0x35
+b GenericTrapUsability
+
+GenericTrapUsability0x36:
+push {r4,r7,r14}
+mov r7, #0x36
+b GenericTrapUsability
+
+GenericTrapUsability0x37:
+push {r4,r7,r14}
+mov r7, #0x37
+b GenericTrapUsability
+
+GenericTrapUsability0x38:
+push {r4,r7,r14}
+mov r7, #0x38
+b GenericTrapUsability
+
+GenericTrapUsability0x39:
+push {r4,r7,r14}
+mov r7, #0x39
+b GenericTrapUsability
+
+
+
+
+GenericTrapUsability:
+ldr r4,=#0x3004E50
+ldr r0,[r4]
+bl GetAdjacentTrapIndividual
 mov r4, r0  @&The DV
 cmp r0,#0
 beq Usability_RetFalse
@@ -202,7 +353,7 @@ mov r0,#1
 
 
 Usability_GoBack:
-pop {r4}
+pop {r4,r7}
 pop {r1}
 bx r1
 

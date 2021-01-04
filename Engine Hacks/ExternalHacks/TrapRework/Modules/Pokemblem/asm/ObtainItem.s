@@ -4,8 +4,21 @@
 .global ObtainItemInitialization
 .type ObtainItemInitialization, %function
 
-.global ObtainItemUsability
-.type ObtainItemUsability, %function
+.global ObtainItemUsability0x10
+.type ObtainItemUsability0x10, %function
+.global ObtainItemUsability0x11
+.type ObtainItemUsability0x11, %function
+.global ObtainItemUsability0x12
+.type ObtainItemUsability0x12, %function
+.global ObtainItemUsability0x13
+.type ObtainItemUsability0x13, %function
+.global ObtainItemUsability0x14
+.type ObtainItemUsability0x14, %function
+.global ObtainItemUsability0x15
+.type ObtainItemUsability0x15, %function
+
+
+
 
 .global ObtainItemEffect
 .type ObtainItemEffect, %function
@@ -80,7 +93,7 @@ cmp r1, r2
 bge CheckA 
 b ReturnA
 CheckA:
-mov r2, #0x20
+mov r2, #0x19
 cmp r1, r2
 blt RetTrap
 
@@ -99,7 +112,7 @@ cmp r1, r2
 bge CheckB 
 b ReturnB
 CheckB:
-mov r2, #0x20
+mov r2, #0x19
 cmp r1, r2
 blt RetTrap
 
@@ -118,7 +131,7 @@ cmp r1, r2
 bge CheckC 
 b ReturnC
 CheckC:
-mov r2, #0x20
+mov r2, #0x19
 cmp r1, r2
 blt RetTrap
 ReturnC:
@@ -136,7 +149,7 @@ cmp r1, r2
 bge CheckD 
 b ReturnD
 CheckD:
-mov r2, #0x20
+mov r2, #0x19
 cmp r1, r2
 blt RetTrap
 
@@ -152,12 +165,114 @@ bx r1
 .ltorg
 .align
 
+GetAdjacentTrapIndividual: @r0 = unit we're checking for adjacency to
+push {r4-r7,r14}
+@r7 trap type to check against 
+mov r4,r0
 
-ObtainItemUsability:
-push {r4,r14}
 ldr r4,=#0x3004E50
 ldr r0,[r4]
-bl GetAdjacentTrap
+
+mov r4, r0
+
+ldrb r5,[r4,#0x10] @x coord
+ldrb r6,[r4,#0x11] @y coord
+
+
+mov r0,r5
+sub r0,#1
+mov r1,r6
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+
+mov r0,r5
+mov r1,r6
+sub r1,#1
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+
+mov r0,r5
+add r0,#1
+mov r1,r6
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+
+mov r0,r5
+mov r1,r6
+add r1,#1
+blh GetTrapAt
+
+mov r1, #0
+ldrb r1,[r0,#2]
+
+mov r2, r7
+cmp r1, r2
+beq RetTrapIndividual
+
+mov r0,#0	@no trap so return 0
+
+
+RetTrapIndividual:
+pop {r4-r7}
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+ObtainItemUsability0x10:
+push {r4,r7,r14}
+mov r7, #0x10
+b ObtainItemUsability
+ObtainItemUsability0x11:
+push {r4,r7,r14}
+mov r7, #0x11
+b ObtainItemUsability
+ObtainItemUsability0x12:
+push {r4,r7,r14}
+mov r7, #0x12
+b ObtainItemUsability
+ObtainItemUsability0x13:
+push {r4,r7,r14}
+mov r7, #0x13
+b ObtainItemUsability
+ObtainItemUsability0x14:
+push {r4,r7,r14}
+mov r7, #0x14
+b ObtainItemUsability
+ObtainItemUsability0x15:
+push {r4,r7,r14}
+mov r7, #0x15
+b ObtainItemUsability
+
+
+
+
+ObtainItemUsability:
+ldr r4,=#0x3004E50
+ldr r0,[r4]
+bl GetAdjacentTrapIndividual
 mov r4, r0  @&The DV
 
 cmp r0,#0
@@ -188,7 +303,7 @@ mov r0,#1
 
 
 Usability_GoBack:
-pop {r4}
+pop {r4,r7}
 pop {r1}
 bx r1
 
