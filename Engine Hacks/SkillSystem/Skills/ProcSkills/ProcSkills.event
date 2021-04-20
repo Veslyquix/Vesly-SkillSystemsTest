@@ -52,6 +52,7 @@ POIN SkillTester
 WORD SolID
 WORD LiquidOozeID
 
+
 Proc_Luna:
 #incbin "Luna/proc_luna.dmp"
 POIN SkillTester
@@ -73,11 +74,16 @@ Proc_AetherDamage:
 POIN SkillTester
 WORD AetherID
 
+Proc_CmbArtHpCost:
+#include "CmbArtHpCost/CmbArtHpCost.lyn.event"
+
 Proc_Counter:
-// #incbin "proc_closecounter.dmp"
 #incbin "Counter/proc_counter.dmp"
 POIN SkillTester
 WORD CounterID
+
+
+
 
 Proc_CounterMagic:
 // #incbin "proc_distantcounter.dmp"
@@ -219,6 +225,39 @@ Proc_Vengeance:
 #incbin "Vengeance/proc_vengeance.dmp"
 POIN SkillTester
 WORD VengeanceID
+
+ALIGN 4
+Proc_TripleHit:
+#incbin "MultiHitMoves/proc_TripleHit.dmp"
+POIN SkillTester
+WORD TripleHitID
+
+ALIGN 4
+Proc_MultiHit:
+#incbin "MultiHitMoves/proc_MultiHit.dmp"
+POIN SkillTester
+WORD MultiHitID
+
+
+Proc_Absorb:
+#incbin "Absorb/proc_Absorb.dmp"
+POIN SkillTester
+WORD AbsorbID
+WORD LiquidOozeID
+
+Proc_Drain:
+#incbin "Drain/proc_Drain.dmp"
+POIN SkillTester
+WORD DrainID
+WORD LiquidOozeID
+
+//ALIGN 4
+//Proc_Skill1:
+//#incbin "Glacies/proc_glacies.dmp"
+//POIN SkillTester
+//WORD Skill1ID
+
+
 
 #include "CombatArts/CombatArtProcSkills.event"
 

@@ -1,0 +1,256 @@
+0  None
+01 Bulbasaur
+02 Ivysaur
+03 Venusaur
+04 Charmander
+05 Charmeleon
+06 Charizard
+07 Squirtle
+08 Wartortle
+09 Blastoise
+0A Caterpie
+0B Metapod
+0C Butterfree
+0D Weedle
+0E Kakuna
+0F Beedrill
+10 Pidgey
+11 Pigeotto
+12 Pidgeot
+13 Necromancer
+14 Necromancer
+15 Necromancer
+16 Necromancer
+17 Rattata
+18 Raticate
+19 Spearow
+1A Fearow
+1B Ekans
+1C Arbok
+1D Pikachu
+1E Raichu
+1F Sandshrew
+20 Sandslash
+21 Nidoran-F
+22 Nidorina
+23 Nidoqueen
+24 Nidoran-M
+25 Nidorino
+26 Nidoking
+27 Clefairy
+28 Clefable
+29 Vulpix
+2A Ninetales
+2B Jigglypuff
+2C Wigglytuff
+2D Zubat
+2E Golbat
+2F Oddish
+30 Gloom
+31 Vileplume
+32 Paras
+33 Parasect
+34 Gorgon Egg
+35 Venonat
+36 Venomoth
+37 Diglett
+38 Dugtrio
+39 Meowth
+3A Persian
+3B Psyduck
+3C Golduck
+3D Mankey
+3E Primeape
+3F Growlithe
+40 Arcanine
+41 Poliwag
+42 Poliwhirl
+43 Poliwrath
+44 Abra
+45 Kadabra
+46 Alakazam
+47 Machop
+48 Machoke
+49 Machamp
+4A Bellsprout
+4B Weepinbell
+4C Victreebel
+4D Tentacool
+4E Tentacruel
+4F Geodude
+50 Graveller
+51 Phantom
+52 Golem
+53 Ponyta
+54 Rapidash
+55 Slowpoke
+56 Slowbro
+57 Magnemite
+58 Magneton
+59 Farfetch'd
+5A Doduo
+5B Dodrio
+5C Seel
+5D Dewgong
+5E Grimer
+5F Muk
+60 Shellder
+61 Cloyster
+62 Gorgon Egg
+63 Gastly
+64 Deathgoyle
+65 Draco Zombie
+66 Demon King
+67
+68
+69
+6A 
+6B 
+6C 
+6D Civilian
+6E Civilian
+6F Civilian
+70 Civilian
+71 Civilian
+72
+73
+74 sfx
+75 open ball
+76 pokeball
+77 pokeball
+78
+79
+7A blank
+7B 
+7C Bush
+7D Elder Bael
+7E Journeyman
+7F Pupil
+80 Muk
+81 Shellder
+82 Cloyster
+83 Gastly
+84 Haunter
+85 Gengar
+86 Onix
+87 Drowzee
+88 Hypno
+89 Krabby
+8A Kingler
+8B Voltorb
+8C Electrode
+8D Exeggcute
+8E Exeggutor
+8F Cubone
+90 Marowak
+91 Hitmonlee
+92 Hitmonchan
+93 Lickitung
+94 Koffing
+95 Weezing
+96 Rhyhorn
+97 Rhydon
+98 Chansey
+99 Tangela
+9A Kangaskhan
+9B Horsea
+9C Seadra
+9D Goldeen
+9E Seaking
+9F Staryu
+A0 Starmie
+A1 Mr. Mime
+A2 Scyther
+A3 Jynx
+A4 Electabuzz
+A5 Magmar
+A6 Pinsir
+A7 Tauros
+A8 Magikarp
+A9 Gyarados
+AA Lapras
+AB Ditto
+AC Eevee
+AD Vaporeon
+AE Jolteon
+AF Flareon
+B0 Porygon
+B1 Omanyte
+B2 Omastar
+B3 Kabuto
+B4 Kabutops
+B5 Aerodactyl
+B6 Snorlax
+B7 Articuno
+B8 Zapdos
+B9 Moltres
+BA Dratini
+BB Dragonair
+BC Dragonite
+BD Mewtwo
+BE Mew
+BF 
+C0 
+C1 
+C2 
+C3 
+C4 
+C5 
+C6 
+C7 
+C8 
+C9 
+CA 
+CB 
+CC 
+CD 
+CE 
+CF 
+D0 
+D1 
+D2 
+D3 
+D4 
+D5 
+D6 
+D7 
+D8 
+D9 
+DA 
+DB 
+DC 
+DD 
+DE 
+DF Placeholders
+E0 Bulbasaur
+E1 Bulbasaur
+E2 Bulbasaur
+E3 Bulbasaur
+E4 Bulbasaur
+E5 Bulbasaur
+E6 Bulbasaur
+E7 Bulbasaur
+E8 Bulbasaur
+E9 Bulbasaur
+EA Bulbasaur
+EB Bulbasaur
+EC Bulbasaur
+ED Bulbasaur
+EE Bulbasaur
+EF Bulbasaur
+F0 Bulbasaur
+F1 Bulbasaur
+F2 Bulbasaur
+F3 Bulbasaur
+F4 Bulbasaur
+F5 Bulbasaur
+F6 Bulbasaur
+F7 Bulbasaur
+F8 Bulbasaur
+F9 Bulbasaur
+FA Bulbasaur
+FB Bulbasaur
+FC Bulbasaur
+FD Bulbasaur
+FE Bulbasaur
+FF 

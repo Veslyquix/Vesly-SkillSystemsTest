@@ -1,0 +1,15 @@
+ALIGN 4
+PromoteOnLevelUp:
+#include "PromoteOnLevelUp.lyn.event"
+    MESSAGE Used prom space ends at currentOffset
+
+ALIGN 4
+		PromotionEvent:
+		CAM1 0xFFFF
+		CUMO 0xFFFF
+		STAL 0x01
+		Cure
+		ASMC 0x80CCA15 //NewPromotion
+		ASMC 0x080790a5 //MU_EndAll //deselect unit
+		NoFade
+		ENDA

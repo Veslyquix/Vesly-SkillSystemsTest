@@ -2,12 +2,131 @@
 //To disable a skill, define it as 255.
 //Skills are categorized broadly by where their effect is applied, in no particular order within each category.
 
+//Custom Skills
+//Name: Skill1 Description. Empty combat art.  
+//By Vesly
+#define Skill1ID 1
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill2ID 2
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill3ID 3
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill4ID 4
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill5ID 5
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill6ID 255
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill7ID 255
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define TripleHitID 6
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define MultiHitID 255
+
+//Absorb: Heal for 12.5% of damage dealt. 
+//Sol's Author Unknown (Initial Commit), edit By Vesly
+#define AbsorbID 255
+
+//Drain: Heal for 25% of damage dealt. 
+//Sol's Author Unknown (Initial Commit), edit By Vesly
+#define DrainID 255
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill8ID 255
+
+//Name: Description. Empty combat art.  
+//By Vesly
+#define Skill9ID 255
+
+//Name: Description. (Blank combat art.)  
+#define Skill10ID 7
+#define Skill11ID 8 
+#define Skill12ID 9
+#define Skill13ID 255
+#define Skill14ID 255
+#define Skill15ID 255
+#define Skill16ID 255 
+#define Skill17ID 255
+#define Skill18ID 255
+#define Skill19ID 255
+#define Skill20ID 255
+#define Skill21ID 255
+#define Skill22ID 255
+#define Skill23ID 255
+#define Skill24ID 255
+#define Skill25ID 255
+#define Skill26ID 255
+#define Skill27ID 255
+#define Skill28ID 255
+#define Skill29ID 255
+#define Skill30ID 255
+#define Skill31ID 255
+#define Skill32ID 255
+#define Skill33ID 255
+#define Skill34ID 255
+#define Skill35ID 255
+#define Skill36ID 255
+#define Skill37ID 255
+#define Skill38ID 255
+#define Skill39ID 255
+#define Skill40ID 255
+#define Skill41ID 255
+#define Skill42ID 255
+#define Skill43ID 255
+#define Skill44ID 255
+#define Skill45ID 255
+#define Skill46ID 255
+#define Skill47ID 255
+#define Skill48ID 255
+#define Skill49ID 255
+#define Skill50ID 255
+#define Skill51ID 255
+#define Skill52ID 255
+#define Skill53ID 255
+#define Skill54ID 255
+#define Skill55ID 255
+#define Skill56ID 255
+#define Skill57ID 255
+#define Skill58ID 255
+#define Skill59ID 255
+#define Skill60ID 255
+#define Skill61ID 255
+#define Skill62ID 255
+#define Skill63ID 255
+#define Skill64ID 255
+#define Skill65ID 255
+#define Skill66ID 255
+#define Skill67ID 255
+#define Skill68ID 255
+#define Skill69ID 255
+#define Skill70ID 255
+
 
 //AI Skills
 
+//6
 //Provoke: Enemies are more likely to target this unit.
 //By Tequila
-#define ProvokeID 6
+#define ProvokeID 255 //6
+
+
 
 //Shade: Enemies are less likely to target this unit.
 //By Sme
@@ -222,17 +341,19 @@
 
 //Movement Skills
 
+//1
 //Acrobat: All traversable terrain costs 1 movement.
 //By Tequila
-#define AcrobatID 1
+#define AcrobatID 255 //1
 
 //Armor March: At start of turn, if unit is adjacent to an armor ally, unit and adjacent armor allies gain +2 Mov.
 //By Leonarth
 #define ArmorMarchID 174
 
+//2
 //Pass: Can move through enemy units.
 //By Tequila
-#define PassID 2
+#define PassID 255 //2
 
 //Keep Up: At start of turn, if unit is within 3 spaces of an ally with Canto or Canto+, unit gains +2 Mov.
 //By Sme
@@ -269,9 +390,10 @@
 //By Tequila
 #define CantoID 11
 
+//3
 //Canto+: Can move again after attacking and other actions.
 //By Tequila
-#define CantoPlusID 3
+#define CantoPlusID 255 //3
 
 //Despoil: Obtain a Red Gem after attacking and defeating an enemy. (Luck % activation)
 //Author Unknown (Initial Commit)
@@ -430,7 +552,7 @@
 
 //Frenzy: For every 4 damage taken, +1 to damage dealt.
 //By Tequila
-#define FrenzyID 9
+#define FrenzyID 255 //9
 
 //Hawkeye: User will always hit the enemy.
 //By SD9k
@@ -713,9 +835,10 @@
 //Author Unknown (Initial Commit)
 #define SolID 15
 
+//5
 //Sure Shot: A precision attack that always hits and does 1.5x damage. (Skill % activation)
 //Author Unknown (Initial Commit)
-#define SureShotID 5
+#define SureShotID 255 //5
 
 //Corrosion: Decrease durability of enemy's weapon by User's level (Skill/2 % activation)
 //By Sme
@@ -855,9 +978,10 @@
 //By Tequila
 #define LungeID 83
 
+//8
 //Mercy: Enemies are left with at least 1 HP.
 //By Tequila
-#define MercyID 8
+#define MercyID 255 //8
 
 //Summon: Can conjure a phantom soldier to fight alongside you.
 //By Sme
@@ -902,13 +1026,16 @@
 
 //Miscellaneous Skills
 
+//4
 //Wary Fighter: Unit cannot double or be doubled.
 //By Tequila
-#define WaryFighterID 4
+#define WaryFighterID 255 //4
 
+
+//7
 //Savior: Can rescue without penalties.
 //Author Unknown (Initial Commit)
-#define SaviorID 7
+#define SaviorID 255 //7
 
 //Discipline: Weapon experience gains are doubled.
 //Author Unknown (Initial Commit)

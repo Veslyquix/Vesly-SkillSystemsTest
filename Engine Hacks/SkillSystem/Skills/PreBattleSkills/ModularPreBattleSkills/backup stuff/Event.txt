@@ -1,0 +1,54 @@
+
+
+
+ModularPreBattleSkillList: 
+	BYTE Skill1ID
+	BYTE Skill2ID
+	BYTE Skill3ID
+	BYTE Skill4ID
+	BYTE Skill5ID
+	BYTE Skill6ID
+	BYTE Skill7ID
+	BYTE Skill8ID
+	BYTE Skill9ID
+	BYTE 0	
+ALIGN 4
+
+/*
+// CBS = Character Battle Structure
+
+	ALIGN 4
+
+
+	#define Skill1Entry(Iterations, CBSByte1, Operation1, Value1, CBSByte2, Operation2, Value2) "BYTE 0x00 0x00 0x00 Iterations CBSByte1 Operation1 Value1 CBSByte2 Operation2 Value2 0x00 0x00 0x00"
+	Skill1Numbers:
+	Skill1Entry(0x02,0x5A,0x01,0x06,0x60,0x02,0x14)
+*/
+/*
+ALIGN 4 // 
+Skill1Numbers:
+BYTE 0x00	//reserved cuz idk
+BYTE 0x00
+BYTE 0x00
+BYTE 0x02 	//3: number of iterations
+
+BYTE 0x5A	//0x5A	Short	Attack
+BYTE 0x01	//0x01 Add, 0x02 Subtract
+BYTE 0x06 	//Modify by this number
+ 
+BYTE 0x60 	//0x60	Short	Hit Rate
+BYTE 0x02	//0x01 Add, 0x02 Subtract
+BYTE 0x14 	//Modify by this number 
+
+BYTE 0x00 	//doesn't actually use a terminator right now
+BYTE 0x00
+
+*/
+
+	//ALIGN 4
+	//Skill2Effect:
+	//BYTE Thunder 0x03 0x04 0x05 /*  */ 0x03
+
+	//ALIGN 4
+	//Skill3Effect:
+	//BYTE Fimbulvetr WindSword /*  */ 0x00

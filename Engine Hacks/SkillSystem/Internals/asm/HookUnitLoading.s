@@ -24,9 +24,21 @@ HookUnitLoading:
 	push {r4-r7, lr}
 	mov r5, r0
 
+
+	@ldr r4, =#0x0203A4EC 		@attacker
+	@mov r2, #0x13
+	@ldrsb r1, [r4,r2] @curr hp
+	@mov r1, #3
+	@strb r1, [r4, r2]
+
+
+	@r0 is 202CFBC
+	@[0203A4FF]!
+
 	@ let's uh clear out the existing skills first... just in case
-	ldr  r4, [r5]
-	ldrb r4, [r4, #4] @char num in r4
+	@insert our own unit pointer here and test
+	ldr  r4, [r5]	@0804A64 Morva's unit pointer
+	ldrb r4, [r4, #4] @char num in r4 @0x41
 
 	cmp r4, #0x46
 	bhi no_skills

@@ -1,360 +1,2029 @@
-EphraimLordSkillList:
-// BYTE 1 OddRhythmID
-//BYTE 10 BondID
-BYTE 01 ShoveID
-BYTE 01 SupplyID
-BYTE 10 HeroesDeathBlowID
-BYTE 20 AetherID
+MESSAGE SkillLearned space starts at currentOffset
+
+BulbasaurSkillList:
+BYTE 01 Skill1ID
+BYTE 10 Skill2ID
+BYTE 20 Skill3ID
+BYTE 30 Skill4ID
 BYTE 00 00
 ALIGN 4
 
-EirikaLordSkillList:
-//BYTE 255 MoonbowID
-// BYTE 10 EvenRhythmID
-BYTE 01 SupplyID
-BYTE 10 AetherID
-BYTE 20 BondID
-BYTE 00 00
-ALIGN 4
+IvysaurSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-EphraimGreatLordSkillList:
-BYTE 255 SupplyID
-BYTE 255 BondID
-BYTE 255 AetherID //255 means "automatically given to prepromotes"
-// BYTE 255 SmiteID
-BYTE 5 RallySpectrumID
-BYTE 15 AxebreakerID
-BYTE 00 00
-ALIGN 4
+VenusaurSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-EirikaGreatLordSkillList:
-BYTE 255 SupplyID
-BYTE 255 BondID
-BYTE 255 AetherID
-// BYTE 255 SmiteID
-BYTE 5 NihilID
-BYTE 15 LancebreakerID
-BYTE 00 00
-ALIGN 4
+CharmanderSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+ 
 
-CavalierSkillList:
-BYTE 1 DisciplineID
-	BYTE 5 TriAdeptID
-BYTE 10 ElbowRoomID
-BYTE 00 00
+CharmeleonSkillList:
 
-PaladinSkillList:
-BYTE 255 DisciplineID //learned if spawning
-BYTE 255 ElbowRoomID
-BYTE 5 RallySklID
-BYTE 15 AegisID
-BYTE 00 00
-ALIGN 4
+ BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-KnightSkillList:
-BYTE 1 ProvokeID
-// BYTE 1 SlowBurnID
-BYTE 10 NaturalCoverID
-BYTE 00 00
-ALIGN 4
+CharizardSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-GeneralSkillList:
-BYTE 255 ProvokeID
-BYTE 255 NaturalCoverID
-BYTE 5 WaryFighterID
-BYTE 15 PaviseID
-BYTE 00 00
-ALIGN 4
+SquirtleSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-ThiefSkillList:
-BYTE 15 AcrobatID
-BYTE 1 DespoilID
-BYTE 00 00
-ALIGN 4
+WartortleSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-MercenarySkillList:
-BYTE 1 RallyStrID
-BYTE 10 SealSpdID
-BYTE 00 00
-ALIGN 4
+BlastoiseSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-HeroSkillList:
-BYTE 255 RallyStrID
-BYTE 255 SealSpdID
-BYTE 5 SolID
-BYTE 15 AxebreakerID
-BYTE 00 00
-ALIGN 4
+CaterpieSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-MyrmidonSkillList:
-BYTE 1 DuelistsBlowID
-BYTE 10 VantageID
-BYTE 00 00
-ALIGN 4
+MetapodSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-SwordmasterSkillList:
-BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
-BYTE 5 AstraID
-BYTE 15 SwordfaireID
-BYTE 00 00
-ALIGN 4
+ButterfreeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-AssassinSkillList:
-BYTE 255 AcrobatID
-BYTE 255 DespoilID
-BYTE 5 LifetakerID
-BYTE 15 PassID
-BYTE 00 00
-ALIGN 4
+WeedleSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-ArcherSkillList:
-BYTE 1 CertainBlowID
-BYTE 10 SureShotID
-BYTE 00 00
-ALIGN 4
+KakunaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-SniperSkillList:
-BYTE 255 CertainBlowID
-BYTE 255 SureShotID
-BYTE 5 BowfaireID
-BYTE 15 GaleforceID
-BYTE 00 00
-ALIGN 4
+BeedrillSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-RangerSkillList:
-BYTE 255 CertainBlowID
-BYTE 255 SureShotID
-BYTE 5 CantoPlusID
-BYTE 15 BowbreakerID
-BYTE 00 00
-ALIGN 4
+PidgeySkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-WyvernRiderSkillList:
-BYTE 10 TantivyID
-BYTE 00 00
-ALIGN 4
+PigeottoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-WyvernLordSkillList:
-BYTE 255 TantivyID
-BYTE 5 SavageBlowID
-BYTE 15 SwordbreakerID
-BYTE 00 00
-ALIGN 4
+PidgeotSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-WyvernKnightSkillList:
-BYTE 255 TantivyID
-BYTE 5 RallyMovID
-BYTE 15 LancefaireID
-BYTE 00 00
-ALIGN 4
+Necromancer1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-MageSkillList:
-BYTE 1 FocusID
-BYTE 10 AdeptID
-BYTE 00 00
-ALIGN 4
+Necromancer2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-SageSkillList:
-BYTE 255 AdeptID
-BYTE 255 FocusID
-BYTE 5 TomefaireID
-BYTE 15 IgnisID
-BYTE 00 00
-ALIGN 4
+Necromancer3SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-MageKnightSkillList:
-BYTE 255 AdeptID
-BYTE 255 FocusID
-BYTE 5 RallyResID
-BYTE 15 QuickBurnID
-BYTE 00 00
-ALIGN 4
+Necromancer4SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-BishopSkillList:
-BYTE 255 MiracleID
-BYTE 255 LiveToServeID
-BYTE 15 CounterMagicID
-BYTE 00 00
-ALIGN 4
+RattataSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-ShamanSkillList:
-BYTE 1 MaleficAuraID
-BYTE 10 SpurDefID
-BYTE 00 00
-ALIGN 4
+RaticateSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-DruidSkillList:
-BYTE 255 MaleficAuraID
-BYTE 255 SpurDefID
-BYTE 5 FrenzyID
-BYTE 15 TomebreakerID
-BYTE 00 00
-ALIGN 4
+SpearowSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-SummonerSkillList:
-BYTE 255 MaleficAuraID
-BYTE 255 SpurDefID
-BYTE 5 AnathemaID
-BYTE 15 RenewalID
-BYTE 00 00
-ALIGN 4
+FearowSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-RogueSkillList:
-BYTE 255 DespoilID
-BYTE 255 AcrobatID
-BYTE 5 LungeID
-BYTE 15 CelerityID
-BYTE 00 00
-ALIGN 4
+EkansSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-GreatKnightSkillList:
-BYTE 255 ProvokeID
-BYTE 255 NaturalCoverID
-BYTE 5 LunaID
-BYTE 15 ArmoredBlowID
-BYTE 00 00
-ALIGN 4
+ArbokSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-ManaketeFSkillList:
-BYTE 01 MiracleID
-BYTE 05 OddRhythmID
-BYTE 10 SpurDefID
-BYTE 00 00
-ALIGN 4
+PikachuSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-FighterSkillList:
-BYTE 10 FieryBloodID
-BYTE 20 DesperationID
-BYTE 00 00
-ALIGN 4
+RaichuSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-WarriorSkillList:
-BYTE 255 FieryBloodID
-BYTE 255 DesperationID
-BYTE 5 DeathBlowID
-BYTE 15 CounterID
-BYTE 00 00
-ALIGN 4
+SandshrewSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-BrigandSkillList:
-BYTE 10 IntimidateID
-BYTE 00 00
-ALIGN 4
+SandslashSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-PirateSkillList:
-BYTE 10 CamaraderieID
-BYTE 20 SealSklID
-BYTE 00 00
-ALIGN 4
+NidoranFSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-BerserkerSkillList:
-BYTE 255 CamaraderieID
-BYTE 255 SealSklID
-BYTE 5 WrathID
-BYTE 15 AxefaireID
-BYTE 00 00
-ALIGN 4
+NidorinaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-MonkSkillList:
-BYTE 10 SpurSpdID
-BYTE 20 SealResID
-BYTE 00 00
-ALIGN 4
+NidoqueenSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-PriestSkillList:
-BYTE 1 MiracleID
-BYTE 10 LiveToServeID
-BYTE 00 00
-ALIGN 4
+NidoranMSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-PegKnightSkillList:
-BYTE 10 DartingBlowID
-BYTE 20 RallySpdID
-BYTE 00 00
-ALIGN 4
+NidorinoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-FalcoknightSkillList:
-BYTE 255 DartingBlowID
-BYTE 255 RallySpdID
-BYTE 5 SaviorID
-BYTE 15 WardingBlowID
-BYTE 00 00
-ALIGN 4
+NidokingSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-ClericSkillList:
-BYTE 1 MiracleID
-BYTE 10 LiveToServeID
-BYTE 00 00
-ALIGN 4
+ClefairySkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-TroubadourSkillList:
-BYTE 10 DemoiselleID
-BYTE 20 VoiceOfPeaceID
-BYTE 00 00
-ALIGN 4
+ClefableSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-ValkyrieSkillList:
-BYTE 255 DemoiselleID
-BYTE 255 VoiceOfPeaceID
-BYTE 5 SpurResID
-BYTE 15 CharmID
-BYTE 00 00
-ALIGN 4
+VulpixSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-DancerSkillList:
-BYTE 255 WaryFighterID
-BYTE 10 AmaterasuID
-BYTE 20 CelerityID
-BYTE 00 00
-ALIGN 4
+NinetalesSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-SoldierSkillList:
-BYTE 255 RepositionID
-BYTE 10 CamaraderieID
-BYTE 20 RallyStrID
-BYTE 00 00
-ALIGN 4
+JigglypuffSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-NecromancerSkillList:
-BYTE 255 MaleficAuraID
-BYTE 10 AnathemaID
-BYTE 20 TomefaireID
-BYTE 00 00
-ALIGN 4
+WigglytuffSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-FleetSkillList:
-BYTE 00 00
-ALIGN 4
+ZubatSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GolbatSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+OddishSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GloomSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+VileplumeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ParasSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ParasectSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GorgonEgg1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+VenonatSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+VenomothSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DiglettSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DugtrioSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MeowthSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PersianSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PsyduckSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GolduckSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MankeySkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PrimeapeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GrowlitheSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ArcanineSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PoliwagSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PoliwhirlSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PoliwrathSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+AbraSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KadabraSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+AlakazamSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MachopSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MachokeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MachampSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BellsproutSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+WeepinbellSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+VictreebelSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+TentacoolSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+TentacruelSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GeodudeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GravellerSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
 PhantomSkillList:
-BYTE 00 00
-ALIGN 4
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
-SuperJourneymanSkillList:
-BYTE 5 ParagonID
-BYTE 00 00
-ALIGN 4
-SuperPupilSkillList:
-BYTE 5 ParagonID
-BYTE 00 00
-ALIGN 4
-SuperRecruitSkillList:
-BYTE 10  ParagonID
-// BYTE 10 AxebreakerID
-BYTE 00 00
-ALIGN 4
-ManaketeMSkillList:
-BYTE 01 MiracleID
-BYTE 05 OddRhythmID
-BYTE 10 SpurDefID
-BYTE 00 00
-ALIGN 4
+GolemSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PonytaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+RapidashSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+SlowpokeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+SlowbroSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MagnemiteSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MagnetonSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+FarfetchdSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DoduoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DodrioSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+SeelSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DewgongSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GrimerSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Muk2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Shellder2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Cloyster2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GorgonEgg2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Gastly2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DeathgoyleSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DracoZombieSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
 
 DemonKingSkillList:
-BYTE 255 BaneID
-BYTE 255 SummonID
-BYTE 255 ReliefID
-BYTE 255 AnathemaID
-BYTE 00 00
-ALIGN 4
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ArcheronBallistaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ArcheronIronBallistaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ArcheronKillerBallistaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BallistaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+IronBallistaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KillerBallistaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Civilian1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Civilian2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Civilian3SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Civilian4SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Civilian5SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PeerSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+QueenSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+sfxSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+openpokeballSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+pokeballRedSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+pokeballGoldSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+FallenPrinceSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+TentSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+blank1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+Cyclops2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BushSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ElderBael2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+JourneymanSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PupilSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MukSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ShellderSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+CloysterSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GastlySkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+HaunterSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GengarSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+OnixSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DrowzeeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+HypnoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KrabbySkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KinglerSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+VoltorbSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ElectrodeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ExeggcuteSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ExeggutorSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+CuboneSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MarowakSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+HitmonleeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+HitmonchanSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+LickitungSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KoffingSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+WeezingSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+RhyhornSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+RhydonSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ChanseySkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+TangelaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KangaskhanSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+HorseaSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+SeadraSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GoldeenSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+SeakingSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+StaryuSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+StarmieSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MrMimeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ScytherSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+JynxSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ElectabuzzSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MagmarSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PinsirSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+TaurosSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MagikarpSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+GyaradosSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+LaprasSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DittoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+EeveeSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+VaporeonSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+JolteonSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+FlareonSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PorygonSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+OmanyteSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+OmastarSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KabutoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+KabutopsSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+AerodactylSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+SnorlaxSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ArticunoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+ZapdosSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MoltresSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DratiniSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DragonairSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+DragoniteSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MewtwoSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+MewSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyBFSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC0SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC3SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC4SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC5SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC6SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC7SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC8SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyC9SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyCASkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyCBSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyCCSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyCDSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyCESkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyCFSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD0SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD3SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD4SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD5SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD6SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD7SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD8SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyD9SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyDASkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyDBSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyDCSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyDDSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+emptyDESkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+PlaceholdersDFSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE0SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE3SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE4SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE5SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE6SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE7SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE8SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurE9SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurEASkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurEBSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurECSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurEDSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurEESkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurEFSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF0SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF1SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF2SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF3SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF4SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF5SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF6SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF7SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF8SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurF9SkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurFASkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurFBSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurFCSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+BulbasaurFDSkillList:
+BYTE 01 Skill1ID 
+BYTE 10 Skill2ID 
+BYTE 20 Skill3ID 
+BYTE 30 Skill4ID 
+BYTE 00 00 
+ALIGN 4 
+
+

@@ -34,9 +34,9 @@ beq	End
 @Check if there are enemies in 2 spaces
 ldr	r0, AuraSkillCheck
 mov	lr, r0
-mov	r0, r4		@attacker
+mov	r0, r5		@defender
 mov	r1, #0x00
-mov	r2, #0x03	@are_enemies
+mov	r2, #0x00	@are_enemies
 mov	r3, #0x02	@range
 .short	0xf800
 

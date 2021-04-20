@@ -180,6 +180,14 @@ HookUnitLoading:
 	// POIN (Skill_Getter|1)
 	// POIN ChargeupTable
 
+
+    MESSAGE GetSkillsASMC starts at currentOffset
+ALIGN 4
+GetSkillsASMC:
+	#incbin "asm/GetSkillsASMC.dmp"
+	POIN (AutoloadSkills|1)
+
+
 ALIGN 4
 AutoloadSkills:
 	// TODO: maybe merge with HookUnitLoading?

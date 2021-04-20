@@ -6,7 +6,7 @@
 
 #define VeinMapSpriteID 0x67
 #define DragonVeinSFXID 0x57
-#define DragonVeinTrapID 0x6
+#define DragonVeinTrapID 0xD
 
 #define VeinEffect(id, event) "PUSH; ORG DragonVeinEffectTableOffset + (4 * id); POIN event; POP"
 #define Vein(XX,YY,EffectID) "BYTE DragonVeinTrapID XX YY EffectID 0x0 0x0"
@@ -116,6 +116,7 @@ SongTable(DragonVeinSFXID,DragonVeinSFX,7)
     #incbin "asm/DragonVeinExecution.dmp"
     POIN DragonVeinEffectTableOffset
 
+	//#include "PokemblemTraps.event"
 
 #endif // DRAGON_VEINS
 

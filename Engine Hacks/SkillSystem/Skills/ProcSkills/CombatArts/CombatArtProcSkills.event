@@ -1,4 +1,6 @@
 
+
+
 ALIGN 4
 CombatArt_Adept:
 #incbin "Adept/proc_adept.dmp"
@@ -52,5 +54,67 @@ CombatArt_SureShot:
 #incbin "SureShot/proc_sureshot.dmp"
 POIN SkillTester
 WORD SureShotID
+
+
+
+ALIGN 4
+CombatArt_Skill1:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill1ID
+
+ALIGN 4
+CombatArt_Skill2:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill2ID
+
+ALIGN 4
+CombatArt_Skill3:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill3ID
+
+ALIGN 4
+CombatArt_Skill4:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill4ID
+
+ALIGN 4
+CombatArt_Skill5:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill5ID
+
+ALIGN 4
+CombatArt_Skill6:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill6ID
+
+ALIGN 4
+CombatArt_Skill7:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill7ID
+
+ALIGN 4
+CombatArt_Skill8:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill8ID
+
+ALIGN 4
+CombatArt_Skill9:
+#incbin "Astra/proc_astra.dmp"
+POIN SkillTester
+WORD Skill9ID
+
+
+
+
+
+
 
 

@@ -143,57 +143,57 @@ Grado Soldier 13,0
 Grado Remnant 1 (Main),0
 Cutthroat,0
 Grado Remnant 2 (Cutscene and C16 only?),0
-Grado Remnant 3 (C16 only?),0
-Grado Remnant 4 (C16 only?),0
-Wraith (Sage),0
-Wraith (Swords),0
-Wraith (Axes),0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
--,0
-Mercenary (C9A),0
-Mercenary (C10A),0
-Merc Remnant (C13A),0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Monster,0
-Demon King,0
--,0
-Frelian,0
-Frelian,0
+Grado Remnant 3 (C16 only?),WatchfulID
+Grado Remnant 4 (C16 only?),WatchfulID
+Wraith (Sage),WatchfulID
+Wraith (Swords),WatchfulID
+Wraith (Axes),WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+-,WatchfulID
+Mercenary (C9A),WatchfulID
+Mercenary (C10A),WatchfulID
+Merc Remnant (C13A),WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Monster,WatchfulID
+Demon King,WatchfulID
+-,WatchfulID
+Frelian,WatchfulID
+Frelian,WatchfulID
 -,0
 -,0
 -,0

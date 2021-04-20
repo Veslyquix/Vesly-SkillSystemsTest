@@ -40,9 +40,29 @@ and r1, r2
 cmp r1, #0x0
 beq noDebuff
 lsr r1, r0
+
+cmp r1, #0x1
+beq sub1
+cmp r1, #0x2
+beq sub2
+
+sub r1, #0x3    @decrement if there
+lsl r1, r0
+orr r4, r1
+b noDebuff
+
+sub1:
 sub r1, #0x1    @decrement if there
 lsl r1, r0
 orr r4, r1
+b noDebuff
+
+sub2:
+sub r1, #0x2    @decrement if there
+lsl r1, r0
+orr r4, r1
+b noDebuff
+
 noDebuff: 
 add r0, #0x4    @next nibble
 cmp r0, #0x14
@@ -69,7 +89,21 @@ mov r1, #0xF
 and r0, r1 @ Clear rally mag flag
 cmp r0, #0x00
 beq NoMagDebuff
+cmp r0, #0x01
+beq submag1
+cmp r0, #0x02
+beq submag2
+	sub r0, r0, #0x03
+b NoMagDebuff
+
+submag1:
 	sub r0, r0, #0x01
+b NoMagDebuff
+
+submag2:
+	sub r0, r0, #0x02
+b NoMagDebuff
+
 NoMagDebuff:
 strb r0, [ r3, #0x05 ]
 

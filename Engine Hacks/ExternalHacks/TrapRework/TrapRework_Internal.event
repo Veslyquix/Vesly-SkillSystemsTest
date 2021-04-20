@@ -1,4 +1,5 @@
 
+#include "bin/ProcDefinitions.txt"
 
 	#include "asm/TrapRework.lyn.event"	
 	
@@ -24,10 +25,47 @@
 		ORG $1A174
 		jumpToHack(TrapRework_NewRefreshTrapFogVision)
 	
-		ORG $02e470
-		jumpToHack(TrapRework_NewUpdateAllLightRunes)	
+		//ORG $02e470 //Sme's address 
+		//jumpToHack(TrapRework_NewUpdateAllLightRunes)
+		
+		ORG $59A2B4 //MapMain "call new child proc TerrainHealLoop"
+		POIN TerrainHealLoopMyVersion 
+		
+		
+
+		
 	POP
 	
+
+
+ALIGN 4
+TerrainHealLoopMyVersion:
+PROC_CALL_ROUTINE(TrapRework_NewUpdateAllLightRunes+1)	
+PROC_CALL_ROUTINE($8035E21) 
+PROC_LABEL(0)
+PROC_CALL_ROUTINE($8035E51)
+PROC_CALL_ROUTINE($8035ED9)
+PROC_YIELD
+
+PROC_CALL_ROUTINE($8035EFD)
+PROC_YIELD
+
+PROC_CALL_ROUTINE($8035F41)
+
+PROC_LABEL(1)
+PROC_CALL_ROUTINE($8035F6D)
+PROC_GOTO(0)
+PROC_END
+
+
+//#incbin "bin/ProcsTerrainHealLoop.dmp"  //the regular Terrain Heal Loop
+
+
+ALIGN 4
+
+
+
+
 	/*
 	//install example map sprite
 	PUSH

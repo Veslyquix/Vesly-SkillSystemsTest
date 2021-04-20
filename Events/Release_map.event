@@ -13,6 +13,14 @@ EventPointerTable(0x7, PointerList)
 
 #ifdef DRAGON_VEINS
 VeinEffect(0, FreezeAllEnemies)
+VeinEffect(1, TalkEvent)
+ObtainEffect(0, TalkEvent)
+ObtainEffect(1, FreezeAllEnemies)
+GenericEffect(0, TalkEvent)
+GenericEffect(1, TestCase)
+GenericDisappearEffect(0, TalkEvent)
+GenericDisappearEffect(1, TestCase)
+
 #endif // DRAGON_VEINS
 
 PointerList:
@@ -59,7 +67,7 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Eirika  0x2 0x1 0xA1   [9,24] 0b 0x0 0x0 0x0 [0x1,0x98,0x88,0x0] [0x0,0x0,0x0,0x0]
+UNIT Eirika  0x2 0x1 0xA1   [9,24] 0b 0x0 0x0 0x0 [0x1,0x98,0x7B,0x0] [0x0,0x0,0x0,0x0]
 UNIT Ephraim  0x1 0x1 0xA1  [7,24] 0b 0x0 0x0 0x0 [0x14,0x99,0x88,0x0] [0x0,0x0,0x0,0x0]
 UNIT Seth  0x7 0x1 0xA1     [11,24] 0b 0x0 0x0 0x0 [0x1,0x0,0x0,0x0] [0x0,0x0,0x0,0x0]
 UNIT Gilliam  0x9 0x1 0xA1  [8,25] 0b 0x0 0x0 0x0 [0x14,0x65,0x88,0x0] [0x0,0x0,0x0,0x0]
@@ -113,9 +121,9 @@ UNIT
 
 EnemyUnits:
 UNIT Morva_Ch20 0x3B 0x40 0xA5    [15,2] 0b 0x0 0x0 0x0 [WretchedAir,0x0,0x0,0x0] AttackInRangeAI
-UNIT ONeill Fighter 0x40 0xA5     [8,19] 0b 0x0 0x0 0x0 [SteelAxe, HandAxe] AttackInRangeAI
-UNIT Breguet Knight 0x40 0xA5     [5,18] 0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
-UNIT Bone Brigand 0x40 0xA5       [11,17] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT ONeill Fighter 0x40 0xA5     [8,19] 0b 0x0 0x0 0x0 [0x0,0x0] AttackInRangeAI
+UNIT Breguet Knight 0x40 0xA5     [8,21] 0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
+UNIT Bone Brigand 0x40 0xA5       [10,20] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Bazba Brigand 0x40 0xA5      [16,18] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Saar Knight 0x40 0xA5        [8,15] 0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
 UNIT Novala Shaman 0x40 0xA5      [12,13] 0 0 0 0 [Nosferatu] AttackInRangeAI
@@ -137,8 +145,18 @@ UNIT
 
 Traps1:
 #ifdef DRAGON_VEINS
-Vein(9,23,0x0,DV1Desc) //freeze enemies
+//Vein(9,23,0x0,DV1Desc) //freeze enemies
+//Vein(9,22,0x1,DV1Desc) //freeze enemies
 #endif // DRAGON_VEINS
+
+Generic(9,23,0xA0, 0xA, 0x0) //x, y, req'd flag, sprite, EventTableID
+Generic(10,23,0x00, 0x8, 0x1)	//coordinates 10x 23y, req'd flag, sprite, EventTableID
+ObtainItem(11,23,0xA0,0x09, 0x0)	//coordinates 10x 23y, completion flag, item given, EventTableID
+ObtainItem(12,23,0x00,0x0B, 0x1)	//coordinates 10x 23y, completion flag, item given, EventTableID
+GenericDisappear(7,23,0xA0, 0x6, 0x0) //x, y, req'd flag, sprite, EventTableID
+GenericDisappear(8,23,0x00, 0x1, 0x1)	//coordinates 10x 23y, req'd flag, sprite, EventTableID
+
+
 ENDTRAP
 ALIGN 4
 
@@ -155,10 +173,10 @@ LOAD1 0x1 EnemyUnits2
 ENUN
 LOAD1 0x0 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
 ENUN
-LOAD1 0x0 Units2
-ENUN
-LOAD1 0x0 MoreUnits
-ENUN
+//LOAD1 0x0 Units2
+//ENUN
+//LOAD1 0x0 MoreUnits
+//ENUN
 // FADI 10
 // MOVE 0 Carlyle [7,10]
 // ENUN
@@ -169,7 +187,9 @@ ENUN
 // FIG1 Carlyle Aias 0
 // STAL 60
 // FADU 10
-GotoPrepScreen
+//GotoPrepScreen
+EVBIT_T 0x7
+ENDA
 
 EndingScene:
 ASMC 0x85C71 0x381F5 0x37CF9 //show records screen
@@ -184,21 +204,33 @@ VillageEvent:
 
 HouseEvent:
 	// Set parameters
-	SVAL r1 NiceThighsID
-	SVAL r2 (-1) // (-1) is active unit
+//BYTE  $40 $05 $02 $00 $7C $43 $80 $08 //sval s2 to 0880437C
+SVAL 0x2 0x880437C
+BYTE $40 $0D $68 $00 $01 $00 $00 $09 //call ASMC Set unit status rom unit struct on Knoll
+
+BYTE $29 $26 $1F $00 //cam1 to Knoll
+
+BYTE $20 $38 $00 $00 //set unit 0 as active
+
+//BYTE $28 $02 $07 $00 $20 $01 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00;
+
+WORD 0x13083C21 //cursor to 8x, 19y
+
+
+	//SVAL r1 NiceThighsID
+	//SVAL r2 (-1) // (-1) is active unit
 	
 	// Check if unit has skill
 	// If they have, goto label #0 (end)
-	ASMC (ASMC_HasSkill+1)
-	BNE 0 rC r0
+	//ASMC (ASMC_HasSkill+1)
+	//BNE 0 rC r0
 	
 	// Learn skill to unit
-	ASMC (ASMC_LearnNewSkill+1)
+	//ASMC (ASMC_LearnNewSkill+1)
 	
 LABEL 0
 	// end
 	
-	Text(HouseText)
 	
 	NoFade
 	ENDA
@@ -213,6 +245,13 @@ NoFade
 ENDA
 #endif // DRAGON_VEINS
 
+    MESSAGE TestCase at currentOffset
+TestCase:
+HouseEvent(HouseText, HouseBG)
+NoFade
+ENDA
+
+    MESSAGE TalkEvent at currentOffset
 TalkEvent:
 Text(0xc0a)
 NoFade

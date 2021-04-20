@@ -1,255 +1,255 @@
 INLINE ClassLevelUpSkillTable,Skill Pointer
 0x00 Separator/Nothing,0x0
-0x01 Ephraim Lord,EphraimLordSkillList|IsPointer
-0x02 Eirika Lord,EirikaLordSkillList|IsPointer
-0x03 Ephraim Great Lord,EphraimGreatLordSkillList|IsPointer
-0x04 Eirika Great Lord,EirikaGreatLordSkillList|IsPointer
-0x05 Cavalier,CavalierSkillList|IsPointer
-0x06 Cavalier (F),CavalierSkillList|IsPointer
-0x07 Paladin,PaladinSkillList|IsPointer
-0x08 Paladin (F),PaladinSkillList|IsPointer
-0x09 Armour Knight,KnightSkillList|IsPointer
-0x0A Armour Knight (F),KnightSkillList|IsPointer
-0x0B General,GeneralSkillList|IsPointer
-0x0C General (F),GeneralSkillList|IsPointer
-0x0D Thief,ThiefSkillList|IsPointer
-0x0E Manakete,0x0
-0x0F Mercenary,MercenarySkillList|IsPointer
-0x10 Mercenary (F),MercenarySkillList|IsPointer
-0x11 Hero,HeroSkillList|IsPointer
-0x12 Hero (F),HeroSkillList|IsPointer
-0x13 Myrmidon,MyrmidonSkillList|IsPointer
-0x14 Myrmidon (F),MyrmidonSkillList|IsPointer
-0x15 Swordmaster,SwordmasterSkillList|IsPointer
-0x16 Swordmaster (F),SwordmasterSkillList|IsPointer
-0x17 Assassin,AssassinSkillList|IsPointer
-0x18 Assassin (F),AssassinSkillList|IsPointer
-0x19 Archer,ArcherSkillList|IsPointer
-0x1A Archer (F),ArcherSkillList|IsPointer
-0x1B Sniper,SniperSkillList|IsPointer
-0x1C Sniper (F),SniperSkillList|IsPointer
-0x1D Ranger,RangerSkillList|IsPointer
-0x1E Ranger (F),RangerSkillList|IsPointer
-0x1F Wyvern Rider,WyvernRiderSkillList|IsPointer
-0x20 Wyvern Rider (F),WyvernRiderSkillList|IsPointer
-0x21 Wyvern Lord,WyvernLordSkillList|IsPointer
-0x22 Wyvern Lord (F),WyvernLordSkillList|IsPointer
-0x23 Wyvern Knight,WyvernKnightSkillList|IsPointer
-0x24 Wyvern Knight (F),WyvernKnightSkillList|IsPointer
-0x25 Mage,MageSkillList|IsPointer
-0x26 Mage (F),MageSkillList|IsPointer
-0x27 Sage,SageSkillList|IsPointer
-0x28 Sage (F),SageSkillList|IsPointer
-0x29 Mage Knight,MageKnightSkillList|IsPointer
-0x2A Mage Knight (F),MageKnightSkillList|IsPointer
-0x2B Bishop,BishopSkillList|IsPointer
-0x2C Bishop (F),BishopSkillList|IsPointer
-0x2D Shaman,ShamanSkillList|IsPointer
-0x2E Shaman (F),ShamanSkillList|IsPointer
-0x2F Druid,DruidSkillList|IsPointer
-0x30 Druid (F),DruidSkillList|IsPointer
-0x31 Summoner,SummonerSkillList|IsPointer
-0x32 Summoner (F),SummonerSkillList|IsPointer
-0x33 Rogue,RogueSkillList|IsPointer
-0x34 Gorgon Egg,0x0
-0x35 Great Knight,GreatKnightSkillList|IsPointer
-0x36 Great Knight (F),GreatKnightSkillList|IsPointer
-0x37 Recruit (2),0x0
-0x38 Journeyman (3),0x0
-0x39 Pupil (3),0x0
-0x3A Recruit (3),0x0
-0x3B Manakete,0x0
-0x3C Manakete (F),ManaketeFSkillList|IsPointer
-0x3D Journeyman (1),0x0
-0x3E Pupil (1),0x0
-0x3F Fighter,FighterSkillList|IsPointer
-0x40 Warrior,WarriorSkillList|IsPointer
-0x41 Brigand,BrigandSkillList|IsPointer
-0x42 Pirate,PirateSkillList|IsPointer
-0x43 Berserker,BerserkerSkillList|IsPointer
-0x44 Monk,MonkSkillList|IsPointer
-0x45 Priest,PriestSkillList|IsPointer
-0x46 Bard,0x0
-0x47 Recruit (1),0x0
-0x48 Pegasus Knight,PegKnightSkillList|IsPointer
-0x49 Falcon Knight,FalcoknightSkillList|IsPointer
-0x4A Cleric,ClericSkillList|IsPointer
-0x4B Troubadour,TroubadourSkillList|IsPointer
-0x4C Valkyrie,ValkyrieSkillList|IsPointer
-0x4D Dancer,DancerSkillList|IsPointer
-0x4E Soldier,SoldierSkillList|IsPointer
-0x4F Necromancer,NecromancerSkillList|IsPointer
-0x50 Fleet,FleetSkillList|IsPointer
+0x01 Ephraim Lord,BulbasaurSkillList|IsPointer
+0x02 Eirika Lord,IvysaurSkillList|IsPointer
+0x03 Ephraim Great Lord,VenusaurSkillList|IsPointer
+0x04 Eirika Great Lord,CharmanderSkillList|IsPointer
+0x05 Cavalier,CharmeleonSkillList|IsPointer
+0x06 Cavalier (F),CharizardSkillList|IsPointer
+0x07 Paladin,SquirtleSkillList|IsPointer
+0x08 Paladin (F),WartortleSkillList|IsPointer
+0x09 Armour Knight,BlastoiseSkillList|IsPointer
+0x0A Armour Knight (F),CaterpieSkillList|IsPointer
+0x0B General,MetapodSkillList|IsPointer
+0x0C General (F),ButterfreeSkillList|IsPointer
+0x0D Thief,WeedleSkillList|IsPointer
+0x0E Manakete,KakunaSkillList|IsPointer
+0x0F Mercenary,BeedrillSkillList|IsPointer
+0x10 Mercenary (F),PidgeySkillList|IsPointer
+0x11 Hero,PigeottoSkillList|IsPointer
+0x12 Hero (F),PidgeotSkillList|IsPointer
+0x13 Myrmidon,Necromancer1SkillList|IsPointer
+0x14 Myrmidon (F),Necromancer2SkillList|IsPointer
+0x15 Swordmaster,Necromancer3SkillList|IsPointer
+0x16 Swordmaster (F),Necromancer4SkillList|IsPointer
+0x17 Assassin,RattataSkillList|IsPointer
+0x18 Assassin (F),RaticateSkillList|IsPointer
+0x19 Archer,SpearowSkillList|IsPointer
+0x1A Archer (F),FearowSkillList|IsPointer
+0x1B Sniper,EkansSkillList|IsPointer
+0x1C Sniper (F),ArbokSkillList|IsPointer
+0x1D Ranger,PikachuSkillList|IsPointer
+0x1E Ranger (F),RaichuSkillList|IsPointer
+0x1F Wyvern Rider,SandshrewSkillList|IsPointer
+0x20 Wyvern Rider (F),SandslashSkillList|IsPointer
+0x21 Wyvern Lord,NidoranFSkillList|IsPointer
+0x22 Wyvern Lord (F),NidorinaSkillList|IsPointer
+0x23 Wyvern Knight,NidoqueenSkillList|IsPointer
+0x24 Wyvern Knight (F),NidoranMSkillList|IsPointer
+0x25 Mage,NidorinoSkillList|IsPointer
+0x26 Mage (F),NidokingSkillList|IsPointer
+0x27 Sage,ClefairySkillList|IsPointer
+0x28 Sage (F),ClefableSkillList|IsPointer
+0x29 Mage Knight,VulpixSkillList|IsPointer
+0x2A Mage Knight (F),NinetalesSkillList|IsPointer
+0x2B Bishop,JigglypuffSkillList|IsPointer
+0x2C Bishop (F),WigglytuffSkillList|IsPointer
+0x2D Shaman,ZubatSkillList|IsPointer
+0x2E Shaman (F),GolbatSkillList|IsPointer
+0x2F Druid,OddishSkillList|IsPointer
+0x30 Druid (F),GloomSkillList|IsPointer
+0x31 Summoner,VileplumeSkillList|IsPointer
+0x32 Summoner (F),ParasSkillList|IsPointer
+0x33 Rogue,ParasectSkillList|IsPointer
+0x34 Gorgon Egg,GorgonEgg1SkillList|IsPointer
+0x35 Great Knight,VenonatSkillList|IsPointer
+0x36 Great Knight (F),VenomothSkillList|IsPointer
+0x37 Recruit (2),DiglettSkillList|IsPointer
+0x38 Journeyman (3),DugtrioSkillList|IsPointer
+0x39 Pupil (3),MeowthSkillList|IsPointer
+0x3A Recruit (3),PersianSkillList|IsPointer
+0x3B Manakete,PsyduckSkillList|IsPointer
+0x3C Manakete (F),GolduckSkillList|IsPointer
+0x3D Journeyman (1),MankeySkillList|IsPointer
+0x3E Pupil (1),PrimeapeSkillList|IsPointer
+0x3F Fighter,GrowlitheSkillList|IsPointer
+0x40 Warrior,ArcanineSkillList|IsPointer
+0x41 Brigand,PoliwagSkillList|IsPointer
+0x42 Pirate,PoliwhirlSkillList|IsPointer
+0x43 Berserker,PoliwrathSkillList|IsPointer
+0x44 Monk,AbraSkillList|IsPointer
+0x45 Priest,KadabraSkillList|IsPointer
+0x46 Bard,AlakazamSkillList|IsPointer
+0x47 Recruit (1),MachopSkillList|IsPointer
+0x48 Pegasus Knight,MachokeSkillList|IsPointer
+0x49 Falcon Knight,MachampSkillList|IsPointer
+0x4A Cleric,BellsproutSkillList|IsPointer
+0x4B Troubadour,WeepinbellSkillList|IsPointer
+0x4C Valkyrie,VictreebelSkillList|IsPointer
+0x4D Dancer,TentacoolSkillList|IsPointer
+0x4E Soldier,TentacruelSkillList|IsPointer
+0x4F Necromancer,GeodudeSkillList|IsPointer
+0x50 Fleet,GravellerSkillList|IsPointer
 0x51 Phantom,PhantomSkillList|IsPointer
-0x52 Revenant,0x0
-0x53 Entombed,0x0
-0x54 Bonewalker,0x0
-0x55 Bonewalker (Bow),0x0
-0x56 Wight,0x0
-0x57 Wight (Bow),0x0
-0x58 Bael,0x0
-0x59 Elder Bael,0x0
-0x5A Cyclops,0x0
-0x5B Mauthe Doog,0x0
-0x5C Gwyllgi,0x0
-0x5D Tarvos,0x0
-0x5E Maelduin,0x0
-0x5F Mogall,0x0
-0x60 Arch Mogall,0x0
-0x61 Gorgon,0x0
-0x62 Gorgon Egg,0x0
-0x63 Gargoyle,0x0
-0x64 Deathgoyle,0x0
-0x65 Dracozombie,0x0
-0x66 Demon King,0x0
-0x67 Archer on Ballista,0x0
-0x68 Archer on Iron Ballista,0x0
-0x69 Archer on Killer Ballista,0x0
-0x6A Ballista,0x0
-0x6B Iron Ballista,0x0
-0x6C Killer Ballista,0x0
-0x6D Civilian,0x0
-0x6E Civilian (F),0x0
-0x6F Civilian,0x0
-0x70 Civilian (F),0x0
-0x71 Civilian,0x0
-0x72 Civilian (F),0x0
-0x73 Peer,0x0
-0x74 Queen,0x0
-0x75 Prince,0x0
-0x76 Queen,0x0
-0x77 (empty),0x0
-0x78 Fallen Prince,0x0
-0x79 Tent,0x0
-0x7A Pontifex,0x0
-0x7B Fallen Peer,0x0
-0x7C Cyclops 2,0x0
-0x7D Elder Bael 2,0x0
-0x7E Journeyman (2),0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
+0x52 Revenant,GolemSkillList|IsPointer
+0x53 Entombed,PonytaSkillList|IsPointer
+0x54 Bonewalker,RapidashSkillList|IsPointer
+0x55 Bonewalker (Bow),SlowpokeSkillList|IsPointer
+0x56 Wight,SlowbroSkillList|IsPointer
+0x57 Wight (Bow),MagnemiteSkillList|IsPointer
+0x58 Bael,MagnetonSkillList|IsPointer
+0x59 Elder Bael,FarfetchdSkillList|IsPointer
+0x5A Cyclops,DoduoSkillList|IsPointer
+0x5B Mauthe Doog,DodrioSkillList|IsPointer
+0x5C Gwyllgi,SeelSkillList|IsPointer
+0x5D Tarvos,DewgongSkillList|IsPointer
+0x5E Maelduin,GrimerSkillList|IsPointer
+0x5F Mogall,Muk2SkillList|IsPointer
+0x60 Arch Mogall,Shellder2SkillList|IsPointer
+0x61 Gorgon,Cloyster2SkillList|IsPointer
+0x62 Gorgon Egg,GorgonEgg2SkillList|IsPointer
+0x63 Gargoyle,Gastly2SkillList|IsPointer
+0x64 Deathgoyle,DeathgoyleSkillList|IsPointer
+0x65 Dracozombie,DracoZombieSkillList|IsPointer
+0x66 Demon King,DemonKingSkillList|IsPointer
+0x67 Archer on Ballista,ArcheronBallistaSkillList|IsPointer
+0x68 Archer on Iron Ballista,ArcheronIronBallistaSkillList|IsPointer
+0x69 Archer on Killer Ballista,ArcheronKillerBallistaSkillList|IsPointer
+0x6A Ballista,BallistaSkillList|IsPointer
+0x6B Iron Ballista,IronBallistaSkillList|IsPointer
+0x6C Killer Ballista,KillerBallistaSkillList|IsPointer
+0x6D Civilian,Civilian1SkillList|IsPointer
+0x6E Civilian (F),Civilian2SkillList|IsPointer
+0x6F Civilian,Civilian3SkillList|IsPointer
+0x70 Civilian (F),Civilian4SkillList|IsPointer
+0x71 Civilian,Civilian5SkillList|IsPointer
+0x72 Civilian (F),PeerSkillList|IsPointer
+0x73 Peer,QueenSkillList|IsPointer
+0x74 Queen,sfxSkillList|IsPointer
+0x75 Prince,openpokeballSkillList|IsPointer
+0x76 Queen,pokeballRedSkillList|IsPointer
+0x77 (empty),pokeballGoldSkillList|IsPointer
+0x78 Fallen Prince,FallenPrinceSkillList|IsPointer
+0x79 Tent,TentSkillList|IsPointer
+0x7A Pontifex,blank1SkillList|IsPointer
+0x7B Fallen Peer,Cyclops2SkillList|IsPointer
+0x7C Cyclops 2,BushSkillList|IsPointer
+0x7D Elder Bael 2,ElderBael2SkillList|IsPointer
+0x7E Journeyman (2),JourneymanSkillList|IsPointer
+-,PupilSkillList|IsPointer
+-,MukSkillList|IsPointer
+-,ShellderSkillList|IsPointer
+-,CloysterSkillList|IsPointer
+-,GastlySkillList|IsPointer
+-,HaunterSkillList|IsPointer
+-,GengarSkillList|IsPointer
+-,OnixSkillList|IsPointer
+-,DrowzeeSkillList|IsPointer
+-,HypnoSkillList|IsPointer
+-,KrabbySkillList|IsPointer
+-,KinglerSkillList|IsPointer
+-,VoltorbSkillList|IsPointer
+-,ElectrodeSkillList|IsPointer
+-,ExeggcuteSkillList|IsPointer
+-,ExeggutorSkillList|IsPointer
+-,CuboneSkillList|IsPointer
+-,MarowakSkillList|IsPointer
+-,HitmonleeSkillList|IsPointer
+-,HitmonchanSkillList|IsPointer
+-,LickitungSkillList|IsPointer
+-,KoffingSkillList|IsPointer
+-,WeezingSkillList|IsPointer
+-,RhyhornSkillList|IsPointer
+-,RhydonSkillList|IsPointer
+-,ChanseySkillList|IsPointer
+-,TangelaSkillList|IsPointer
+-,KangaskhanSkillList|IsPointer
+-,HorseaSkillList|IsPointer
+-,SeadraSkillList|IsPointer
+-,GoldeenSkillList|IsPointer
+-,SeakingSkillList|IsPointer
+-,StaryuSkillList|IsPointer
+-,StarmieSkillList|IsPointer
+-,MrMimeSkillList|IsPointer
+-,ScytherSkillList|IsPointer
+-,JynxSkillList|IsPointer
+-,ElectabuzzSkillList|IsPointer
+-,MagmarSkillList|IsPointer
+-,PinsirSkillList|IsPointer
+-,TaurosSkillList|IsPointer
+-,MagikarpSkillList|IsPointer
+-,GyaradosSkillList|IsPointer
+-,LaprasSkillList|IsPointer
+-,DittoSkillList|IsPointer
+-,EeveeSkillList|IsPointer
+-,VaporeonSkillList|IsPointer
+-,JolteonSkillList|IsPointer
+-,FlareonSkillList|IsPointer
+-,PorygonSkillList|IsPointer
+-,OmanyteSkillList|IsPointer
+-,OmastarSkillList|IsPointer
+-,KabutoSkillList|IsPointer
+-,KabutopsSkillList|IsPointer
+-,AerodactylSkillList|IsPointer
+-,SnorlaxSkillList|IsPointer
+-,ArticunoSkillList|IsPointer
+-,ZapdosSkillList|IsPointer
+-,MoltresSkillList|IsPointer
+-,DratiniSkillList|IsPointer
+-,DragonairSkillList|IsPointer
+-,DragoniteSkillList|IsPointer
+-,MewtwoSkillList|IsPointer
+-,MewSkillList|IsPointer
+-,emptyBFSkillList|IsPointer
+-,emptyC0SkillList|IsPointer
+-,emptyC1SkillList|IsPointer
+-,emptyC2SkillList|IsPointer
+-,emptyC3SkillList|IsPointer
+-,emptyC4SkillList|IsPointer
+-,emptyC5SkillList|IsPointer
+-,emptyC6SkillList|IsPointer
+-,emptyC7SkillList|IsPointer
+-,emptyC8SkillList|IsPointer
+-,emptyC9SkillList|IsPointer
+-,emptyCASkillList|IsPointer
+-,emptyCBSkillList|IsPointer
+-,emptyCCSkillList|IsPointer
+-,emptyCDSkillList|IsPointer
+-,emptyCESkillList|IsPointer
+-,emptyCFSkillList|IsPointer
+-,emptyD0SkillList|IsPointer
+-,emptyD1SkillList|IsPointer
+-,emptyD2SkillList|IsPointer
+-,emptyD3SkillList|IsPointer
+-,emptyD4SkillList|IsPointer
+-,emptyD5SkillList|IsPointer
+-,emptyD6SkillList|IsPointer
+-,emptyD7SkillList|IsPointer
+-,emptyD8SkillList|IsPointer
+-,emptyD9SkillList|IsPointer
+-,emptyDASkillList|IsPointer
+-,emptyDBSkillList|IsPointer
+-,emptyDCSkillList|IsPointer
+-,emptyDDSkillList|IsPointer
+-,emptyDESkillList|IsPointer
+-,PlaceholdersDFSkillList|IsPointer
+-,BulbasaurE0SkillList|IsPointer
+-,BulbasaurE1SkillList|IsPointer
+-,BulbasaurE2SkillList|IsPointer
+-,BulbasaurE3SkillList|IsPointer
+-,BulbasaurE4SkillList|IsPointer
+-,BulbasaurE5SkillList|IsPointer
+-,BulbasaurE6SkillList|IsPointer
+-,BulbasaurE7SkillList|IsPointer
+-,BulbasaurE8SkillList|IsPointer
+-,BulbasaurE9SkillList|IsPointer
+-,BulbasaurEASkillList|IsPointer
+-,BulbasaurEBSkillList|IsPointer
+-,BulbasaurECSkillList|IsPointer
+-,BulbasaurEDSkillList|IsPointer
+-,BulbasaurEESkillList|IsPointer
+-,BulbasaurEFSkillList|IsPointer
+-,BulbasaurF0SkillList|IsPointer
+-,BulbasaurF1SkillList|IsPointer
+-,BulbasaurF2SkillList|IsPointer
+-,BulbasaurF3SkillList|IsPointer
+-,BulbasaurF4SkillList|IsPointer
+-,BulbasaurF5SkillList|IsPointer
+-,BulbasaurF6SkillList|IsPointer
+-,BulbasaurF7SkillList|IsPointer
+-,BulbasaurF8SkillList|IsPointer
+-,BulbasaurF9SkillList|IsPointer
+-,BulbasaurFASkillList|IsPointer
+-,BulbasaurFBSkillList|IsPointer
+-,BulbasaurFCSkillList|IsPointer
+-,BulbasaurFDSkillList|IsPointer

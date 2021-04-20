@@ -50,6 +50,85 @@ SetCombatArtCost(11,2) //Ignis
 SetCombatArtCost(12,2) //Luna
 SetCombatArtCost(13,2) //Sol
 SetCombatArtCost(14,3) //Sure Shot
+SetCombatArtCost(15,1) //My skill1
+SetCombatArtCost(16,1) //My skill2
+SetCombatArtCost(17,1) //My skill3
+SetCombatArtCost(18,1) //My skill4
+SetCombatArtCost(19,1) //My skill5
+SetCombatArtCost(20,1) //My skill6
+SetCombatArtCost(21,1) //My skill7
+SetCombatArtCost(22,1) //My skill8
+SetCombatArtCost(23,1) //My skill9
+
+SetCombatArtCost(24,1) //My skill10
+SetCombatArtCost(25,1) //My skill11
+SetCombatArtCost(26,1) //My skill12
+SetCombatArtCost(27,1) //My skill13
+SetCombatArtCost(28,1) //My skill14
+SetCombatArtCost(29,1) //My skill15
+SetCombatArtCost(30,1) //My skill16
+SetCombatArtCost(31,1) //My skill17
+SetCombatArtCost(32,1) //My skill18
+SetCombatArtCost(33,1) //My skill19
+
+SetCombatArtCost(34,1) //My skill20
+SetCombatArtCost(35,1) //My skill21
+SetCombatArtCost(36,1) //My skill22
+SetCombatArtCost(37,1) //My skill23
+SetCombatArtCost(38,1) //My skill24
+SetCombatArtCost(39,1) //My skill25
+SetCombatArtCost(40,1) //My skill26
+SetCombatArtCost(41,1) //My skill27
+SetCombatArtCost(42,1) //My skill28
+SetCombatArtCost(43,1) //My skill29
+
+
+SetCombatArtCost(44,1) //My skill30
+SetCombatArtCost(45,1) //My skill31
+SetCombatArtCost(46,1) //My skill32
+SetCombatArtCost(47,1) //My skill33
+SetCombatArtCost(48,1) //My skill34
+SetCombatArtCost(49,1) //My skill35
+SetCombatArtCost(50,1) //My skill36
+SetCombatArtCost(51,1) //My skill37
+SetCombatArtCost(52,1) //My skill38
+SetCombatArtCost(53,1) //My skill39
+
+SetCombatArtCost(54,1) //My skill40
+SetCombatArtCost(55,1) //My skill41
+SetCombatArtCost(56,1) //My skill42
+SetCombatArtCost(57,1) //My skill43
+SetCombatArtCost(58,1) //My skill44
+SetCombatArtCost(59,1) //My skill45
+SetCombatArtCost(60,1) //My skill46
+SetCombatArtCost(61,1) //My skill47
+SetCombatArtCost(62,1) //My skill48
+SetCombatArtCost(63,1) //My skill49
+
+
+SetCombatArtCost(64,1) //My skill50
+SetCombatArtCost(65,1) //My skill51
+SetCombatArtCost(66,1) //My skill52
+SetCombatArtCost(67,1) //My skill53
+SetCombatArtCost(68,1) //My skill54
+SetCombatArtCost(69,1) //My skill55
+SetCombatArtCost(70,1) //My skill56
+SetCombatArtCost(71,1) //My skill57
+SetCombatArtCost(72,1) //My skill58
+SetCombatArtCost(73,1) //My skill59
+
+SetCombatArtCost(74,1) //My skill60
+SetCombatArtCost(75,1) //My skill61
+SetCombatArtCost(76,1) //My skill62
+SetCombatArtCost(77,1) //My skill63
+SetCombatArtCost(78,1) //My skill64
+SetCombatArtCost(79,1) //My skill65
+SetCombatArtCost(80,1) //My skill66
+SetCombatArtCost(81,1) //My skill67
+SetCombatArtCost(82,1) //My skill68
+SetCombatArtCost(83,1) //My skill69
+
+SetCombatArtCost(84,1) //My skill70
 
 ALIGN 4
 CombatArtsMenu:
@@ -73,6 +152,79 @@ MenuCommand(UM_Sol, UM_SolDesc, NormalText, SolUsability, SolEffect, $22c31, $22
 
 MenuCommand(UM_SureShot, UM_SureShotDesc, NormalText, SureShotUsability, SureShotEffect, $22c31, $22c99)
 
+
+
+
+MenuCommand(UM_Skill1, UM_Skill1_Desc, NormalText, Skill1Usability, Skill1Effect, $22c31, $22c99)
+MenuCommand(UM_Skill2, UM_Skill2_Desc, NormalText, Skill2Usability, Skill2Effect, $22c31, $22c99)
+MenuCommand(UM_Skill3, UM_Skill3_Desc, NormalText, Skill3Usability, Skill3Effect, $22c31, $22c99)
+MenuCommand(UM_Skill4, UM_Skill4_Desc, NormalText, Skill4Usability, Skill4Effect, $22c31, $22c99)
+MenuCommand(UM_Skill5, UM_Skill5_Desc, NormalText, Skill5Usability, Skill5Effect, $22c31, $22c99)
+MenuCommand(UM_Skill6, UM_Skill6_Desc, NormalText, Skill6Usability, Skill6Effect, $22c31, $22c99)
+MenuCommand(UM_Skill7, UM_Skill7_Desc, NormalText, Skill7Usability, Skill7Effect, $22c31, $22c99)
+MenuCommand(UM_Skill8, UM_Skill8_Desc, NormalText, Skill8Usability, Skill8Effect, $22c31, $22c99)
+MenuCommand(UM_Skill9, UM_Skill9_Desc, NormalText, Skill9Usability, Skill9Effect, $22c31, $22c99)
+MenuCommand(UM_Skill10, UM_Skill10_Desc, NormalText, Skill10Usability, Skill10Effect, $22c31, $22c99)
+MenuCommand(UM_Skill11, UM_Skill11_Desc, NormalText, Skill11Usability, Skill11Effect, $22c31, $22c99)
+MenuCommand(UM_Skill12, UM_Skill12_Desc, NormalText, Skill12Usability, Skill12Effect, $22c31, $22c99)
+MenuCommand(UM_Skill13, UM_Skill13_Desc, NormalText, Skill13Usability, Skill13Effect, $22c31, $22c99)
+MenuCommand(UM_Skill14, UM_Skill14_Desc, NormalText, Skill14Usability, Skill14Effect, $22c31, $22c99)
+MenuCommand(UM_Skill15, UM_Skill15_Desc, NormalText, Skill15Usability, Skill15Effect, $22c31, $22c99)
+MenuCommand(UM_Skill16, UM_Skill16_Desc, NormalText, Skill16Usability, Skill16Effect, $22c31, $22c99)
+MenuCommand(UM_Skill17, UM_Skill17_Desc, NormalText, Skill17Usability, Skill17Effect, $22c31, $22c99)
+MenuCommand(UM_Skill18, UM_Skill18_Desc, NormalText, Skill18Usability, Skill18Effect, $22c31, $22c99)
+MenuCommand(UM_Skill19, UM_Skill19_Desc, NormalText, Skill19Usability, Skill19Effect, $22c31, $22c99)
+MenuCommand(UM_Skill20, UM_Skill20_Desc, NormalText, Skill20Usability, Skill20Effect, $22c31, $22c99)
+MenuCommand(UM_Skill21, UM_Skill21_Desc, NormalText, Skill21Usability, Skill21Effect, $22c31, $22c99)
+MenuCommand(UM_Skill22, UM_Skill22_Desc, NormalText, Skill22Usability, Skill22Effect, $22c31, $22c99)
+MenuCommand(UM_Skill23, UM_Skill23_Desc, NormalText, Skill23Usability, Skill23Effect, $22c31, $22c99)
+MenuCommand(UM_Skill24, UM_Skill24_Desc, NormalText, Skill24Usability, Skill24Effect, $22c31, $22c99)
+MenuCommand(UM_Skill25, UM_Skill25_Desc, NormalText, Skill25Usability, Skill25Effect, $22c31, $22c99)
+MenuCommand(UM_Skill26, UM_Skill26_Desc, NormalText, Skill26Usability, Skill26Effect, $22c31, $22c99)
+MenuCommand(UM_Skill27, UM_Skill27_Desc, NormalText, Skill27Usability, Skill27Effect, $22c31, $22c99)
+MenuCommand(UM_Skill28, UM_Skill28_Desc, NormalText, Skill28Usability, Skill28Effect, $22c31, $22c99)
+MenuCommand(UM_Skill29, UM_Skill29_Desc, NormalText, Skill29Usability, Skill29Effect, $22c31, $22c99)
+MenuCommand(UM_Skill30, UM_Skill30_Desc, NormalText, Skill30Usability, Skill30Effect, $22c31, $22c99)
+MenuCommand(UM_Skill31, UM_Skill31_Desc, NormalText, Skill31Usability, Skill31Effect, $22c31, $22c99)
+MenuCommand(UM_Skill32, UM_Skill32_Desc, NormalText, Skill32Usability, Skill32Effect, $22c31, $22c99)
+MenuCommand(UM_Skill33, UM_Skill33_Desc, NormalText, Skill33Usability, Skill33Effect, $22c31, $22c99)
+MenuCommand(UM_Skill34, UM_Skill34_Desc, NormalText, Skill34Usability, Skill34Effect, $22c31, $22c99)
+MenuCommand(UM_Skill35, UM_Skill35_Desc, NormalText, Skill35Usability, Skill35Effect, $22c31, $22c99)
+MenuCommand(UM_Skill36, UM_Skill36_Desc, NormalText, Skill36Usability, Skill36Effect, $22c31, $22c99)
+MenuCommand(UM_Skill37, UM_Skill37_Desc, NormalText, Skill37Usability, Skill37Effect, $22c31, $22c99)
+MenuCommand(UM_Skill38, UM_Skill38_Desc, NormalText, Skill38Usability, Skill38Effect, $22c31, $22c99)
+MenuCommand(UM_Skill39, UM_Skill39_Desc, NormalText, Skill39Usability, Skill39Effect, $22c31, $22c99)
+MenuCommand(UM_Skill40, UM_Skill40_Desc, NormalText, Skill40Usability, Skill40Effect, $22c31, $22c99)
+MenuCommand(UM_Skill41, UM_Skill41_Desc, NormalText, Skill41Usability, Skill41Effect, $22c31, $22c99)
+MenuCommand(UM_Skill42, UM_Skill42_Desc, NormalText, Skill42Usability, Skill42Effect, $22c31, $22c99)
+MenuCommand(UM_Skill43, UM_Skill43_Desc, NormalText, Skill43Usability, Skill43Effect, $22c31, $22c99)
+MenuCommand(UM_Skill44, UM_Skill44_Desc, NormalText, Skill44Usability, Skill44Effect, $22c31, $22c99)
+MenuCommand(UM_Skill45, UM_Skill45_Desc, NormalText, Skill45Usability, Skill45Effect, $22c31, $22c99)
+MenuCommand(UM_Skill46, UM_Skill46_Desc, NormalText, Skill46Usability, Skill46Effect, $22c31, $22c99)
+MenuCommand(UM_Skill47, UM_Skill47_Desc, NormalText, Skill47Usability, Skill47Effect, $22c31, $22c99)
+MenuCommand(UM_Skill48, UM_Skill48_Desc, NormalText, Skill48Usability, Skill48Effect, $22c31, $22c99)
+MenuCommand(UM_Skill49, UM_Skill49_Desc, NormalText, Skill49Usability, Skill49Effect, $22c31, $22c99)
+MenuCommand(UM_Skill50, UM_Skill50_Desc, NormalText, Skill50Usability, Skill50Effect, $22c31, $22c99)
+MenuCommand(UM_Skill51, UM_Skill51_Desc, NormalText, Skill51Usability, Skill51Effect, $22c31, $22c99)
+MenuCommand(UM_Skill52, UM_Skill52_Desc, NormalText, Skill52Usability, Skill52Effect, $22c31, $22c99)
+MenuCommand(UM_Skill53, UM_Skill53_Desc, NormalText, Skill53Usability, Skill53Effect, $22c31, $22c99)
+MenuCommand(UM_Skill54, UM_Skill54_Desc, NormalText, Skill54Usability, Skill54Effect, $22c31, $22c99)
+MenuCommand(UM_Skill55, UM_Skill55_Desc, NormalText, Skill55Usability, Skill55Effect, $22c31, $22c99)
+MenuCommand(UM_Skill56, UM_Skill56_Desc, NormalText, Skill56Usability, Skill56Effect, $22c31, $22c99)
+MenuCommand(UM_Skill57, UM_Skill57_Desc, NormalText, Skill57Usability, Skill57Effect, $22c31, $22c99)
+MenuCommand(UM_Skill58, UM_Skill58_Desc, NormalText, Skill58Usability, Skill58Effect, $22c31, $22c99)
+MenuCommand(UM_Skill59, UM_Skill59_Desc, NormalText, Skill59Usability, Skill59Effect, $22c31, $22c99)
+MenuCommand(UM_Skill60, UM_Skill60_Desc, NormalText, Skill60Usability, Skill60Effect, $22c31, $22c99)
+MenuCommand(UM_Skill61, UM_Skill61_Desc, NormalText, Skill61Usability, Skill61Effect, $22c31, $22c99)
+MenuCommand(UM_Skill62, UM_Skill62_Desc, NormalText, Skill62Usability, Skill62Effect, $22c31, $22c99)
+MenuCommand(UM_Skill63, UM_Skill63_Desc, NormalText, Skill63Usability, Skill63Effect, $22c31, $22c99)
+MenuCommand(UM_Skill64, UM_Skill64_Desc, NormalText, Skill64Usability, Skill64Effect, $22c31, $22c99)
+MenuCommand(UM_Skill65, UM_Skill65_Desc, NormalText, Skill65Usability, Skill65Effect, $22c31, $22c99)
+MenuCommand(UM_Skill66, UM_Skill66_Desc, NormalText, Skill66Usability, Skill66Effect, $22c31, $22c99)
+MenuCommand(UM_Skill67, UM_Skill67_Desc, NormalText, Skill67Usability, Skill67Effect, $22c31, $22c99)
+MenuCommand(UM_Skill68, UM_Skill68_Desc, NormalText, Skill68Usability, Skill68Effect, $22c31, $22c99)
+MenuCommand(UM_Skill69, UM_Skill69_Desc, NormalText, Skill69Usability, Skill69Effect, $22c31, $22c99)
+MenuCommand(UM_Skill70, UM_Skill70_Desc, NormalText, Skill70Usability, Skill70Effect, $22c31, $22c99)
 
 
 //Lunge
@@ -229,4 +381,1031 @@ ALIGN 4
 SureShotEffect:
 #incbin "CombatArtEffect.dmp"
 WORD 14 //Sure Shot art ID
+
+
+ALIGN 4
+Skill1Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill1ID
+WORD 15 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill1Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 15 // art ID
+
+
+
+ALIGN 4
+Skill2Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill2ID
+WORD 16 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill2Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 16 // art ID
+
+
+
+ALIGN 4
+Skill3Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill3ID
+WORD 17 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill3Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 17 // art ID
+
+
+
+ALIGN 4
+Skill4Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill4ID
+WORD 18 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill4Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 18 // art ID
+
+
+
+ALIGN 4
+Skill5Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill5ID
+WORD 19 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill5Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 19 // art ID
+
+
+
+ALIGN 4
+Skill6Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill6ID
+WORD 20 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill6Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 20 // art ID
+
+
+
+ALIGN 4
+Skill7Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill7ID
+WORD 21 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill7Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 21 // art ID
+
+
+
+ALIGN 4
+Skill8Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill8ID
+WORD 22 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill8Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 22 // art ID
+
+
+
+ALIGN 4
+Skill9Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill9ID
+WORD 23 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill9Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 23 // art ID
+
+
+
+
+
+
+ALIGN 4
+Skill10Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill10ID
+WORD 24 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill10Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 24 // art ID
+
+
+
+ALIGN 4
+Skill11Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill11ID
+WORD 25 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill11Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 25 // art ID
+
+
+
+ALIGN 4
+Skill12Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill12ID
+WORD 26 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill12Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 26 // art ID
+
+
+
+ALIGN 4
+Skill13Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill13ID
+WORD 27 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill13Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 27 // art ID
+
+
+
+ALIGN 4
+Skill14Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill14ID
+WORD 28 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill14Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 28 // art ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALIGN 4
+Skill15Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill15ID
+WORD 29 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill15Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 29 // art ID
+
+
+
+ALIGN 4
+Skill16Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill16ID
+WORD 30 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill16Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 30 // art ID
+
+
+
+ALIGN 4
+Skill17Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill17ID
+WORD 31 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill17Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 31 // art ID
+
+
+
+ALIGN 4
+Skill18Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill18ID
+WORD 32 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill18Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 32 // art ID
+
+
+ALIGN 4
+Skill19Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill19ID
+WORD 33 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill19Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 33 // art ID
+
+
+ALIGN 4
+Skill20Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill20ID
+WORD 34 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill20Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 34 // art ID
+
+
+
+
+ALIGN 4
+Skill21Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill21ID
+WORD 35 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill21Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 35 // art ID
+
+
+
+
+ALIGN 4
+Skill22Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill22ID
+WORD 36 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill22Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 36 // art ID
+
+
+
+
+ALIGN 4
+Skill23Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill23ID
+WORD 37 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill23Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 37 // art ID
+
+
+
+
+ALIGN 4
+Skill24Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill24ID
+WORD 38 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill24Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 38 // art ID
+
+
+
+
+ALIGN 4
+Skill25Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill25ID
+WORD 39 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill25Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 39 // art ID
+
+
+
+
+ALIGN 4
+Skill26Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill26ID
+WORD 40 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill26Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 40 // art ID
+
+
+
+
+ALIGN 4
+Skill27Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill27ID
+WORD 41 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill27Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 41 // art ID
+
+
+
+
+ALIGN 4
+Skill28Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill28ID
+WORD 42 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill28Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 42 // art ID
+
+
+
+
+ALIGN 4
+Skill29Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill29ID
+WORD 43 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill29Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 43 // art ID
+
+
+
+
+ALIGN 4
+Skill30Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill30ID
+WORD 44 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill30Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 44 // art ID
+
+ALIGN 4
+Skill31Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill31ID
+WORD 45 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill31Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 45 // art ID
+
+ALIGN 4
+Skill32Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill32ID
+WORD 46 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill32Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 46 // art ID
+
+ALIGN 4
+Skill33Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill33ID
+WORD 47 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill33Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 47 // art ID
+
+ALIGN 4
+Skill34Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill34ID
+WORD 48 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill34Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 48 // art ID
+
+ALIGN 4
+Skill35Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill35ID
+WORD 49 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill35Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 49 // art ID
+
+ALIGN 4
+Skill36Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill36ID
+WORD 50 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill36Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 50 // art ID
+
+ALIGN 4
+Skill37Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill37ID
+WORD 51 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill37Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 51 // art ID
+
+ALIGN 4
+Skill38Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill38ID
+WORD 52 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill38Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 52 // art ID
+
+ALIGN 4
+Skill39Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill39ID
+WORD 53 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill39Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 53 // art ID
+
+
+ALIGN 4
+Skill40Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill40ID
+WORD 54 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill40Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 54 // art ID
+
+
+ALIGN 4
+Skill41Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill41ID
+WORD 55 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill41Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 55 // art ID
+
+
+ALIGN 4
+Skill42Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill42ID
+WORD 56 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill42Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 56 // art ID
+
+
+ALIGN 4
+Skill43Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill43ID
+WORD 57 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill43Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 57 // art ID
+
+
+ALIGN 4
+Skill44Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill44ID
+WORD 58 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill44Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 58 // art ID
+
+
+ALIGN 4
+Skill45Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill45ID
+WORD 59 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill45Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 59 // art ID
+
+
+ALIGN 4
+Skill46Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill46ID
+WORD 60 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill46Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 60 // art ID
+
+
+ALIGN 4
+Skill47Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill47ID
+WORD 61 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill47Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 61 // art ID
+
+
+ALIGN 4
+Skill48Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill48ID
+WORD 62 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill48Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 62 // art ID
+
+
+ALIGN 4
+Skill49Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill49ID
+WORD 63 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill49Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 63 // art ID
+
+
+ALIGN 4
+Skill50Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill50ID
+WORD 64 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill50Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 64 // art ID
+
+
+
+ALIGN 4
+Skill51Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill51ID
+WORD 65 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill51Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 65 // art ID
+
+
+ALIGN 4
+Skill52Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill52ID
+WORD 66 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill52Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 66 // art ID
+
+
+ALIGN 4
+Skill53Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill53ID
+WORD 67 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill53Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 67 // art ID
+
+
+ALIGN 4
+Skill54Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill54ID
+WORD 68 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill54Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 68 // art ID
+
+
+ALIGN 4
+Skill55Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill55ID
+WORD 69 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill55Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 69 // art ID
+
+
+ALIGN 4
+Skill56Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill56ID
+WORD 70 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill56Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 70 // art ID
+
+
+ALIGN 4
+Skill57Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill57ID
+WORD 71 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill57Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 71 // art ID
+
+
+ALIGN 4
+Skill58Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill58ID
+WORD 72 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill58Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 72 // art ID
+
+
+ALIGN 4
+Skill59Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill59ID
+WORD 73 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill59Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 73 // art ID
+
+
+ALIGN 4
+Skill60Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill60ID
+WORD 74 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill60Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 74 // art ID
+
+
+ALIGN 4
+Skill61Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill61ID
+WORD 75 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill61Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 75 // art ID
+
+
+ALIGN 4
+Skill62Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill62ID
+WORD 76 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill62Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 76 // art ID
+
+
+ALIGN 4
+Skill63Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill63ID
+WORD 77 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill63Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 77 // art ID
+
+
+ALIGN 4
+Skill64Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill64ID
+WORD 78 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill64Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 78 // art ID
+
+
+ALIGN 4
+Skill65Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill65ID
+WORD 79 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill65Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 79 // art ID
+
+
+ALIGN 4
+Skill66Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill66ID
+WORD 80 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill66Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 80 // art ID
+
+
+ALIGN 4
+Skill67Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill67ID
+WORD 81 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill67Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 81 // art ID
+
+
+ALIGN 4
+Skill68Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill68ID
+WORD 82 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill68Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 82 // art ID
+
+
+ALIGN 4
+Skill69Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill69ID
+WORD 83 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill69Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 83 // art ID
+
+
+ALIGN 4
+Skill70Usability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD Skill70ID
+WORD 84 // art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+Skill70Effect:
+#incbin "CombatArtEffect.dmp"
+WORD 84 // art ID
+
+
+
 

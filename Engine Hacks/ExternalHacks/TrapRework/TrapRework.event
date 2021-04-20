@@ -1,21 +1,7 @@
-
-#ifndef TRAP_REWORK
-
-#ifdef DRAGON_VEINS
-	#define TRAP_REWORK
-#endif // DRAGON_VEINS
-
-#ifdef HEAL_TILES
-	#define TRAP_REWORK
-#endif // HEAL_TILES
-
-#endif // TRAP_REWORK
-
-#ifdef TRAP_REWORK
-
 #ifndef TRAP_REWORK_INSTALLED
 	#define TRAP_REWORK_INSTALLED
 
+	
 	
 	//vanilla trap ID defs
 	#define BallistaTrapID 1
@@ -31,6 +17,55 @@
 	#define MineTrapID 11
 	#define GorgonEggTrapID 12
 	#define LightRuneTrapID 13
+
+
+	
+	#define RedPokeballItemID 16	//respawnable item 
+	#define GoldPokeballItemID 17	//non-respawnable item
+	#define HiddenPokeballItemID 18	//invisible item 
+
+
+	#define BlueWaitID 32		//Wait
+	#define CutBushID 33		//Cut
+	#define RockSmashID 34		//Smash
+	#define StrengthBoulderID 35	//Push
+	#define BreakableFloorID 36	//Step
+	#define HoleID 37 		//Jump
+	#define BoulderReceptacleID 38	//place boulder into
+	#define SpawnGenericID 39	//Yell-into
+	#define FoodID 40		//Eat
+
+	#define GenericID 48		//Interact
+	#define NPCTalkID 49		//Talk
+
+
+
+	
+
+
+
+	#define Placeholder19ID 19	//respawnable item 
+	#define Placeholder20ID 20	//respawnable item 
+	#define Placeholder21ID 21	//respawnable item 
+	#define Placeholder22ID 22	//respawnable item 
+	#define Placeholder23ID 23	//respawnable item 
+	#define Placeholder24ID 24	//respawnable item 
+	#define Placeholder25ID 25	//respawnable item 
+	#define Placeholder26ID 26	//respawnable item 
+	#define Placeholder27ID 27	//respawnable item 
+	#define Placeholder28ID 28	//respawnable item 
+	#define Placeholder29ID 29	//respawnable item 
+	#define Placeholder30ID 30	//respawnable item 
+	#define Placeholder31ID 31	//respawnable item 
+
+	#define Placeholder41ID 41	//respawnable item 
+	#define Placeholder42ID 42	//respawnable item 
+	#define Placeholder43ID 43	//respawnable item 
+	#define Placeholder44ID 44	//respawnable item 
+	#define Placeholder45ID 45	//respawnable item 
+	#define Placeholder46ID 46	//respawnable item 
+	#define Placeholder47ID 47	//respawnable item 
+
 	
 	#define LightRuneTrapPaletteWord 0xFFFFB080
 	#define PlayerTrapPaletteWord 0xFFFFC080
@@ -62,7 +97,11 @@
 	SetTrapEventInit(MineTrapID,$378D6)
 	SetTrapEventInit(GorgonEggTrapID,$378EC)
 	SetTrapEventInit(LightRuneTrapID,0)
-	
+
+
+
+
+
 	
 	#define SetTrapMapSprite(trapID,mapSpriteID) "PUSH; ORG TrapMapSpriteTable+(trapID-1); BYTE mapSpriteID; POP"
 
@@ -80,7 +119,59 @@
 	SetTrapMapSprite(MineTrapID,0)
 	SetTrapMapSprite(GorgonEggTrapID,0)
 	SetTrapMapSprite(LightRuneTrapID,0x66) //light rune map sprite
-	
+
+
+
+	SetTrapMapSprite(CutBushID,0x6A)
+	SetTrapMapSprite(RockSmashID,0x65)
+	SetTrapMapSprite(StrengthBoulderID,0x6A)
+	SetTrapMapSprite(BreakableFloorID,0x6A)
+	SetTrapMapSprite(HoleID,0x6A)
+	SetTrapMapSprite(BoulderReceptacleID,0x6A)
+
+	SetTrapMapSprite(FoodID,0x6A)
+	SetTrapMapSprite(BlueWaitID,0x6A)
+	SetTrapMapSprite(GenericID,0x6A)
+	SetTrapMapSprite(NPCTalkID,0x6A)
+
+	SetTrapMapSprite(Placeholder19ID,0x6A)
+	SetTrapMapSprite(Placeholder20ID,0x6A)
+	SetTrapMapSprite(Placeholder21ID,0x6A)
+	SetTrapMapSprite(Placeholder22ID,0x6A)
+	SetTrapMapSprite(Placeholder23ID,0x6A)
+	SetTrapMapSprite(Placeholder24ID,0x6A)
+	SetTrapMapSprite(Placeholder25ID,0x6A)
+	SetTrapMapSprite(Placeholder26ID,0x6A)
+	SetTrapMapSprite(Placeholder27ID,0x6A)
+	SetTrapMapSprite(Placeholder28ID,0x6A)
+	SetTrapMapSprite(Placeholder29ID,0x6A)
+	SetTrapMapSprite(Placeholder30ID,0x6A)
+	SetTrapMapSprite(Placeholder31ID,0x6A)
+	SetTrapMapSprite(Placeholder41ID,0x6A)
+	SetTrapMapSprite(Placeholder42ID,0x6A)
+	SetTrapMapSprite(Placeholder43ID,0x6A)
+	SetTrapMapSprite(Placeholder44ID,0x6A)
+	SetTrapMapSprite(Placeholder45ID,0x6A)
+	SetTrapMapSprite(Placeholder46ID,0x6A)
+	SetTrapMapSprite(Placeholder47ID,0x6A)
+
+	SetTrapMapSprite(51,0x6A)
+	SetTrapMapSprite(52,0x6A)
+	SetTrapMapSprite(53,0x6A)
+	SetTrapMapSprite(54,0x6A)
+	SetTrapMapSprite(55,0x6A)
+	SetTrapMapSprite(56,0x6A)
+	SetTrapMapSprite(57,0x6A)
+	SetTrapMapSprite(58,0x6A)
+	SetTrapMapSprite(59,0x6A)
+	SetTrapMapSprite(60,0x6A)
+	SetTrapMapSprite(61,0x6A)
+	SetTrapMapSprite(62,0x6A)
+	SetTrapMapSprite(63,0x6A)
+
+
+
+
 	//Macro for setting unique cases on trap map sprites
 	#define SetTrapMapSpriteFunc(trapID,ptr) "PUSH; ORG (TrapMapSpriteFuncTable+((trapID-1)*4)); POIN ptr; POP"
 	//doesn't need to be one for ballistae, they're handled somewhere else
@@ -90,6 +181,58 @@
 	#define SetTrapMapSpritePalette(trapID,paletteWord) "PUSH; ORG TrapMapSpritePaletteTable+(4*(trapID-1)); WORD paletteWord; POP"
 	
 	SetTrapMapSpritePalette(LightRuneTrapID,LightRuneTrapPaletteWord)
+	
+	
+	
+
+	
+	SetTrapMapSpritePalette(CutBushID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(RockSmashID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(StrengthBoulderID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(BreakableFloorID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(HoleID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(BoulderReceptacleID,NPCTrapPaletteWord)
+
+	SetTrapMapSpritePalette(FoodID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(BlueWaitID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(GenericID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(NPCTalkID,NPCTrapPaletteWord)
+
+	SetTrapMapSpritePalette(Placeholder19ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder20ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder21ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder22ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder23ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder24ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder25ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder26ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder27ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder28ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder29ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder30ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder31ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder41ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder42ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder43ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder44ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder45ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder46ID,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(Placeholder47ID,NPCTrapPaletteWord)
+	
+	SetTrapMapSpritePalette(51,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(52,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(53,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(54,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(55,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(56,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(57,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(58,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(59,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(60,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(61,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(62,NPCTrapPaletteWord)
+	SetTrapMapSpritePalette(63,NPCTrapPaletteWord)
+
 	
 	
 
@@ -117,11 +260,53 @@
 	//Macro for setting traps as impassable, like light runes
 	#define SetImpassableTrap(trapID) "PUSH; ORG (TrapLightRuneImpassableTable+trapID); BYTE 1; POP"
 	
+
 	SetImpassableTrap(LightRuneTrapID)
 	
-	
- 
-	
+	SetImpassableTrap(CutBushID)
+	SetImpassableTrap(RockSmashID)
+	SetImpassableTrap(StrengthBoulderID)
+	SetImpassableTrap(BreakableFloorID)
+	SetImpassableTrap(HoleID)
+	SetImpassableTrap(BoulderReceptacleID)
+
+	SetImpassableTrap(FoodID)
+	SetImpassableTrap(BlueWaitID)
+	SetImpassableTrap(GenericID)
+	SetImpassableTrap(NPCTalkID)
+
+	SetImpassableTrap(Placeholder19ID)
+	SetImpassableTrap(Placeholder20ID)
+	SetImpassableTrap(Placeholder21ID)
+	SetImpassableTrap(Placeholder22ID)
+	SetImpassableTrap(Placeholder23ID)
+	SetImpassableTrap(Placeholder24ID)
+	SetImpassableTrap(Placeholder25ID)
+	SetImpassableTrap(Placeholder26ID)
+	SetImpassableTrap(Placeholder27ID)
+	//SetImpassableTrap(Placeholder28ID)
+	//SetImpassableTrap(Placeholder29ID)
+	//SetImpassableTrap(Placeholder30ID)
+	//SetImpassableTrap(Placeholder31ID)
+	SetImpassableTrap(Placeholder41ID)
+	SetImpassableTrap(Placeholder42ID)
+	SetImpassableTrap(Placeholder43ID)
+	SetImpassableTrap(Placeholder44ID)
+	SetImpassableTrap(Placeholder45ID)
+	SetImpassableTrap(Placeholder46ID)
+	SetImpassableTrap(Placeholder47ID)
+
+	SetImpassableTrap(51)
+	SetImpassableTrap(52)
+	SetImpassableTrap(53)
+	SetImpassableTrap(54)
+	SetImpassableTrap(55)
+	SetImpassableTrap(56)
+	SetImpassableTrap(57)
+	SetImpassableTrap(58)
+	SetImpassableTrap(59)
+
+
 
 	//Macro for settings pairs of terrain IDs & char IDs for breakable terrain
 	#define TrapBreakableTerrain(terrainID,charID,maxHP) "BYTE (terrainID-1) charID maxHP 0"
@@ -132,26 +317,16 @@
 	TrapBreakableTerrainList: 
 	TrapBreakableTerrain(0x34,0xFF,20) 		//Snag
 	TrapBreakableTerrain(0x1C,0xFE,0xFF) 	//Wall
+	TrapBreakableTerrain(0x1F,0xFC,40) 		//Door
 	TrapBreakableTerrainListEnd
 	
 
+	//Example usages
 	#include "Modules/DragonVeins/DragonVeins.event"
 	#include "Modules/HealTiles/HealTiles.event"
+	#include "Modules/TelliusTorches/TelliusTorches.event"
+	#include "Modules/Pokemblem/PokemblemTraps.event"
 	
-	//This is here to satiate a hardcoded requirement if heal tiles are not installed.
-	#ifndef HEAL_TILES
-	HealTileTrapIDLink:
-	WORD 0
-	#endif // HEAL_TILES
-	
-	//Tellius Torches are not included in this distribution,
-	//but there are references to it in the code still.
-	//This exists to satiate them, remove it if you add Tellius Torches.
-	TelliusTorchTrapIDLink:
-	TelliusTorchOffMapSpriteIDLink:
-	TelliusTorchOnMapSpriteIDLink:
-	WORD 0
+
 	
 #endif // TRAP_REWORK_INSTALLED
-
-#endif // TRAP_REWORK

@@ -75,6 +75,24 @@ UnitMenuTable:
   
   #ifdef DRAGON_VEINS
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, VeinUsability, VeinEffect)
+
+
+  MenuCommand(UM_Mercy, UM_MercyDesc, BlueText, GenericTrapUsability0x30, GenericTrapEffect)
+  MenuCommand(UM_Rally, UM_RallyDesc, BlueText, GenericTrapUsability0x31, GenericTrapEffect)
+  MenuCommand(UM_Mercy, UM_MercyDesc, BlueText, GenericTrapUsability0x32, GenericTrapEffect)
+  MenuCommand(UM_Rally, UM_RallyDesc, BlueText, GenericTrapUsability0x33, GenericTrapEffect)
+
+  MenuCommand(UM_Mercy, UM_MercyDesc, GreenText, GenericTrapDisappearUsability0x20, GenericTrapDisappearEffect)
+  MenuCommand(UM_Rally, UM_RallyDesc, GreenText, GenericTrapDisappearUsability0x21, GenericTrapDisappearEffect)
+  MenuCommand(UM_Mercy, UM_MercyDesc, GreenText, GenericTrapDisappearUsability0x22, GenericTrapDisappearEffect)
+  MenuCommand(UM_Rally, UM_RallyDesc, GreenText, GenericTrapDisappearUsability0x23, GenericTrapDisappearEffect)
+
+  MenuCommand(UM_Mercy, UMText_DVDesc, GreenText, ObtainItemUsability0x10, ObtainItemEffect)
+  MenuCommand(UM_Rally, UMText_DVDesc, GreenText, ObtainItemUsability0x11, ObtainItemEffect)
+  MenuCommand(UM_Mercy, UMText_DVDesc, GreenText, ObtainItemUsability0x12, ObtainItemEffect)
+  MenuCommand(UM_Rally, UMText_DVDesc, GreenText, ObtainItemUsability0x13, ObtainItemEffect)
+/*
+*/
   #endif // DRAGON_VEINS
   
   // UM_Attack

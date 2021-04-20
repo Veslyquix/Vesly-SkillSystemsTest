@@ -1,0 +1,20 @@
+60 max 
+50 - 15 = 35
+I have 15 in r3
+I have 50 in r0 
+
+current change = 
+60 - 50
+= 10
+
+get current change 
+r0 = 10
+r3 = 15
+I want 25
+ergo, 10 + 15 = 25
+but, if either is negative...
+
+neg gets me 100 - r3 = 85 
+
+maybe r0 is -10 
+0xFFFFFF80
